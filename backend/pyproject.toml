@@ -1,0 +1,18 @@
+[project]
+name = "api-taller-jwt"
+version = "0.1.0"
+description = "Proyecto API Taller: con JWT y Rate Limiting"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi",
+  "uvicorn[standard]",
+  "python-jose[cryptography]",
+  "passlib",
+  "bcrypt==4.3.0",
+  "slowapi",
+  "pydantic",
+  "pydantic[email]",
+  "python-multipart",
+  "sqlalchemy"
+]
