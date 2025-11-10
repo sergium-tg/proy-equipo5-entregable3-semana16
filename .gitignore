@@ -1,6 +1,8 @@
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudio,python,windows,macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudio,python,windows,macos
 
+**/uv.lock
+
 ### macOS ###
 # General
 .DS_Store
