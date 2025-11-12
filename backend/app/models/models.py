@@ -72,6 +72,7 @@ class Venta(Base):
 
 #### para las entidades asociadas ####
 
+# entidad de union o asociada. para solucionar M:N
 class MtoTecnico(Base):
     __tablename__ = "mto_tecnicos"
     numero_mantenimiento = Column(Integer, ForeignKey("mantenimientos.numero"), primary_key=True)
@@ -80,6 +81,7 @@ class MtoTecnico(Base):
     mantenimiento = relationship("Mantenimiento", back_populates="tecnicos")
     tecnico = relationship("Tecnico", back_populates="mantenimientos")
 
+# entidad de union o asociada. para solucionar M:N
 class VentaArticulo(Base):
     __tablename__ = "venta_articulos"
     numero_venta = Column(Integer, ForeignKey("ventas.numero"), primary_key=True)

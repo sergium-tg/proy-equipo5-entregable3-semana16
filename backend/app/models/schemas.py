@@ -103,6 +103,7 @@ class VentaUpdate(BaseModel):
 
 ###### Entidad MANTENIMIENTO_TECNICO ######
 
+# entidad de union o asociada. para solucionar M:N
 class MtoTecnico(BaseModel):
     numero_mantenimiento: int
     id_tecnico: int
@@ -117,6 +118,7 @@ class MtoTecnicoUpdate(BaseModel):
 
 ###### Entidad VENTA_ARTICULO ######
 
+# entidad de union o asociada. para solucionar M:N
 class VentaArticulo(BaseModel):
     numero_venta: int
     id_articulo: int

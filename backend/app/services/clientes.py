@@ -14,8 +14,9 @@ class ClienteService:
         if cliente:
             raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail="CLIENTE ya existe en la BD.")
         
+        # creacion instancia para SQL
         cliente = models.Cliente(**payload.model_dump())
-        
+        # pasos para la BD
         db.add(cliente)
         db.commit()
         db.refresh(cliente)
@@ -24,9 +25,11 @@ class ClienteService:
 
     @staticmethod
     def lista_todos(db: Session) -> List[Cliente]:
+        # toma todos los clientes  de la BD
         clientes_models = db.query(models.Cliente).all()
         if not clientes_models:
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="No se encontraron clientes")
+        # de Alchemy a pydantic
         return [Cliente.model_validate(c) for c in clientes_models]
 
     @staticmethod
@@ -38,7 +41,7 @@ class ClienteService:
 
     @staticmethod
     def busca_clientes(db: Session, q: int | str | None, sort: str, order: str, offset: int, limit: int) -> Tuple[List[Cliente], int]:
-
+        # toma todos los clientes  de la BD
         los_clientes = db.query(models.Cliente).all()
 
         clientes: Dict[int, Cliente] = {
@@ -61,10 +64,11 @@ class ClienteService:
         if not cliente:
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Cliente NO EXISTE en la BD.")
         
+        # pydantic a dict. solo los diligenciados
         datos_actualizacion = payload.model_dump(exclude_unset=True)
         if not datos_actualizacion:
             return Cliente.model_validate(cliente)
-
+        # actualiza datos en SQL
         for key, value in datos_actualizacion.items():
             setattr(cliente, key, value)
         

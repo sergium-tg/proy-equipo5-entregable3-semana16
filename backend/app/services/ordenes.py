@@ -11,6 +11,7 @@ class OrdenService:
 
     @staticmethod
     def crea_ordenes(db: Session, payload: CrearOrden) -> Orden:
+        # miro si el cliente existe
         cliente = db.query(models.Cliente).filter(models.Cliente.id == payload.id_cliente).first()
         if not cliente:
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"Cliente con id {payload.id_cliente} NO EXISTE en la BD. La orden no puede ser creada.")
@@ -20,11 +21,13 @@ class OrdenService:
         db.add(orden)
         db.commit()
         db.refresh(orden)
-        
+
+        # Valida si es ORDEN
         return Orden.model_validate(orden)
 
     @staticmethod
     def lista_todos(db: Session) -> List[Orden]:
+        # tomo todas las ordenes
         ordenes_models = db.query(models.Orden).options(
             joinedload(models.Orden.ventas),
             joinedload(models.Orden.mantenimientos)
@@ -46,6 +49,7 @@ class OrdenService:
 
     @staticmethod
     def lista_por_tipo(db: Session, tipo: Literal["solo Ventas", "solo Mantenimientos", "Mantenimiento con ventas"]) -> List[Orden]:
+        # Carga todas las ordenes con sus relaciones
         ordenes = db.query(models.Orden).options(
             joinedload(models.Orden.ventas),
             joinedload(models.Orden.mantenimientos)
@@ -55,7 +59,7 @@ class OrdenService:
         for orden_model in ordenes:
             tiene_ventas = bool(orden_model.ventas)
             tiene_mantenimientos = bool(orden_model.mantenimientos)
-            
+            # filtro
             if tipo == "solo Ventas" and tiene_ventas and not tiene_mantenimientos:
                 resultados.append(Orden.model_validate(orden_model))
             elif tipo == "solo Mantenimientos" and not tiene_ventas and tiene_mantenimientos:

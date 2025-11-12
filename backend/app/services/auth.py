@@ -10,16 +10,19 @@ from app.db.session import get_db
 from app.models import models, schemas
 from app.core.config import SECRET_KEY, ALGORITHM, ACCESS_TOKEN_EXPIRE_MINUTES
 
+# para el hashing con bcrypt
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-
+# ruta del token
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/token")
 
 class AuthService:
 
+    # revisa si coincide la pass plana con el hash
     @staticmethod
     def revisa_pass(plain_password: str, hashed_password: str) -> bool:
         return pwd_context.verify(plain_password, hashed_password)
 
+    # para convertir pass plana a hash
     @staticmethod
     def alista_hash(password: str) -> str:
         return pwd_context.hash(password)
@@ -51,7 +54,7 @@ class AuthService:
 
     @staticmethod
     def regist(db: Session, user: schemas.UserCreate) -> models.User:
-        """Crea un nuevo usuario en la BD (versión simplificada)."""
+        # crea usuario en la BD
         if AuthService.alista_nombre(db, user.username):
             raise HTTPException(
                 status_code=status.HTTP_409_CONFLICT,
