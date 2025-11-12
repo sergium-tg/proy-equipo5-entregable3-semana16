@@ -439,6 +439,11 @@ X-Total-Count: 20
     "consecutivo_orden": 55   
   }
 ]
+
+## Carga de la base de datos con persistencia ##
+Dentro del directorio de "backend" digitamos:
+```bash
+python carga_casos_db.py
 ```
 
 ## Instalacion **uv** (fast Python packaging)
