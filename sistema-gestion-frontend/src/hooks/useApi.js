@@ -1,192 +1,77 @@
-import { useState, useEffect } from 'react'
-import { API_BASE_URL } from '../utils/constants'
+// src/hooks/useApi.js
+const BASE_URL = 'http://localhost:8000/api'  // Con /api incluido
 
-export const useApi = (endpoint, options = {}) => {
-  const [data, setData] = useState(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
-
-  const fetchData = async (url, config = {}) => {
+export const useApi = () => {
+  const request = async (method, endpoint, data = null) => {
     try {
-      setLoading(true)
-      setError(null)
-      
-      const token = localStorage.getItem('authToken')
-      const headers = {
-        'Content-Type': 'application/json',
-        ...(token && { 'Authorization': `Bearer ${token}` }),
-        ...config.headers
-      }
-
-      const response = await fetch(`${API_BASE_URL}${url}`, {
-        headers,
-        ...config
-      })
-      
-      if (!response.ok) {
-        throw new Error(`Error ${response.status}: ${response.statusText}`)
-      }
-      
-      // Para respuestas sin contenido (DELETE, etc.)
-      if (response.status === 204) {
-        return null
-      }
-      
-      const result = await response.json()
-      setData(result)
-      return result
-    } catch (err) {
-      setError(err.message)
-      console.error('API Error:', err)
-      throw err
-    } finally {
-      setLoading(false)
-    }
-  }
-
-  const postData = async (url, postData) => {
-    return fetchData(url, {
-      method: 'POST',
-      body: JSON.stringify(postData)
-    })
-  }
-
-  const putData = async (url, putData) => {
-    return fetchData(url, {
-      method: 'PUT',
-      body: JSON.stringify(putData)
-    })
-  }
-
-  const deleteData = async (url) => {
-    return fetchData(url, {
-      method: 'DELETE'
-    })
-  }
-
-  useEffect(() => {
-    if (endpoint && options.autoFetch !== false) {
-      fetchData(endpoint)
-    }
-  }, [endpoint])
-
-  return {
-    data,
-    loading,
-    error,
-    fetchData,
-    postData,
-    putData,
-    deleteData,
-    refetch: () => fetchData(endpoint)
-  }
-}
-
-// Hook específico para autenticación
-export const useAuth = () => {
-  const [user, setUser] = useState(null)
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(null)
-
-  const login = async (email, password) => {
-    try {
-      setLoading(true)
-      setError(null)
-      
-      const response = await fetch(`${API_BASE_URL}/auth/token`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: `username=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`
-      })
-
-      if (!response.ok) {
-        throw new Error('Credenciales inválidas')
-      }
-
-      const data = await response.json()
-      localStorage.setItem('authToken', data.access_token)
-      
-      // Obtener información del usuario
-      const userResponse = await fetch(`${API_BASE_URL}/auth/users/me`, {
-        headers: {
-          'Authorization': `Bearer ${data.access_token}`
-        }
-      })
-      
-      const userData = await userResponse.json()
-      setUser(userData)
-      
-      return data
-    } catch (err) {
-      setError(err.message)
-      throw err
-    } finally {
-      setLoading(false)
-    }
-  }
-
-  const register = async (userData) => {
-    try {
-      setLoading(true)
-      setError(null)
-      
-      const response = await fetch(`${API_BASE_URL}/auth/register`, {
-        method: 'POST',
+      const options = {
+        method,
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(userData)
-      })
-
-      if (!response.ok) {
-        throw new Error('Error en el registro')
       }
 
-      return await response.json()
-    } catch (err) {
-      setError(err.message)
-      throw err
-    } finally {
-      setLoading(false)
-    }
-  }
-
-  const logout = () => {
-    localStorage.removeItem('authToken')
-    setUser(null)
-  }
-
-  const getCurrentUser = async () => {
-    const token = localStorage.getItem('authToken')
-    if (!token) return null
-
-    try {
-      const response = await fetch(`${API_BASE_URL}/auth/users/me`, {
-        headers: {
-          'Authorization': `Bearer ${token}`
+      // Agregar token de autenticación si existe
+      const userData = localStorage.getItem('user')
+      if (userData) {
+        try {
+          const user = JSON.parse(userData)
+          if (user && user.token) {
+            options.headers['Authorization'] = `Bearer ${user.token}`
+          }
+        } catch (e) {
+          console.warn('Error parsing user data:', e)
         }
-      })
-      
-      if (response.ok) {
-        const userData = await response.json()
-        setUser(userData)
-        return userData
       }
-    } catch (err) {
-      console.error('Error obteniendo usuario:', err)
-      logout()
+
+      if (data && method !== 'GET') {
+        options.body = JSON.stringify(data)
+      }
+
+      console.log(`🔄 API Call: ${method} ${BASE_URL}${endpoint}`, data)
+
+      const response = await fetch(`${BASE_URL}${endpoint}`, options)
+      
+      if (!response.ok) {
+        // Manejar errores de autenticación
+        if (response.status === 401) {
+          localStorage.removeItem('user')
+          window.location.hash = '#login'
+          throw new Error('Sesión expirada. Por favor inicia sesión nuevamente.')
+        }
+        
+        let errorMessage = `Error ${response.status}`
+        try {
+          const errorData = await response.json()
+          errorMessage = errorData.detail || errorMessage
+        } catch {
+          // Si no se puede parsear como JSON, usar texto plano
+          const errorText = await response.text()
+          errorMessage = errorText || errorMessage
+        }
+        
+        throw new Error(errorMessage)
+      }
+
+      // Para DELETE sin contenido (204)
+      if (response.status === 204) {
+        return { success: true, message: 'Operación exitosa' }
+      }
+
+      const result = await response.json()
+      console.log(`✅ API Response:`, result)
+      return result
+
+    } catch (error) {
+      console.error(`❌ API Error:`, error)
+      throw error
     }
   }
 
   return {
-    user,
-    loading,
-    error,
-    login,
-    register,
-    logout,
-    getCurrentUser
+    get: (endpoint) => request('GET', endpoint),
+    post: (endpoint, data) => request('POST', endpoint, data),
+    put: (endpoint, data) => request('PUT', endpoint, data),
+    del: (endpoint) => request('DELETE', endpoint),
   }
 }
