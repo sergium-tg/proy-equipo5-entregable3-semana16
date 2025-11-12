@@ -16,34 +16,41 @@ Administradores internos: personal de la empresa encargado de registrar ventas, 
 Módulo: Autenticación	
 1. Autenticar Usuario (/auth/token).
 2. Registrar Nuevo Usuario (/auth/register).
- Módulo: Dashboard
+
+Módulo: Dashboard
 3. Visualizar Métricas Clave (Artículos Totales, Clientes Activos, Ventas del Mes, Mantenimientos, Órdenes Activas, Técnicos).
 4. Revisar Actividad Reciente.
+
 Módulo: Artículos
 5. Crear Nuevo Artículo (Inventario).
 6. Buscar y Filtrar Artículos (por nombre o disponibilidad).
 7. Listar Todos los Artículos. 
 8. Buscar, Actualizar, Eliminar un Artículo por ID. 
 9. Listar Ventas de un Artículo específico.
+
 Módulo: Clientes	
 10. Crear Nuevo Cliente. 
 11. Buscar Clientes (por nombre, email, teléfono). 
 12. Listar Todos los Clientes. 
 13. Buscar, Actualizar, Eliminar un Cliente por ID.
+
 Módulo: Ventas	
 14. Crear Nueva Venta (incluye registro de Total y Artículos). 
 15. Buscar y Filtrar Ventas (por número, cliente o rango de fechas). 
 16. Listar Todos los Artículos de una Venta. 
 17. Actualizar/Eliminar Ventas y Artículos en la Venta.
+
 Módulo: Mantenimientos	
 18. Crear Nuevo Mantenimiento (Tipo, Prioridad, Estimación de Costo/Duración). 
 19. Buscar Mantenimientos (por número, tipo o descripción, rango de fechas). 
 20. Asignar/Quitar/Actualizar Técnico a un Mantenimiento. 
 21. Actualizar/Eliminar Mantenimiento por Número.
+
 Módulo: Órdenes (de Trabajo)	
 22. Crear Nueva Orden (Tipo, Prioridad, Tiempo Estimado). 
 23. Buscar y Filtrar Órdenes (por consecutivo, tipo, rango de fechas o cliente). 
 24. Actualizar/Eliminar una Orden.
+
 Módulo: Técnicos	
 25. Crear Nuevo Técnico (con especialidad, experiencia y calificación). 
 26. Buscar Técnicos (por nombre, especialidad o email). 
