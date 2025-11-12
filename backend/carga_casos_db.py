@@ -56,9 +56,9 @@ def populate_db_data(db: Session):
         # --- Casos ARTICULO ---
         articulo1 = models.Articulo(id=1140, nombre="Splitter 3 inch", descripcion="Splitter usado", precio=11000, existencia=True)
         articulo2 = models.Articulo(id=2455, nombre="Fusible 5A", precio=2000, existencia=True)
-        articulo3 = models.Articulo(id=523, nombre="Aspas AC 24 inch", descripcion="usado", precio=58000, existencia=False)
+        articulo3 = models.Articulo(id=523, nombre="Aspas AC 24 inch", descripcion="usado", precio=58000, existencia=True)
         articulo4 = models.Articulo(id=556, nombre="Jumper 16 AWG", descripcion="Jumber en calibre 16 con terminales M-M", precio=2000, existencia=True)
-        articulo5 = models.Articulo(id=333, nombre="Radiador R2U2", descripcion="Radiador para AC", precio=550000, existencia=False)
+        articulo5 = models.Articulo(id=333, nombre="Radiador R2U2", descripcion="Radiador para AC", precio=550000, existencia=True)
         db.add_all([articulo1, articulo2, articulo3, articulo4, articulo5])
         
         db.commit()
