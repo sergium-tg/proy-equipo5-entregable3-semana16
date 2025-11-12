@@ -1,59 +1,69 @@
 import React from 'react'
-import { LayoutDashboard, Package, Users, ShoppingCart, Settings, FileText, Wrench } from 'lucide-react'
-import { MODULES, COLOR_SCHEMES } from '../../utils/constants'
+import { useAuth } from '../../context/AuthContext'
 
-const Navbar = ({ currentSection, onSectionChange }) => {
-  const getIcon = (iconName) => {
-    const icons = {
-      LayoutDashboard,
-      Package,
-      Users,
-      ShoppingCart,
-      Settings,
-      FileText,
-      Wrench
-    }
-    const IconComponent = icons[iconName]
-    return IconComponent ? <IconComponent className="w-5 h-5" /> : null
+const Navbar = ({ currentSection }) => {
+  const { user, logout } = useAuth()
+  const navItems = [
+    { name: 'Inicio', hash: '#inicio' },
+    { name: 'Artículos', hash: '#articulos' },
+    { name: 'Clientes', hash: '#clientes' },
+    { name: 'Ventas', hash: '#ventas' },
+    { name: 'Órdenes', hash: '#ordenes' },
+    { name: 'Mantenimientos', hash: '#mantenimientos' },
+    { name: 'Técnicos', hash: '#tecnicos' }
+  ]
+
+  const handleNavClick = (hash) => {
+    window.location.hash = hash
+  }
+
+  const handleLogout = () => {
+    logout()
+    window.location.hash = '#login'
+  }
+
+  if (!user) {
+    return null
   }
 
   return (
-    <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-slate-200 z-50">
+    <nav className="bg-white shadow-sm border-b">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">SG</span>
-            </div>
-            <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Sistema Gestión
-            </h1>
+        <div className="flex justify-between h-16">
+          <div className="flex items-center">
+            <span className="text-xl font-semibold text-slate-800">
+              Sistema de Gestión
+            </span>
           </div>
-
-          {/* Navigation */}
-          <div className="flex space-x-1">
-            {Object.entries(MODULES).map(([key, module]) => {
-              const isActive = currentSection === key
-              const colors = COLOR_SCHEMES[module.color]
-              
-              return (
+          
+          <div className="flex items-center space-x-4">
+            <div className="flex space-x-4">
+              {navItems.map((item) => (
                 <button
-                  key={key}
-                  onClick={() => onSectionChange(key)}
-                  className={`
-                    flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 font-medium
-                    ${isActive 
-                      ? `${colors.bg} text-white shadow-lg transform scale-105` 
-                      : `text-slate-600 hover:text-slate-900 hover:bg-slate-100`
-                    }
-                  `}
+                  key={item.hash}
+                  onClick={() => handleNavClick(item.hash)}
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                    currentSection === item.hash.replace('#', '')
+                      ? 'text-blue-600 bg-blue-50'
+                      : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                  }`}
                 >
-                  {getIcon(module.icon)}
-                  <span className="hidden sm:block">{module.name}</span>
+                  {item.name}
                 </button>
-              )
-            })}
+              ))}
+            </div>
+
+            <div className="flex items-center space-x-3 ml-4 pl-4 border-l border-gray-200">
+              <div className="text-sm text-slate-600">
+                Hola, <span className="font-medium">{user.name}</span>
+              </div>
+              <button
+                onClick={handleLogout}
+                className="px-3 py-2 text-sm font-medium text-slate-600 hover:text-slate-800 hover:bg-slate-100 rounded-md transition-colors duration-200"
+              >
+                Cerrar Sesión
+              </button>
+            </div>
           </div>
         </div>
       </div>
