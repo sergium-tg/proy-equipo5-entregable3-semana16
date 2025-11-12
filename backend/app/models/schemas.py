@@ -43,7 +43,7 @@ class Articulo(BaseModel):
     nombre: str
     descripcion: Optional[str] = None
     precio: float
-    existencia: bool = False
+    existencia: bool = True
     model_config = ConfigDict(from_attributes=True)
 
 class ArticuloCreate(Articulo):
