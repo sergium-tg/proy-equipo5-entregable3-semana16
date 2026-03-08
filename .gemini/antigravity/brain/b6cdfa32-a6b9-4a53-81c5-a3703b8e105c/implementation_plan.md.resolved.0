@@ -1,0 +1,24 @@
+# Goal: Run the MediSync Project
+
+This plan outlines the steps to install dependencies and start both the frontend and backend servers for the MediSync project.
+
+## Proposed Changes
+
+### Frontend Setup
+- Install dependencies in `MediSync-Proyecto`: `npm install`
+- Start the development server: `npm run dev`
+
+### Backend Setup
+- Install dependencies in `MediSync-Proyecto/backend`: `npm install`
+- Start the development server: `npm run dev` (uses nodemon)
+
+## Verification Plan
+
+### Automated Tests
+- Check if both servers are reachable.
+- Frontend usually runs on `http://localhost:5173`.
+- Backend port needs to be verified in `server.js`.
+
+### Manual Verification
+- Open the browser at the frontend URL.
+- Try to interact with the login/registration to see if it communicates with the backend.

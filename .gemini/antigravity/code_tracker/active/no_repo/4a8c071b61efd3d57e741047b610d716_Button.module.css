@@ -1,0 +1,50 @@
+Ù.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.65rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.primary {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.primary:hover:not(:disabled) {
+    background: var(--color-primary-dark);
+}
+
+.outline {
+    background: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+.outline:hover:not(:disabled) {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.ghost {
+    background: transparent;
+    color: var(--color-text);
+}
+
+.ghost:hover:not(:disabled) {
+    background: var(--color-background);
+}
+
+.fullWidth {
+    width: 100%;
+}Ù*cascade082hfile:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/components/shared/Button/Button.module.css

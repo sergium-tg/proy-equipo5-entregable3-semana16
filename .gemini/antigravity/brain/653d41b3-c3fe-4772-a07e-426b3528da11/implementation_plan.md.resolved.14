@@ -1,0 +1,22 @@
+# FAQ Page Redesign: Enhanced Accordion
+
+We will replace the current grid design of the FAQ page with a premium, high-interaction accordion system based on the one used in the contact page.
+
+## Proposed Changes
+
+### [DetailedFAQ Component]
+#### [MODIFY] [DetailedFAQ.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/faq/DetailedFAQ.tsx)
+-   Replace the grid layout with a single-column accordion using shadcn/ui components.
+-   Integrate category-specific icons.
+-   Add enhanced animations and transitions (hover effects, smooth expansion).
+-   Include "WhatsApp" quick contact links for each question.
+
+## Verification Plan
+
+### Automated Tests
+- Run `npm run build` to ensure no linting or type errors.
+
+### Manual Verification
+- Visual inspection of the new accordion.
+- Verify that transitions are smooth and "striking" as requested.
+- Test responsive behavior.

@@ -1,0 +1,41 @@
+# Walkthrough - Auth Layout Redesign
+
+I have redesigned the authentication page to feature a dynamic split-screen layout that responds to the user's action (Login vs Register) with a fluid side-swapping animation.
+
+## Key Features
+
+### Split-Screen Layout
+The screen is now divided into two main sections:
+- **Form Side**: Contains the login or register form, centered vertically and horizontally.
+- **Tips Side**: Shows helpful developer tips that revolve every **6 seconds** with a smooth fade effect.
+
+### Fluid Side-Swap Animation
+When the user clicks the "Regístrate" or "Inicia Sesión" button:
+- The form and the tips section swap positions smoothly using Framer Motion's `layout` animation.
+- A subtle divider line separates the two halves.
+- The [AuthCard](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx#12-164) flips in sync with the swap to show the appropriate fields.
+
+### Revolving Developer Tips
+- Tips are now updated every **6 seconds** (timer adjusted from 5s).
+- Each tip transition is handled by `AnimatePresence` for a professional fade-in/fade-out look.
+
+## Components Updated
+
+### [AuthContainer.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthContainer.tsx)
+- Implemented the `order-1`/`order-2` swap logic with Framer Motion.
+- Added the "Toggle" button inside the tips section.
+
+### [DevTips.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/DevTips.tsx)
+- Adjusted interval to **6000ms**.
+- Updated layout to be centered and responsive.
+
+#### [InitialLoader.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/ui/InitialLoader.tsx)
+- Added `import React` to ensure correct typing for `React.ReactNode`.
+- Converted the function to a constant arrow function to match common patterns and ensure it's correctly exported.
+- **RESTORED**: Added `"use client";` to the top of the file, which was accidentally removed. This is required for components using `useState` and `useEffect`.
+
+### [AuthCard.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx)
+- Made the flip state controlled by the parent component for perfect synchronization.
+
+## Verification Result
+Ran `npx tsc --noEmit` and the project builds successfully. The animations provide a high-end feel as requested.

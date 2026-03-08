@@ -1,0 +1,54 @@
+# Task List
+
+- [x] Modify Hero Background Image
+    - [x] Add blur effect to the background image
+    - [x] Fix scrolling issue (prevent excessive movement)
+    - [x] Revert to fixed background behavior
+- [x] Modify "Nuestra Trayectoria" Text
+    - [x] Change text color to black
+    - [x] Change stats numbers to white
+- [x] Center Corporate Value Cards
+    - [x] Update flex/grid layout in CorporateValues.tsx
+- [x] Center ContactInfo Cards
+    - [x] Locate and modify ContactInfo.tsx
+    - [x] Update MobileCarousel className in ContactInfo.tsx
+- [x] Troubleshoot Build Failure
+    - [x] Verify directory structure
+    - [x] Verify package.json scripts
+- [x] Troubleshoot Dev Server Lock
+    - [x] Identify blocking process
+    - [x] Terminate blocking process
+- [x] Troubleshoot Vercel Deployment
+    - [x] Diagnose Root Directory mismatch
+    - [x] Instruct user to update Vercel settings
+- [x] Modify Hero Stats
+    - [x] Remove "100+ Proyectos Completados"
+    - [x] Update "15+ Años de Experiencia" to "10+"
+- [x] Add PESV Service Card to DetailedServices.tsx
+    - [x] Read DetailedServices.tsx
+    - [x] Append new service object to the list
+- [x] Generate PESV Image
+    - [x] Generate image using AI
+    - [x] Save image to public/images/services/pesv.png
+- [x] Update Service Images (Sections 5 & 6)
+    - [x] Generate image for RUC (Section 5)
+    - [x] Generate image for HSEQ (Section 6)
+    - [x] overwrite public/images/services/ruc.png
+    - [x] overwrite public/images/services/hseq.png
+- [x] Troubleshoot Image Cache
+    - [x] Verify file timestamps
+    - [x] Add cache-busting query param to image URLs
+- [x] Fix Image Error and Cache
+    - [x] Rename image files (ruc -> ruc-updated, hseq -> hseq-updated)
+    - [x] Update DetailedServices.tsx with new filenames
+- [x] Troubleshoot GitHub Push
+    - [x] Check git status and remotes
+    - [x] Commit any pending changes
+    - [x] Push to origin/santiago (FAILED: Large file in node_modules)
+- [ ] Fix Large File Error
+    - [x] Check for .gitignore (Missing)
+    - [x] Create .gitignore
+    - [x] Remove node_modules from git tracking (Local Fix Only)
+    - [x] Commit removal (Still failed push due to history)
+    - [x] Rewrite git history to remove large file
+    - [ ] Force push clean history

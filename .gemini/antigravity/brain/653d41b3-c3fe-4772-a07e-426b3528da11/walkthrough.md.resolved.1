@@ -1,0 +1,36 @@
+# Walkthrough - Moving Header and Footer to Shared Folder
+
+I have successfully moved the [Header](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/shared/Header.tsx#7-82) and `Footer` components to the `components/shared/` folder to improve project organization.
+
+## Changes Made
+
+### File Restructuring
+- Moved [components/ui/Header.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/Header.tsx) to [components/shared/Header.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/shared/Header.tsx).
+- Moved [components/ui/Footer.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/Footer.tsx) to [components/shared/Footer.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/shared/Footer.tsx).
+
+### Import Updates
+
+#### [layout.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/layout.tsx)
+- Updated the import paths for [Header](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/shared/Header.tsx#7-82) and `Footer` to point to the new location:
+```diff
+-import Header from '@/components/ui/Header'
+-import Footer from '@/components/ui/Footer'
++import Header from '@/components/shared/Header'
++import Footer from '@/components/shared/Footer'
+```
+
+#### [Header.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/shared/Header.tsx)
+- Updated the relative import for the [Button](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/Button.tsx#41-63) component:
+```diff
+-import { Button } from "./Button";
++import { Button } from "../ui/Button";
+```
+
+## Verification Results
+
+### Automated Tests
+- Ran `npm run build` which completed successfully, confirming that all imports are correct and the project is functional:
+```
+✓ Compiled successfully in 1641.6ms
+✓ Finished TypeScript in 2.1s
+```

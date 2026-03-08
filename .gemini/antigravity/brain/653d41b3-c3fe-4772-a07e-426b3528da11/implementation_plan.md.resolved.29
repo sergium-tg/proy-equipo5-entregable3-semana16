@@ -1,0 +1,18 @@
+# Favicon Implementation
+
+The user reported the favicon is not showing.
+Analysis:
+- [app/favicon.ico](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/favicon.ico) exists.
+- [app/layout.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/layout.tsx) explicitly sets `icons: { icon: "/images/logo-siprac.jpg" }`.
+- Checking if [public/images/logo-siprac.jpg](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/public/images/logo-siprac.jpg) exists.
+
+## Proposed Changes
+### [Layout]
+#### [MODIFY] [layout.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/layout.tsx)
+- If [logo-siprac.jpg](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/public/images/logo-siprac.jpg) is missing, remove the incorrect reference.
+- Let Next.js handle [favicon.ico](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/favicon.ico) automatically (by removing the `icons` property from metadata or pointing it to [/favicon.ico](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/favicon.ico)).
+- Remove the `<link rel="icon" ...>` tag from the `<head>` section as Next.js injects this automatically based on file conventions or metadata.
+
+## Verification Plan
+### Manual Verification
+- Refresh the browser and check the tab icon.

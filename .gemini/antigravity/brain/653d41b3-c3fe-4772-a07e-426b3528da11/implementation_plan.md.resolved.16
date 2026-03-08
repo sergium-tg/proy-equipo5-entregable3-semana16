@@ -1,0 +1,21 @@
+# Mission & Vision: Pronounced Neumorphic Redesign
+
+We will update the [MissionVision.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/about/MissionVision.tsx) component to implement a more distinct neumorphic (soft UI) effect on the Mission and Vision cards.
+
+## Proposed Changes
+
+### [Mission & Vision Component]
+#### [MODIFY] [MissionVision.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/about/MissionVision.tsx)
+-   Implement a stronger dual shadow system for a more "marked" effect.
+-   Apply persistent neumorphic shadows to the Mission and Vision cards.
+-   Add interactive hover effects on the icon containers, similar to the Benefits section.
+-   Ensure background consistency for the neumorphic effect to be effective.
+
+## Verification Plan
+
+### Automated Tests
+- Run `npm run build` to ensure no UI breakages.
+
+### Manual Verification
+- Visual inspection of the more pronounced neumorphic shadows.
+- Verify that the cards look deeply integrated into the screen background.

@@ -1,0 +1,40 @@
+# Recreate About Page
+
+The user wants to recreate the "About" page from a provided Netlify URL. We have extracted the content and will implement it using a component-based approach.
+
+## Proposed Changes
+
+### Components
+We will create a specific folder `components/about/` for these components to keep the project organized.
+
+#### [NEW] [AboutHero.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/about/AboutHero.tsx)
+- Simple hero section with "Quiénes Somos".
+
+#### [NEW] [CompanyIntro.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/about/CompanyIntro.tsx)
+- "Nuestra Empresa" text section.
+
+#### [NEW] [MissionVision.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/about/MissionVision.tsx)
+- Two columns/cards for Mission and Vision.
+
+#### [NEW] [Team.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/about/Team.tsx)
+- Team member profiles (Nini and Michel).
+- Use placeholder images or extracted text.
+
+#### [NEW] [CorporateValues.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/about/CorporateValues.tsx)
+- Grid of 5 values (Compromiso, Excelencia, etc.).
+
+#### [NEW] [CorporateObjectives.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/about/CorporateObjectives.tsx)
+- List of 4 objectives.
+
+#### [NEW] [AboutCTA.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/about/AboutCTA.tsx)
+- Call to action section: "¿Listo para optimizar...?" with a button.
+
+### Page
+#### [MODIFY] [page.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/about/page.tsx)
+- Assemble all the above components. Include `AboutCTA` at the bottom.
+
+## Verification Plan
+### Manual Verification
+- navigate to `/about`.
+- Check that all content matches the extracted text.
+- Check responsiveness.

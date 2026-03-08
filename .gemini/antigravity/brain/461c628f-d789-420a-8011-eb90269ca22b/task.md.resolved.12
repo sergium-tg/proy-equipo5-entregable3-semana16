@@ -1,0 +1,16 @@
+# Task: Integrate Blob Auth Design
+
+- [/] Planning integration of user code <!-- id: 0 -->
+    - [x] Analyze provided LoginPage and SignupPage code <!-- id: 1 -->
+    - [/] Map blob animations and variants to DevAuth theme <!-- id: 2 -->
+- [ ] Update `globals.css` <!-- id: 3 -->
+    - [ ] Add custom keyframes for blob animations <!-- id: 4 -->
+    - [ ] Define theme color variables if needed <!-- id: 5 -->
+- [ ] Implement Blob-inspired [AuthContainer](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthContainer.tsx#12-87) <!-- id: 6 -->
+    - [ ] Integrate background blob animations <!-- id: 7 -->
+    - [ ] Maintain the side-swapping logic <!-- id: 8 -->
+- [ ] Implement variant-based [AuthCard](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx#12-202) <!-- id: 9 -->
+    - [ ] Adopt `itemVariants`, `containerVariants` from user code <!-- id: 10 -->
+    - [ ] Style forms with DevAuth colors (Deep Blue/Emerald/Purple) <!-- id: 11 -->
+- [ ] Verify flow and aesthetics <!-- id: 12 -->
+    - [ ] Confirm animations are smooth and centering is perfect <!-- id: 13 -->

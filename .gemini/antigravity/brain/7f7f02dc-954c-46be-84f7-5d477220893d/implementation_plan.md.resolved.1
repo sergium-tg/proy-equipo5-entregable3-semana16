@@ -1,0 +1,19 @@
+# Hero Scroll Enhancements Plan (v2)
+
+The current scroll animations are not visible because the page has no scrollable content. I will add content and implement a more dramatic "premium" scroll effect.
+
+## Proposed Changes
+
+### [Page] [Home](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/app/page.tsx)
+- Add a placeholder "Features" section below the [Hero](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/components/hero/Hero.tsx#11-35) to enable scrolling.
+
+### [Component] [AnimatedBackground](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/components/hero/components/AnimatedBackground.tsx)
+- Update scroll tracking to calculate a `scroll-progress` (0 to 1) based on viewport height.
+- Apply this progress to blur, scale, and opacity of the background orbs.
+
+### [Component] [Hero](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/components/hero/Hero.tsx)
+- Apply scroll-based transforms to the `content` layer so it fades and moves upward as the user scrolls down.
+
+## Verification Plan
+- Manually scroll the page and verify the transition between the Hero and the content below.
+- Ensure the background effects are clearly visible and "smooth".

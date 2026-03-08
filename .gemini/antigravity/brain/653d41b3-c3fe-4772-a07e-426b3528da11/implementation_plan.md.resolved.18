@@ -1,0 +1,21 @@
+# Corporate Values: Intensified Neumorphic Effect
+
+We will update the [CorporateValues.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/about/CorporateValues.tsx) component to implement a more distinct and "marked" neumorphic effect on the value cards.
+
+## Proposed Changes
+
+### [Corporate Values Component]
+#### [MODIFY] [CorporateValues.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/about/CorporateValues.tsx)
+- Apply the intensified dual shadow system (20px/40px) to the value cards.
+- Ensure the effect is visible around all borders.
+- Match card background to section background for the "sculpted" look.
+- Apply neumorphic styling to the icons within the cards.
+
+## Verification Plan
+
+### Automated Tests
+- Run `npm run build` to ensure no UI breakages.
+
+### Manual Verification
+- Visual inspection of the high-contrast neumorphic shadows on the value cards.
+- Verify the tactile feel and consistency with other sections.

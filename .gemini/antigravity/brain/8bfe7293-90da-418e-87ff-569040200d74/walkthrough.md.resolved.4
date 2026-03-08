@@ -1,0 +1,27 @@
+# Walkthrough - Refactor Services and ContactInfo with MobileCarousel
+
+I have applied the responsive [MobileCarousel](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/MobileCarousel.tsx#11-36) component to [ValuedAudits](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/ValuedAudits.tsx#34-80), [CoreAdvisory](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/CoreAdvisory.tsx#40-115), [DetailedServices](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/DetailedServices.tsx#101-181), and [ContactInfo](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/contact/ContactInfo.tsx#4-114).
+
+## Changes
+
+### [components/ui/MobileCarousel.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/MobileCarousel.tsx)
+
+Refined component to have narrower cards (`75vw`) and gap spacing (`gap-4`) for better mobile aesthetics.
+
+### `components/services`
+
+Refactored three components to use [MobileCarousel](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/MobileCarousel.tsx#11-36):
+- **[ValuedAudits.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/ValuedAudits.tsx)**
+- **[CoreAdvisory.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/CoreAdvisory.tsx)**
+- **[DetailedServices.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/DetailedServices.tsx)**
+
+### `components/contact`
+
+- **[ContactInfo.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/contact/ContactInfo.tsx)**: Wrapped contact cards in [MobileCarousel](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/MobileCarousel.tsx#11-36) to provide horizontal scrolling on mobile while maintaining grid layout on desktop.
+
+## Verification Results
+
+### Implementation
+- [MobileCarousel](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/MobileCarousel.tsx#11-36) is now the standard wrapper for card lists across the site.
+- Consistent behavior (snap scrolling, 75vw width) on mobile.
+- Responsive design maintained for desktop (grid layout).

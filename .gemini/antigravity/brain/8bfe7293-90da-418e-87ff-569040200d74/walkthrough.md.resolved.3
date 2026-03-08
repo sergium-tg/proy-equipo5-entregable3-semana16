@@ -1,0 +1,33 @@
+# Walkthrough - Refine Mobile Carousel Dimensions
+
+I adjusted the [MobileCarousel](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/MobileCarousel.tsx#11-36) component to refine the appearance on mobile devices based on your feedback.
+
+## Changes
+
+### [components/ui/MobileCarousel.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/MobileCarousel.tsx)
+
+- **Reduced Width**: Changed card width from `85vw` to `75vw` to make them less wide.
+- **Added Spacing**: Added `gap-4` to the flex container to ensure spacing between cards.
+
+```diff
+         /* Mobile: Horizontal Scroll */
+         flex overflow-x-auto snap-x snap-mandatory 
+-        pb-8 -mx-4 px-4 scrollbar-hide
++        pb-8 -mx-4 px-4 gap-4 scrollbar-hide
+         
+         /* Desktop: Standard Grid or Flex (controlled by parent/className) */
+         md:grid md:overflow-visible md:pb-0 md:mx-0 md:px-0
+@@ -25,7 +25,7 @@
+       `}
+         >
+             {React.Children.map(children, (child) => (
+-                <div className="snap-center shrink-0 w-[85vw] md:w-auto md:shrink-1 h-full">
++                <div className="snap-center shrink-0 w-[75vw] md:w-auto md:shrink-1 h-full">
+                     {child}
+```
+
+## Verification Results
+
+### Implementation
+- The changes apply globally to [ValuedAudits](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/ValuedAudits.tsx#34-80), [DetailedServices](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/DetailedServices.tsx#101-181), and [CoreAdvisory](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/CoreAdvisory.tsx#40-115) since they all use [MobileCarousel](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/MobileCarousel.tsx#11-36).
+- Spacing and width should now be more balanced.

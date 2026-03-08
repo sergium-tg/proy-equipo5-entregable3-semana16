@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_WALKTHROUGH",
+  "summary": "Documentation of the fix for the Next.js lock file issue. The process involved killing stale processes and removing the lock file.",
+  "updatedAt": "2026-03-08T05:08:30.868861Z"
+}

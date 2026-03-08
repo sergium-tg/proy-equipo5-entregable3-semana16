@@ -1,0 +1,26 @@
+# Contact Info Enhancement: Typography and Icons
+
+We will refine the [ContactInfo.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/contact/ContactInfo.tsx) component by adding specific icons to phone numbers and increasing the overall font sizes for better visibility and legibility.
+
+## Proposed Changes
+
+### [Contact Component]
+#### [MODIFY] [ContactInfo.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/contact/ContactInfo.tsx)
+- Import `PhoneForwarded` from `lucide-react`.
+- Update the "Teléfonos" card to display the `PhoneForwarded` icon next to each number.
+- Increase font sizes across all elements in the cards:
+    - Titles: `text-2xl` -> `text-3xl`
+    - Items (Phones/Emails): `text-xs` -> `text-base`
+    - Details (Schedule): `text-[10px]/text-[11px]` -> `text-base`
+    - Content/Description: `text-[11px]` -> `text-sm`
+    - Footer/Small text: `text-[10px]` -> `text-xs`
+- Ensure icons remain proportional to the new font sizes.
+
+## Verification Plan
+
+### Automated Tests
+- Run `npm run build` to ensure the component compiles correctly with new imports.
+
+### Manual Verification
+- Visual inspection of the "Teléfonos" card to confirm the presence of the `PhoneForwarded` icon.
+- Confirm that font sizes are visibly larger and more readable.

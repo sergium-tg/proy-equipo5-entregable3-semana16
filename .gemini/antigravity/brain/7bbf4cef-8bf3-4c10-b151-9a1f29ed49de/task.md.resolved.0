@@ -1,0 +1,17 @@
+# Task: Create Contact Page and Update Global Styles
+
+Recreate the contact page based on reference images and update the overall website color scheme (off-white background, orange/black themes).
+
+## Checklist
+
+- [ ] Update Global Styles and Theme ([globals.css](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/globals.css)) <!-- id: 0 -->
+- [ ] Update Navigation and Header ([Header.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/Header.tsx)) <!-- id: 1 -->
+- [ ] Update Footer to Black ([Footer.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/Footer.tsx)) <!-- id: 2 -->
+- [ ] Implement Contact Page Components <!-- id: 3 -->
+    - [ ] `ContactHero.tsx` <!-- id: 4 -->
+    - [ ] `ContactInfo.tsx` <!-- id: 5 -->
+    - [ ] `ContactForm.tsx` <!-- id: 6 -->
+    - [ ] `Location.tsx` <!-- id: 7 -->
+    - [ ] `FAQ.tsx` <!-- id: 8 -->
+- [ ] Assemble Contact Page (`app/contact/page.tsx`) <!-- id: 9 -->
+- [ ] Final Verification and Responsive Check <!-- id: 10 -->

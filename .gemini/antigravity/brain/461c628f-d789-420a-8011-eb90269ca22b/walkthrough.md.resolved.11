@@ -1,0 +1,32 @@
+# Walkthrough - Neumorphic Sliding Auth Redesign
+
+I have completely pivoted the authentication experience to a **Neumorphic (Soft UI)** aesthetic, returning to the highly requested "Sliding Overlay" mechanism. This design focuses on tactile, extruded surfaces and soft depth.
+
+## Key Implementation Details
+
+### 1. Neumorphic Design System
+- **Custom Shadows**: Implemented `shadow-nm-flat` and `shadow-nm-inset` utilities in Tailwind. These create the distinctive and soft "extruded" look in dark mode.
+- **Base Background**: Adjusted the background to `#0c0d21` to provide the perfect contrast for soft UI shadows.
+
+### 2. Neumorphic Navbar
+- A floating, centered navigation bar with soft, tactile buttons.
+- **Pressed State**: Buttons appear to physically sink into the navbar on click (`nm-inset` animation).
+
+### 3. Tactile Sliding Auth
+- **AuthContainer**: Centered, large-radius card with a horizontal sliding overlay.
+- **Depth Elements**: Added ambient background glows that complement the tactile depth of the neumorphic cards.
+
+### 4. Soft UI Auth Forms
+- **Inset Inputs**: Redesigned [LoginForm](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx#20-92) and [RegisterForm](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx#93-168) with inset shadows to make input fields look like they are carved into the surface.
+- **Extruded Buttons**: Main action buttons are "raised" from the surface and respond with soft transitions on hover and tap.
+
+## Files Modified
+- [layout.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/layout.tsx)
+- [AuthContainer.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthContainer.tsx)
+- [AuthCard.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx)
+- [Navbar.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/ui/Navbar.tsx)
+- [globals.css](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/globals.css)
+- [tailwind.config.ts](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/tailwind.config.ts)
+
+## Final Check
+Build verified successfully with `npx tsc --noEmit`. The transition between forms is smooth and the visual depth is consistent across all components.

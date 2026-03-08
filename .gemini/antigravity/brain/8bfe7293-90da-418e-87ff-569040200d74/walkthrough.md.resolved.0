@@ -1,0 +1,26 @@
+# Walkthrough - Fix TypeScript Error in CoreAdvisory
+
+I have resolved the TypeScript assignment error in [CoreAdvisory.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/CoreAdvisory.tsx) by refactoring how icons are stored and rendered.
+
+## Changes
+
+### [components/services/CoreAdvisory.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/CoreAdvisory.tsx)
+
+Refactored `advisoryServices` to store component references instead of JSX elements, and updated the render loop to instantiate them directly. This avoids the `React.cloneElement` type mismatch issue.
+
+```diff
+ const advisoryServices = [
+     {
+-        icon: <LayoutGrid className="size-8" />,
++        icon: LayoutGrid,
+         title: 'Sistemas de Gestión Integrado (SGI)',
+// ...
+-                                       {React.cloneElement(service.icon as React.ReactElement, { className: "size-6 md:size-8" })}
++                                       <service.icon className="size-6 md:size-8" />
+```
+
+## Verification Results
+
+### Automated Tests
+- Validated that `lucide-react` icons function correctly as React components and accept `className` props.
+- The syntax is valid JSX/TSX.

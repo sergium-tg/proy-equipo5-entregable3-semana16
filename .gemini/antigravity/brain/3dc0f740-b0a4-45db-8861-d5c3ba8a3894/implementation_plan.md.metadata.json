@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary": "Plan for building a senior-quality Next.js auth UI. Covers Hero with animated background, sliding auth overlay, modular form components with micro-animations, CSS Modules design system, and TypeScript config.",
+  "updatedAt": "2026-03-08T04:52:01.601940Z"
+}

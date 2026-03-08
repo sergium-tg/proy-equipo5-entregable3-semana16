@@ -1,0 +1,12 @@
+- [x] Apply Immersion Neumorphism to Service Cards
+    - [x] Create implementation plan
+    - [x] Locate specific cards in [DetailedServices.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/DetailedServices.tsx)
+    - [x] Apply inset shadows and styling logic
+    - [x] Verify visual consistency
+    - [x] Update walkthrough
+- [x] Generate Service Images
+    - [x] Create implementation plan
+    - [x] Generate images for SST, Environment, Quality, Audits
+    - [x] Integrate images into [DetailedServices.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/DetailedServices.tsx)
+    - [x] Verify image loading
+    - [x] Update walkthrough

@@ -1,0 +1,32 @@
+# Global Immersion Neumorphism Redesign
+
+We will unify the neumorphic style across the website using an "immersion" (inset) approach. Cards will appear carved into the background, and hover effects will be simplified to color changes only, removing all physical movement.
+
+## Proposed Changes
+
+### [Benefits, Mission & Vision, Corporate Values]
+#### [MODIFY] [Benefits.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/Benefits.tsx)
+-   Apply persistent **inset** shadows.
+-   Remove hover translation (`translate-y`).
+-   Remove icon animations (scale, rotate, translate).
+-   Only change icon/text color on hover.
+
+#### [MODIFY] [MissionVision.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/about/MissionVision.tsx)
+-   Switch from outward shadows to **inset** shadows.
+-   Remove hover translation.
+-   Remove icon animations.
+-   Only change color on hover.
+
+#### [MODIFY] [CorporateValues.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/about/CorporateValues.tsx)
+-   Switch from outward shadows to **inset** shadows.
+-   Remove hover translation.
+-   Only change color on hover.
+
+## Verification Plan
+
+### Automated Tests
+- Run `npm run build` to ensure no UI breakages.
+
+### Manual Verification
+- Visual inspection of the "inset" look across all three sections.
+- Verify that hovering only changes colors and doesn't move any elements.

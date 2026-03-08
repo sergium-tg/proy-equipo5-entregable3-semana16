@@ -1,0 +1,29 @@
+# Neumorphic Services & Mobile Navbar
+
+The user wants two major UI upgrades:
+1.  **Mobile Navbar**: A slide-in menu from the left that focuses the menu items while heavily blurring the background content ("focus effect").
+2.  **Services Portfolio (Home)**: A reusable component with a specific neumorphic style:
+    - Shadow structure: White shadow top-left, Dark shadow bottom-right.
+    - Aesthetic: "Extruded" look (raised).
+
+## Proposed Changes
+### [Components]
+#### [MODIFY] [Header.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/shared/Header.tsx)
+-   Implement `isOpen` state for mobile menu.
+-   Create a full-screen or side-panel overlay.
+-   **Focus Effect**: When open, apply `backdrop-blur-xl` or similar to the overlay background, effectively blurring the *rest* of the page behind it.
+-   **Animation**: Slide in from left using `transform` transitions.
+
+#### [MODIFY] [Services.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/Services.tsx)
+-   Refactor the service card logic into a reusable `NeumorphicCard` style or component.
+-   **CSS Logic**:
+    -   Background: `#FAF9F6` (matching the section background).
+    -   Shadows: `shadow-[10px_10px_20px_#d1d5db,-10px_-10px_20px_#ffffff]`. (Adjusting colors to fit the white/gray theme).
+    -   Content: Keep existing icons and text but ensure they sit comfortably within this new depth.
+
+#### [MODIFY] [globals.css](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/globals.css)
+-   Add utility classes for the specific neumorphic shadows if needed, or use arbitrary values in Tailwind.
+
+## Verification
+-   **Mobile**: Trigger the menu on a small viewport. Check the blur effect + slide animation.
+-   **Services**: Verify the shadows are correctly oriented (Light TL, Dark BR).

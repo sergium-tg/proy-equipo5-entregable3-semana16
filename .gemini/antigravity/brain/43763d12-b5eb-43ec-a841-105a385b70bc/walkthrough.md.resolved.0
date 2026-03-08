@@ -1,0 +1,28 @@
+# Resolution: Cannot find module 'next/headers'
+
+I have resolved the issue where the `next/headers` module could not be found. The root cause was a missing `node_modules` directory, which meant the project's dependencies were not installed locally.
+
+## Changes Made
+
+### Dependency Restoration
+- Executed `npm install` to download and install all required packages listed in [package.json](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/package.json).
+- Verified the creation of the `node_modules` folder.
+
+## Verification Results
+
+### Automated Tests
+- Successfully ran `npm run build`, which confirmed that all modules (including `next/headers`) are now correctly resolved and the project is type-safe.
+
+```bash
+# Build output summary
+Route (app)                                            
+┌ ○ /_not-found                                        
+├ ƒ /api/users/login                                   
+├ ƒ /api/users/logout                                
+└ ƒ /api/users/register                                
+...
+Exit code: 0
+```
+
+### Manual Verification
+- You can now see that the red squiggly lines in [src/lib/supabase/server.ts](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/lib/supabase/server.ts) have disappeared (you might need to restart the TypeScript server in your IDE if they persist, but the build proves they are gone).

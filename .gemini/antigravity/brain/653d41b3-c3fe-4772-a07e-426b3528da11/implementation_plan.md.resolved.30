@@ -1,0 +1,26 @@
+# Email Template Redesign
+
+The user wants the notification email to match the website's "liquid glass" and "neumorphic" aesthetic.
+Current state: Basic HTML string in [sendDiagnosticEmail](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/actions/send-email.ts#7-72).
+
+## Proposed Changes
+### [Actions]
+#### [MODIFY] [send-email.ts](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/actions/send-email.ts)
+- Replace the simple HTML string with a robust, table-based HTML template.
+- **Design Specs**:
+    - **Background**: `#FAF9F6` (Main site background).
+    - **Container**: Rounded corners, "Glass" effect simulation using borders (`border: 1px solid rgba(255,255,255,0.8)`) and soft shadows.
+    - **Typography**: Sans-serif, dark gray text, Orange (`#f97316`) headers.
+    - **Neumorphism**: Since email clients have limited CSS support for complex shadows (`box-shadow`), we will use comprehensive fallbacks (solid borders, simple background colors) that approximation the look.
+    - **Structure**:
+        - Header with Title/Logo placeholder.
+        - Data sections organized in clean blocks.
+        - Footer with subtle styling.
+
+## Compatibility Note
+- `backdrop-filter` is not supported in most email clients (Gmail, Outlook).
+- `box-shadow` support is mixed.
+- We will rely on **color palette** and **spacing** to evoke the feel, rather than depending on advanced CSS rendering.
+
+## Verification Plan
+- Since we cannot send actual emails in this environment, checking the code compilation and visually verifying the HTML structure (by potentially rendering it in a test page temporarily if needed, or just careful code review) will be the method.

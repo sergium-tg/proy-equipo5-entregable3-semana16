@@ -1,0 +1,34 @@
+# Implementation Plan - Neumorphic Sliding Auth
+
+The objective is to pivot the design to **Neumorphism** (Soft UI) while implementing a "Sliding Overlay" for the Login/Register forms. This moves away from minimalist glassmorphism towards tactile, extruded elements with soft shadows.
+
+## Proposed Changes
+
+### [Design System]
+#### [MODIFY] [tailwind.config.ts](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/tailwind.config.ts)
+- Add custom neumorphic shadow utilities for both "elevated" and "pressed" states in dark mode.
+- Define a base background color that works well with soft shadows (e.g., `#0c0d21` or similar).
+
+### [Global Styles]
+#### [MODIFY] [globals.css](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/globals.css)
+- Set the base background and ensure text contrast is high for neumorphic surfaces.
+
+### [UI Components]
+#### [NEW] [Navbar.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/ui/Navbar.tsx)
+- Implement a neumorphic navigation bar with "floating" buttons that appear pressed on click.
+
+### [Auth Components]
+#### [MODIFY] [AuthContainer.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthContainer.tsx)
+- **Sliding Mechanism**: Re-implement the horizontal sliding overlay using Framer Motion.
+- **Visuals**: Use large, soft-shadowed containers centered on the screen.
+
+#### [MODIFY] [AuthCard.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx)
+- **Forms**: Redesign forms using neumorphic inputs (inset shadows) and buttons (outer shadows).
+- **Aceternity Integration**: Adapt the Aceternity focus effects to complement the neumorphic depth.
+
+## Verification Plan
+
+### Manual Verification
+- **Tactile Feedback**: Ensure buttons and inputs feel "clickable" through shadow transitions.
+- **Contrast Check**: Verify that the neumorphic "inner" shadows in dark mode don't wash out the text inputs.
+- **Sliding Animation**: Confirm smooth transition between Login and Register states.

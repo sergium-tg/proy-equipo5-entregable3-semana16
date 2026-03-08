@@ -1,0 +1,14 @@
+# Verification of Image Cache Fix
+
+I have applied a fix to force the browser to load the new images for the RUC and HSEQ services.
+
+## Changes Made
+- **Code Update**: Added `?v=2` to the image file paths in [DetailedServices.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/DetailedServices.tsx).
+    - [ruc.png](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/public/images/services/ruc.png) -> `ruc.png?v=2`
+    - [hseq.png](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/public/images/services/hseq.png) -> `hseq.png?v=2`
+
+## Verification
+- **Visual Check**:
+    - Build or start the dev server again (if not auto-reloaded).
+    - Refresh the **Services** page.
+    - The images should now correctly display the new versions (RUC with industry/checklist elements, HSEQ with integration/gears elements).

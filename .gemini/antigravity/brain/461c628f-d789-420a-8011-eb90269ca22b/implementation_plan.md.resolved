@@ -1,0 +1,42 @@
+# Implementation Plan - Shared Components, White Card Redesign & Build Fix
+
+The objective is to refactor global UI components into a `shared` directory, redesign the authentication forms into a centered, white-card layout, and resolve the build error caused by Client/Server component mismatches.
+
+## Proposed Changes
+
+### [Architecture & Shared Components]
+#### [NEW] [Header.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/shared/Header.tsx)
+- Create a [Header](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/shared/Header.tsx#7-18) component that encapsulates the [Navbar](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/shared/Navbar.tsx#9-59).
+- Ensure consistent styling and layout.
+
+#### [NEW] [Footer.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/shared/Footer.tsx)
+- Implement a global [Footer](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/shared/Footer.tsx#6-32) with essential links and branding.
+- Match the new clean aesthetic.
+
+#### [MOVE/MODIFY] [Navbar.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/shared/Navbar.tsx)
+- Move from `/ui` to `/shared`.
+- Refine design to integrate seamlessly with the new [Header](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/shared/Header.tsx#7-18).
+
+### [Authentication Redesign]
+#### [MODIFY] [AuthCard.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx)
+- **Visual Overhaul**: Wrap forms in a high-quality **white card**.
+- **Centering**: Use `flex justify-center items-center` for perfect screen centering.
+- **Typography**: Balance font colors (likely dark text for the white card components) while maintaining the user's "font blanco" preference where appropriate (likely background elements or headers).
+- **Optimization**: Improve spacing and layout for a more compact and professional look.
+
+#### [MODIFY] [layout.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/layout.tsx)
+- Integrate newly created [Header](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/shared/Header.tsx#7-18) and [Footer](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/shared/Footer.tsx#6-32).
+- Update import paths for the moved [Navbar](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/shared/Navbar.tsx#9-59).
+
+### [Build Factor]
+#### [MODIFY] [Header.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/shared/Header.tsx)
+- [DELETE] Remove `"use client"` directive.
+- Keep as an `async` Server Component to safely call [getAuthenticatedUser](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/modules/users/users.service.ts#121-151).
+
+## Verification Plan
+
+### Manual Verification
+- **Structural Integrity**: Verify the new `shared` folder structure and component imports.
+- **Design Check**: Confirm the auth forms are centered in a white card with improved spacing.
+- **Navigation**: Test that the Header/Navbar and Footer appear correctly across pages.
+- **Responsiveness**: Ensure the centered card layout works well on various screen sizes.

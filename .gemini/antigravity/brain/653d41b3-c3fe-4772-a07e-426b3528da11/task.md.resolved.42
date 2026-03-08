@@ -1,0 +1,7 @@
+# Detailed Cards
+
+- [/] Mobile Detailed Cards
+    - [x] Analyze current mobile layout issue
+    - [ ] Refactor DetailedServices to use Card styling on mobile
+    - [ ] Ensure desktop layout remains unchanged
+    - [ ] Update walkthrough

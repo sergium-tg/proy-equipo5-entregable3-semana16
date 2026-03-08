@@ -1,0 +1,53 @@
+∞@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-main: #060714;
+    --bg-card: #0c0d21;
+    --border-accent: rgba(255, 255, 255, 0.08);
+    --color-primary: #3b82f6;
+    --color-secondary: #a855f7;
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.05);
+  }
+
+  body {
+    @apply antialiased;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    background-image:
+      radial-gradient(circle at 10% 10%, rgba(59, 130, 246, 0.03) 0%, transparent 40%),
+      radial-gradient(circle at 90% 90%, rgba(168, 85, 247, 0.03) 0%, transparent 40%);
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}\ *cascade08\a*cascade08ad *cascade08de *cascade08e}}~*cascade08~ *cascade08Å*cascade08ÅÇ *cascade08
+Çà àä *cascade08ä∫∫º*cascade08ºΩ *cascade08Ωø*cascade08ø¿ *cascade08¿«*cascade08«  *cascade08 –*cascade08–— *cascade08—÷ *cascade08÷◊ *cascade08◊⁄*cascade08⁄€ *cascade08€‹*cascade08‹ﬁ *cascade08ﬁﬂ*cascade08ﬂ‡ *cascade08‡‚*cascade08‚‰ *cascade08‰Ë*cascade08ËÍ *cascade08ÍÎ*cascade08ÎÏ *cascade08ÏÌ *cascade08Ì*cascade08Ò *cascade08
+ÒÚ Ú¯ *cascade08¯Ä*cascade08ÄÅ *cascade08Åóóò *cascade08ò¨¨≠ *cascade08≠Ø*cascade08Ø∞ *cascade08∞≤*cascade08≤≥ *cascade08≥µ*cascade08µ∑ *cascade08∑º *cascade08ºø*cascade08ø¡ *cascade08¡ƒ*cascade08ƒ∆ *cascade08∆…*cascade08…Õ *cascade08Õœ*cascade08œ–*cascade08–— *cascade08
+—“ “‘ *cascade08
+‘÷ ÷ÿ *cascade08ÿ⁄*cascade08⁄€ *cascade08€›*cascade08›ﬁ *cascade08ﬁ‰*cascade08‰Ë *cascade08ËÈ *cascade08È˜*cascade08˜¯ *cascade08¯˙*cascade08˙˚ *cascade08˚¸*cascade08¸˝ *cascade08˝˛*cascade08˛ˇ*cascade08ˇÄ *cascade08
+ÄÉ É• *cascade08•Ø *cascade08Ø± *cascade08±æ*cascade08æø *cascade08ø— *cascade08—Ó*cascade08Ó¯ *cascade08¯˘ *cascade08˘Ö *cascade08ÖÜ *cascade08Üà*cascade08àâ *cascade08âä*cascade08äã *cascade08ãé*cascade08éè *cascade08èî*cascade08îï *cascade08ïõ*cascade08õú *cascade08ú† *cascade08
+†° °¢*cascade08¢§ *cascade08§•*cascade08•Æ *cascade08Æ∞*cascade08∞≥ *cascade08≥µ*cascade08µ∏ *cascade08∏∫*cascade08∫æ *cascade08
+æø ø¿*cascade08¿∆ *cascade08∆« *cascade08«»*cascade08»… *cascade08…À*cascade08ÀÃ *cascade08ÃŒ*cascade08Œœ *cascade08œ“ *cascade08“””‰ *cascade08‰Ë *cascade08Ë¯*cascade08¯˙*cascade08˙¸ *cascade08¸˝*cascade08˝Ü *cascade08Üà*cascade08àå *cascade08åç*cascade08çë *cascade08ëí*cascade08íó *cascade08óò*cascade08ò† *cascade08†° *cascade08°£*cascade08£§ *cascade08§¶*cascade08¶ß *cascade08ß™ *cascade08™´´∑ *cascade08∑∏ *cascade08∏ª*cascade08ªº *cascade08º≈*cascade08≈À *cascade08À„„ˇ *cascade08ˇÇ*cascade08ÇÑ *cascade08ÑÖ*cascade08ÖÜ *cascade08Üå*cascade08åù *cascade08ùü *cascade08üüü¶ *cascade08¶ª *cascade08ªΩΩ≈ *cascade08≈∆∆… *cascade08…  À *cascade08ÀÕÕË *cascade08ËÍÍ˜ *cascade08˜¯¯˙ *cascade08˙ÇÇÉ *cascade08ÉÑÑÖ *cascade08Öáá¢ *cascade08¢§§ß *cascade08ß©*cascade08©´ *cascade08´Æ*cascade08Æ∞ *cascade08∞±*cascade08±≤ *cascade08≤¥*cascade08¥µ *cascade08µ≈*cascade08≈∆ *cascade08∆  *cascade08 ÃÃŒ*cascade08Œœ *cascade08œ–*cascade08–“ *cascade08“”*cascade08”‘ *cascade08‘ÿ*cascade08ÿŸ *cascade08Ÿ‹ *cascade08‹ﬁﬁ‡ *cascade08‡· *cascade08·‚‚‰ *cascade08‰ÂÂÜ *cascade08Üààã *cascade08ãç*cascade08çè *cascade08èí*cascade08íì *cascade08ìï*cascade08ïñ *cascade08ñó*cascade08óô *cascade08ô†*cascade08†° *cascade08°©*cascade08©™ *cascade08™≠*cascade08≠Æ *cascade08ÆØØ∞ *cascade08"(72bd7035e7a959ee4bbfe129beb12c2a2dd46bad2kfile:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/globals.css:Wfile:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico

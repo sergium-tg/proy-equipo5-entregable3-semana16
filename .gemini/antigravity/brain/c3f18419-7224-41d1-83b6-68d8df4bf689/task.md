@@ -1,0 +1,36 @@
+- [x] Fix Project Configuration <!-- id: 0 -->
+    - [x] Restore `globals.css` with Tailwind directives <!-- id: 1 -->
+    - [x] Implement `Header.tsx` component <!-- id: 2 -->
+    - [x] Import and use Header in `layout.tsx` <!-- id: 3 -->
+    - [x] Implement `Footer.tsx` component <!-- id: 4 -->
+- [ ] Recreate About Page <!-- id: 5 -->
+    - [x] Analyze reference page structure <!-- id: 6 -->
+    - [x] Plan About page components <!-- id: 7 -->
+    - [x] Create `AboutHero` component <!-- id: 8 -->
+    - [x] Create `CompanyIntro` component <!-- id: 9 -->
+    - [x] Create `MissionVision` component <!-- id: 10 -->
+    - [x] Create `Team` component <!-- id: 11 -->
+    - [x] Create `CorporateValues` component <!-- id: 12 -->
+    - [x] Create `CorporateObjectives` component <!-- id: 13 -->
+    - [x] Assemble `app/about/page.tsx` <!-- id: 14 -->
+- [x] Polish About Page <!-- id: 15 -->
+    - [x] Retrieve missing CTA content <!-- id: 16 -->
+    - [x] Create `AboutCTA` component <!-- id: 17 -->
+    - [x] Integrate CTA into `about/page.tsx` <!-- id: 18 -->
+- [x] Fix Styling and Home Page Content <!-- id: 19 -->
+    - [x] Update `globals.css` for Tailwind v4 <!-- id: 20 -->
+    - [x] Move content to `app/page.tsx` <!-- id: 21 -->
+- [x] Update Header Button <!-- id: 22 -->
+- [ ] Apply New Color Scheme <!-- id: 32 -->
+    - [ ] Update `globals.css` (Bone white bg, Orange accents) <!-- id: 33 -->
+    - [ ] Update Header & Footer styling <!-- id: 34 -->
+    - [ ] Update About page components styling <!-- id: 35 -->
+- [ ] Recreate Contact Page <!-- id: 23 -->
+    - [x] Analyze reference contact page <!-- id: 24 -->
+    - [/] Plan Contact page components <!-- id: 25 -->
+    - [ ] Create `ContactHero` component <!-- id: 26 -->
+    - [ ] Create `ContactInfo` component <!-- id: 27 -->
+    - [ ] Create `ContactForm` component <!-- id: 28 -->
+    - [ ] Create `FAQ` component <!-- id: 29 -->
+    - [ ] Create `Locations` component <!-- id: 30 -->
+    - [ ] Assemble `app/contact/page.tsx` <!-- id: 31 -->

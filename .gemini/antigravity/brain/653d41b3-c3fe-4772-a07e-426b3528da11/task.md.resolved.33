@@ -1,0 +1,5 @@
+- [x] Fix Favicon Display
+    - [x] Check existing favicon files
+    - [x] Clean up [layout.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/layout.tsx) metadata and head tags
+    - [x] Verify favicon appears
+    - [x] Update walkthrough

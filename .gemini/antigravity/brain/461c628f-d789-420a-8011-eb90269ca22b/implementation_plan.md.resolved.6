@@ -1,0 +1,32 @@
+# Implementation Plan - Premium Sliding Auth Overhaul
+
+The functionality of the sliding panel is approved. This plan focuses on "Aesthetic Excellence" to transform the current layout into a truly premium, high-end interface using "cards-within-cards" and refined glassy effects.
+
+## Proposed Changes
+
+### [Visual Style & Theme]
+- **Premium Glassmorphism**: Use multi-layered shadows and subtle border-gradients (via `border-image` or pseudo-elements) to give the cards depth.
+- **High-Contrast Typography**: Increase font sizes for headers and ensure all text has a minimum contrast ratio of 7:1 against backgrounds.
+- **Mesh Gradients**: Enhance the sliding panel's background with a dynamic mesh gradient (Blue/Purple/Emerald) instead of a simple linear one.
+
+### [Auth Components]
+
+#### [MODIFY] [AuthCard.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx)
+- **Inner Card Design**: Wrap the [LoginForm](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx#30-105) and [RegisterForm](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx#106-190) content in a dedicated "inner card" with its own `bg-white/5` and `backdrop-blur`.
+- **Refined Inputs**: Update input fields to have a more defined "pressed" look when focused, using subtle inner shadows and glowing borders.
+- **Better Labels**: Use monospaced or highly tracked uppercase labels for a more technical/developer aesthetic.
+
+#### [MODIFY] [AuthContainer.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthContainer.tsx)
+- **Container Polish**: Add a more prominent outer glow to the main card.
+- **Sliding Panel Refinement**: Enhance the overlay with a more complex gradient and subtle "noise" texture or decorative patterns (like a grid overlay).
+- **Premium Switch Button**: Redesign the "Inicia Sesión / Crear Cuenta" button on the sliding panel to be more distinct (larger, better hover states).
+
+#### [MODIFY] [DevTips.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/DevTips.tsx)
+- Update typography to use bolder weights and more professional line-heights.
+
+## Verification Plan
+
+### Manual Verification
+- **Visual Audit**: Compare the resulting UI against the user's "better design" request (check contrast, spacing, and the "card" feel).
+- **Interactive Feedback**: Verify hover and focus states for all interactive elements.
+- **Build Integrity**: Run `npx tsc --noEmit` to ensure no regressions.

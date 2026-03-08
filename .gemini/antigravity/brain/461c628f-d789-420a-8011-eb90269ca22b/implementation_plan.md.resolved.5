@@ -1,0 +1,32 @@
+# Implementation Plan - Sliding Panel Auth Redesign
+
+The goal is to implement a professional "Sliding Panel" transition for the login/register flow. This design uses a fixed-size card container where an overlay panel slides horizontally to reveal the appropriate form, creating a high-end, tactile interface.
+
+## Proposed Changes
+
+### [Auth Components]
+
+#### [MODIFY] [AuthContainer.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthContainer.tsx)
+- **Container Structure**: Implement a fixed-size card (e.g., `max-w-4xl`, `h-[600px]`) with `relative` and `overflow-hidden`.
+- **Sliding Overlay**: 
+    - Create an "Overlay Container" that occupies 50% of the card width.
+    - Use Framer Motion to slide this overlay between `x: 0` (Login state, revealing form on right) and `x: 100%` (Register state, revealing form on left).
+    - Inside the overlay, place the [DevTips](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/DevTips.tsx#25-84) and a "Switch" button.
+- **Form Reveal**: Place the Login and Register forms *behind* the overlay, positioned absolutely so they are revealed as the overlay slides away.
+
+#### [MODIFY] [AuthCard.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx)
+- Remove the internal `AnimatePresence` toggle.
+- Instead, export two separate sub-components (or use props) to render the Login and Register forms side-by-side or in fixed positions that align with the [AuthContainer](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthContainer.tsx#12-155)'s sliding logic.
+- Ensure perfect vertical/horizontal centering for each form.
+
+#### [MODIFY] [DevTips.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/DevTips.tsx)
+- Adjust the layout to be more compact to fit inside the 50% overlay panel.
+- Ensure the color contrast is high against the shifting background.
+
+## Verification Plan
+
+### Manual Verification
+- **Toggle Transition**: Click "Register" and verify the overlay slides smoothly to the right, revealing the signup form.
+- **Toggle Back**: Click "Login" and verify the overlay slides back to the left, revealing the login form.
+- **Centering**: Confirm all inputs and buttons are perfectly centered and fully visible within the fixed-size card.
+- **Blobs**: Ensure background blobs move *behind* the card or are integrated into the card for depth.

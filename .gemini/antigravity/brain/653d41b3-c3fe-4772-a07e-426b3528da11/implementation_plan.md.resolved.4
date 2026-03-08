@@ -1,0 +1,47 @@
+# Home Page Enhancement: Team Section and Visual Polish
+
+The goal is to integrate a new team-focused section on the home page and elevate the visual aesthetics of existing components to create a more premium and cohesive experience.
+
+## User Review Required
+
+> [!NOTE]
+> I will be adding a new section specifically for the team description provided, using a design that highlights the leadership and specialized roles of the firm.
+
+## Proposed Changes
+
+### New Component: Team Snippet
+
+#### [NEW] [TeamSnippet.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/TeamSnippet.tsx)
+- A dedicated section featuring the provided team bio.
+- **Design**: A clean, two-column layout or a centered focus with elegant typography.
+- **Visuals**: Use icons or subtle illustrative elements to represent "Leadership" (Gerente) and "Technical SST" (Analista).
+- **Background**: Soft `orange-50/30` background to distinguish it from other sections.
+
+### Visual Improvements to Existing Sections
+
+#### [MODIFY] [Hero.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/Hero.tsx)
+- **Background**: Upgrade from plain color to a soft gradient or subtle mesh pattern.
+- **Typography**: Refine the weight and spacing of the main h1 for better readability and impact.
+- **Buttons**: Transform the "Nuestros Servicios" text link into a proper ghost button for better visual hierarchy.
+- **Stats**: Add subtle animations or more refined dividers to the statistics at the bottom.
+
+#### [MODIFY] [Benefits.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/Benefits.tsx)
+- **Cards**: Enhance the "liquid-glass" effect with a more prominent shadow and smoother hover state.
+- **Icons**: Ensure icon containers are visually consistent and high-contrast.
+
+#### [MODIFY] [CTA.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/CTA.tsx)
+- **Content**: Update the sub-header and button styling to feel more "urgent" and premium.
+
+### App Route Integration
+
+#### [MODIFY] [page.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/page.tsx)
+- Import and integrate the new `TeamSnippet` component between [Benefits](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/Benefits.tsx#24-55) and [CTA](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/CTA.tsx#5-28).
+
+## Verification Plan
+
+### Automated Tests
+- Run `npm run build` to ensure all new components are correctly typed and integrated.
+
+### Manual Verification
+- Visual inspection of the home page to ensure the new team section fits the "libertad creativa" while adhering to the established brand guidelines.
+- Verify responsiveness on mobile devices.

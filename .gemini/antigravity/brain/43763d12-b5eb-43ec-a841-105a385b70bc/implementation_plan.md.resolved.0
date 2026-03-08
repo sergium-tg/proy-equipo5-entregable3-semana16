@@ -1,0 +1,20 @@
+# Resolve Missing 'next/headers' Module
+
+The error "Cannot find module 'next/headers'" occurs because the project's dependencies are not currently installed. I found that the `node_modules` directory is missing in your project folder.
+
+## Proposed Changes
+
+### Environment Setup
+I will install the necessary dependencies using `npm`. This will create the `node_modules` folder and provide the required type declarations for Next.js.
+
+> [!IMPORTANT]
+> Since the `node_modules` folder is missing, many features (including autocompletion and type checking) will not work correctly until `npm install` is executed.
+
+## Verification Plan
+
+### Automated Tests
+1. Run `ls -d node_modules` to confirm the directory exists after installation.
+2. Check if the TypeScript error in [src/lib/supabase/server.ts](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/lib/supabase/server.ts) is resolved by the IDE (this may require a restart of the TypeScript server, which I can trigger if needed).
+
+### Manual Verification
+1. You can try to run `npm run dev` to see if the project starts correctly without module errors.

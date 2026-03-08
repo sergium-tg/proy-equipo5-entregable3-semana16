@@ -1,0 +1,7 @@
+- [x] Optimize and Redesign FAQ Accordions
+    - [x] Research FAQ and Accordion implementations
+    - [x] Create implementation plan
+    - [x] Optimize [accordion.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/accordion.tsx) animations
+    - [x] Apply immersion style to [contact/FAQ.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/contact/FAQ.tsx)
+    - [x] Apply immersion style to [faq/DetailedFAQ.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/faq/DetailedFAQ.tsx)
+    - [x] Final build and performance check

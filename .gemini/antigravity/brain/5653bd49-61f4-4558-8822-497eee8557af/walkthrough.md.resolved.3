@@ -1,0 +1,12 @@
+# Verification of ContactInfo Centering
+
+I have addressed the issue where ContactInfo cards were not centered.
+
+## Changes Made
+- **Common Fix**: Applied the same layout fix used for the Corporate Values section.
+- **Container Alignment**: Added `md:mx-auto` and `justify-center` to the [MobileCarousel](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/MobileCarousel.tsx#12-48) component in [ContactInfo.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/contact/ContactInfo.tsx) to force center alignment on desktop screens.
+
+## Verification
+- **Desktop/Tablet**:
+    - The grid of 4 cards (Phones, Emails, WhatsApp, Hours) should be centered on the page.
+    - The 2x2 grid layout (on standard desktop width) should appear balanced and centered within the container.

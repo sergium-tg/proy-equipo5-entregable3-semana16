@@ -1,0 +1,13 @@
+# Task: Run the project
+
+## Frontend
+- [x] Install dependencies for frontend <!-- id: 0 -->
+- [x] Start frontend development server <!-- id: 1 -->
+
+## Backend
+- [x] Install dependencies for backend <!-- id: 2 -->
+- [x] Configure environment variables if needed <!-- id: 3 -->
+- [/] Start backend development server <!-- id: 4 -->
+
+## Verification
+- [/] Verify both frontend and backend are running <!-- id: 5 -->

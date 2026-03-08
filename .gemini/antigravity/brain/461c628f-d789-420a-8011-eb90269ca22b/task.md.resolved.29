@@ -1,0 +1,7 @@
+# Task: Fix Supabase Runtime Error
+
+- [/] Fixing Supabase Client Error <!-- id: 23 -->
+    - [ ] Add defensive checks in [server.ts](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/lib/supabase/server.ts) <!-- id: 24 -->
+    - [ ] Protect [getAuthenticatedUser](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/modules/users/users.service.ts#118-142) with try/catch <!-- id: 25 -->
+    - [ ] Create `.env.example` <!-- id: 26 -->
+- [ ] Notify User & Verify <!-- id: 27 -->

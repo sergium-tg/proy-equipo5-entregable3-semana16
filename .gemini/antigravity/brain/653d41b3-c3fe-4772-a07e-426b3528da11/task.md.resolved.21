@@ -1,0 +1,6 @@
+- [x] Enhance Contact Cards UI
+    - [x] Research current styling
+    - [x] Create implementation plan
+    - [x] Import and integrate `PhoneForwarded` icon in [ContactInfo.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/contact/ContactInfo.tsx)
+    - [x] Increase font sizes globally in [ContactInfo.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/contact/ContactInfo.tsx)
+    - [x] Final build check

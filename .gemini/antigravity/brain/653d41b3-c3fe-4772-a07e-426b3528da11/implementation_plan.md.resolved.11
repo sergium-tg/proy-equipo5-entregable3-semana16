@@ -1,0 +1,35 @@
+# FAQ Updates and New Dedicated FAQ Page
+
+The goal is to update the existing contact page FAQ with new content and create a dedicated FAQ page that showcases a more creative and premium visual approach.
+
+## Proposed Changes
+
+### [MODIFY] [FAQ.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/contact/FAQ.tsx)
+- Replace the current FAQs with the 5 new questions and answers provided by the user.
+- Keep the design sober and integrated with the contact page's flow.
+
+### [NEW] [DetailedFAQ.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/faq/DetailedFAQ.tsx)
+- Create a premium display for the same 5 questions.
+- **Design Strategy**:
+    - Use **metallic-glass cards** in a grid or staggered layout.
+    - Add relevant icons for each question (e.g., `Award` for certifications, `Clock` for time, `Search` for audits).
+    - Implement the "light sweep" effect on hover.
+    - Focus on high-end typography and clear hierarchy.
+
+### [NEW] [FAQHero.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/faq/FAQHero.tsx)
+- A standard hero section matching [AboutHero](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/about/AboutHero.tsx#1-17) and [ServicesHero](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/ServicesHero.tsx#5-21) for consistency.
+
+### [NEW] [page.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/faq/page.tsx)
+- Assemble the `FAQHero`, `DetailedFAQ`, and [CTA](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/CTA.tsx#5-28).
+
+### [MODIFY] [Footer.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/Footer.tsx)
+- Add "Preguntas Frecuentes" to the quick links.
+
+## Verification Plan
+
+### Automated Tests
+- Run `npm run build` to ensure no broken links or missing components.
+
+### Manual Verification
+- Visual inspection of the updated Contact FAQ.
+- Exploration of the new dedicated FAQ page to ensure "creative freedom" aligns with the premium brand identity.

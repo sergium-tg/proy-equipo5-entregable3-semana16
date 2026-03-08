@@ -1,0 +1,55 @@
+# Component-Based Refactor & Architecture
+
+This plan refactors the existing auth pages to follow a clean separation of concerns: `src/app` for routing and `src/components` for implementation/design.
+
+## Proposed Changes
+
+### Component Migration
+Move all UI and logic from the pages to dedicated components:
+
+#### [NEW] [LoginForm.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/LoginForm.tsx)
+Handles the login UI and state.
+
+#### [NEW] [RegisterForm.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/RegisterForm.tsx)
+Handles the registration UI and state.
+
+#### [NEW] [HomeHero.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/home/HomeHero.tsx)
+The landing page content.
+
+---
+
+### Page Simplification
+Update `src/app` pages to act only as callers:
+
+#### [MODIFY] [page.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/page.tsx)
+Will only render `<HomeHero />`.
+
+#### [MODIFY] [login/page.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/login/page.tsx)
+Will only render `<LoginForm />`.
+
+#### [MODIFY] [register/page.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/register/page.tsx)
+Will only render `<RegisterForm />`.
+
+---
+
+## Backend Connection Explanation
+
+To connect these components to your backend, we use two main patterns in Next.js:
+
+1.  **Client-Side Fetch (Current approach in components):**
+    *   The component uses `fetch('/api/users/login', ...)` inside an `onSubmit` handler.
+    *   This is great for immediate feedback (loading states, validation errors).
+
+2.  **Server Actions (Recommended for Next.js):**
+    *   You create a function with `'use server'` that handles the logic (database, Supabase).
+    *   You pass this action to the form's `action` attribute.
+    *   **Benefit:** Better security and works without JavaScript if needed.
+
+> [!NOTE]
+> I will keep the client-side logic in the components for now as requested, but structured so they are ready to be swapped for Server Actions later.
+
+## Verification Plan
+
+### Manual Verification
+1. Verify that `src/app/*/page.tsx` files are minimal (less than 10-15 lines).
+2. Ensure Tailwind CSS v4 is correctly processing the `src/components` directory.

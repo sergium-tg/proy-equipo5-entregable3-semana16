@@ -1,0 +1,5 @@
+# Fix Button Import and Usage
+
+- [ ] Fix [Button](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/Button.tsx#41-63) import in [components/ui/header.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/header.tsx) <!-- id: 0 -->
+- [ ] Fix [Button](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/Button.tsx#41-63) import and usage in [components/about/AboutCTA.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/about/AboutCTA.tsx) <!-- id: 1 -->
+- [ ] Verify fix by running build/checking dev server <!-- id: 2 -->

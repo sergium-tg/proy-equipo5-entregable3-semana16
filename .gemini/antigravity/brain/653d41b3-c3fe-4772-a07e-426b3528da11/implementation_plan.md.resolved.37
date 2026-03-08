@@ -1,0 +1,17 @@
+# Sync Contact FAQ with Main FAQ
+
+User wants [components/contact/FAQ.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/contact/FAQ.tsx) to look exactly like the main FAQ.
+I found [components/contact/FAQ.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/contact/FAQ.tsx). I need to identify the "Main FAQ".
+Based on `find_by_name`, I expect to see `components/sections/FAQ.tsx` or [app/faq/page.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/faq/page.tsx).
+
+## Proposed Changes
+### [Contact FAQ]
+#### [MODIFY] [FAQ.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/contact/FAQ.tsx)
+-   Adopt styling from the source/reference FAQ component.
+-   Likely changes:
+    -   Item Container: `bg-[#FAF9F6] rounded-2xl shadow-[10px_10px_20px_#d1cfcc,-10px_-10px_20px_#ffffff]`.
+    -   Open State: `shadow-[inset_6px_6px_12px_#d1cfcc,inset_-6px_-6px_12px_#ffffff]`.
+    -   Typography and Icons matching standard.
+
+## Verification
+-   Visual check.

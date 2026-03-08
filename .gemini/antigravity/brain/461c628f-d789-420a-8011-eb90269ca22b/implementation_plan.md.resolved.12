@@ -1,0 +1,29 @@
+# Implementation Plan - Supabase Robustness Fix
+
+The objective is to resolve the runtime crash caused by missing Supabase environment variables and provide a clear configuration path for the user.
+
+## Proposed Changes
+
+### [Supabase Utility]
+#### [MODIFY] [server.ts](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/lib/supabase/server.ts)
+- Add defensive checks for `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY`.
+- Log a clear error message if variables are missing instead of allowing a crash.
+- Return `null` or a restricted client if initialization is not possible.
+
+### [User Service]
+#### [MODIFY] [users.service.ts](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/modules/users/users.service.ts)
+- Wrap [getAuthenticatedUser](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/modules/users/users.service.ts#118-142) logic in a try/catch block.
+- Ensure it gracefully returns `null` if the Supabase client cannot be initialized.
+
+### [Configuration]
+#### [NEW] [.env.example](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/.env.example)
+- Define the required keys: `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY`.
+
+## Verification Plan
+
+### Automated Tests
+- Run `npx tsc --noEmit` to ensure no type regressions.
+
+### Manual Verification
+- Verify that the app loads even if `.env.local` is missing (Navbar will be hidden).
+- Instruct the user to verify by filling in the keys.

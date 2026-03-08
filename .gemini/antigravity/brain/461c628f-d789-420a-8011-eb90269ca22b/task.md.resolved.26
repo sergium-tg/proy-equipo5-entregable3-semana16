@@ -1,0 +1,13 @@
+# Task: MediSync Styled Auth Refactor
+
+- [x] Planning the card-based refactor <!-- id: 0 -->
+- [x] Implement Modern Navbar <!-- id: 1 -->
+- [x] Create MediSync-style [LoginForm](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx#17-152) <!-- id: 4 -->
+- [x] Create MediSync-style [RegisterForm](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx#153-287) <!-- id: 5 -->
+- [x] Update Pages and Cleanup <!-- id: 12 -->
+    - [x] Update [login/page.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/login/page.tsx) <!-- id: 13 -->
+    - [x] Update [register/page.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/register/page.tsx) <!-- id: 14 -->
+    - [x] Remove [AuthContainer.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthContainer.tsx) <!-- id: 15 -->
+- [x] Final Verification & Polish <!-- id: 16 -->
+    - [x] Ensure Aceternity input effects are functional <!-- id: 10 -->
+    - [x] Verify contrasting "light-dark" card shades <!-- id: 11 -->

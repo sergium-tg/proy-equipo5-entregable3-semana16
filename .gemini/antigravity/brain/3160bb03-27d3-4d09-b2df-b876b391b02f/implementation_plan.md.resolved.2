@@ -1,0 +1,65 @@
+# Frontend Implementation Plan
+
+The goal is to create a modern, vibrant Next.js frontend with Login, Register, and Logout functionality. The UI will feature sliding transitions between forms and a dedicated loading screen.
+
+## Proposed Changes
+
+### [Frontend Components]
+The UI components will be stored in the root `frontend/components` directory to keep the design logic separate from the routing logic.
+
+#### [NEW] [LoadingScreen.tsx](file:///Users/santiagovalencia/Documents/proyecto_informatico_1/Proyecto_Informatico/frontend/components/LoadingScreen.tsx)
+- A full-screen animated loading overlay with vibrant gradients.
+- Uses Framer Motion for smooth entry/exit animations.
+
+#### [NEW] [AuthForm.tsx](file:///Users/santiagovalencia/Documents/proyecto_informatico_1/Proyecto_Informatico/frontend/components/AuthForm.tsx)
+- A reusable form container that handles the "sliding overlay" effect.
+- Will contain both Login and Register views.
+
+#### [NEW] [LoginForm.tsx](file:///Users/santiagovalencia/Documents/proyecto_informatico_1/Proyecto_Informatico/frontend/components/LoginForm.tsx)
+- The login form component.
+
+#### [NEW] [RegisterForm.tsx](file:///Users/santiagovalencia/Documents/proyecto_informatico_1/Proyecto_Informatico/frontend/components/RegisterForm.tsx)
+- The registration form component.
+
+---
+
+### [Next.js Pages]
+The pages will be entry points in `src/app` that call the corresponding components.
+
+#### [NEW] [login/page.tsx](file:///Users/santiagovalencia/Documents/proyecto_informatico_1/Proyecto_Informatico/src/app/login/page.tsx)
+#### [NEW] [register/page.tsx](file:///Users/santiagovalencia/Documents/proyecto_informatico_1/Proyecto_Informatico/src/app/register/page.tsx)
+---
+
+### [Platform Components]
+New shared components for site-wide structure.
+
+#### [NEW] [Navbar.tsx](file:///Users/santiagovalencia/Documents/proyecto_informatico_1/Proyecto_Informatico/frontend/components/Navbar.tsx)
+- Glassmorphism design with links to Q&A, Snippets, and Auth.
+- Responsive mobile menu.
+
+#### [NEW] [Footer.tsx](file:///Users/santiagovalencia/Documents/proyecto_informatico_1/Proyecto_Informatico/frontend/components/Footer.tsx)
+- Structured footer with platform mission and quick links.
+
+---
+
+### [Platform-Specific UI Overhaul]
+Redesigning core views to align with the "Collaborative Platform for Developers" theme.
+
+#### [MODIFY] [page.tsx](file:///Users/santiagovalencia/Documents/proyecto_informatico_1/Proyecto_Informatico/src/app/page.tsx)
+- Hero section highlighting "Solve, Code, Repeat".
+- Mock "Trending Snippets" and "Top Questions" sections.
+- Visual metaphor for Frontend + Backend collaboration.
+
+#### [MODIFY] [AuthContainer.tsx](file:///Users/santiagovalencia/Documents/proyecto_informatico_1/Proyecto_Informatico/frontend/components/AuthContainer.tsx)
+- Integrated into a layout that includes Navbar and Footer.
+- Improved transition styles to match the dev-centric aesthetic.
+
+## Verification Plan
+
+### Automated Tests
+- N/A (Manual verification via browser tool).
+
+### Manual Verification
+- Verify that navigating between `/login` and `/register` triggers the sliding overlay.
+- Verify that form submissions correctly call the `/api/users/*` routes.
+- Verify the loading screen appearance on page transitions.

@@ -1,0 +1,27 @@
+# Walkthrough - Neumorphic Sliding Auth Redesign
+
+I have completely pivoted the authentication experience to a **Neumorphic (Soft UI)** aesthetic, implementing a horizontal "Sliding Overlay" for the Login/Register forms.
+
+## Key Implementation Details
+
+### 1. Neumorphic Design System
+- **Custom Shadows**: Implemented `shadow-nm-flat` and `shadow-nm-inset` utilities in Tailwind. These create the distinctive and soft "extruded" look in dark mode.
+- **Base Background**: Adjusted the background to `#0c0d21` for the perfect soft UI balance.
+
+### 2. Neumorphic Navbar
+- A floating, centered navigation bar with tactile buttons.
+- **Pressed State**: Buttons appear to physically sink into the navbar on click (`nm-inset` animation).
+
+### 3. Tactile Sliding Auth
+- **AuthContainer**: Horizontal sliding overlay with soft shadows.
+- **Soft UI Forms**: Redesigned [LoginForm](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx#20-92) and [RegisterForm](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx#93-168) with inset shadows for inputs and raised-surface buttons.
+
+## Components Implemented/Updated
+- [layout.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/layout.tsx)
+- [AuthContainer.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthContainer.tsx)
+- [AuthCard.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx)
+- [Navbar.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/ui/Navbar.tsx)
+- [tailwind.config.ts](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/tailwind.config.ts)
+
+## Verification Plan
+Ran `npx tsc --noEmit` and confirmed the project builds successfully. All visual depth animations and transitions are functional.

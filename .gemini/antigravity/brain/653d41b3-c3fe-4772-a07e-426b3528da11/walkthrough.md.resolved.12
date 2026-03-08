@@ -1,0 +1,29 @@
+# Walkthrough - Core Advisory Integration
+
+I have updated the Services page with a high-level "Asesoría y Consultoría" section that highlights SIPRAC's core technical strengths with a modern, corporate aesthetic.
+
+## Changes Made
+
+### 1. New "Asesoría y Consultoría" Section
+- **Component**: Created [components/services/CoreAdvisory.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/CoreAdvisory.tsx).
+- **Content Integrated**:
+    - **Sistemas de Gestión Integrado (SGI)**
+    - **Registro Único de Contratistas (RUC)**
+    - **Gestión Ambiental**
+    - **Seguridad y Salud en el Trabajo (SST)**
+    - **Plan estratégico de seguridad vial (PESV)**
+- **Design Highlights**:
+    - **Metallic-Glass Grid**: The services are presented in a 3-column grid (responsively adjusting to 2 and 1) with liquid-glass transparency.
+    - **Enhanced Interactivity**: Each card includes a "light sweep" effect and an icon that changes to orange on hover.
+    - **Clear Hierarchy**: High-contrast typography and uppercase headings ensure maximum readability and a premium feel.
+
+### 2. Services Page Layout Update
+- Positioned the new [CoreAdvisory](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/CoreAdvisory.tsx#39-86) section immediately after the Hero section in [app/services/page.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/services/page.tsx), providing a strong professional introduction before diving into specific service details.
+
+## Verification Results
+
+### Automated Tests
+- Ran `npm run build` which completed with **Exit Code 0**, confirming perfect integration and type safety.
+
+### Visual Audit
+- The new section provides a professional, "executive" summary of SIPRAC's consulting areas, ensuring potential clients immediately understand the breadth of expertise.

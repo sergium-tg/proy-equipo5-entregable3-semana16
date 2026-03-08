@@ -1,0 +1,29 @@
+# Walkthrough - FAQ System Expansion
+
+I have expanded the FAQ system of the SIPRAC website, both by updating the essential support section on the contact page and by creating a high-end dedicated subpage.
+
+## Changes Made
+
+### 1. Updated Contact FAQ
+- **Content**: Replaced legacy questions with the 5 new strategic questions regarding ISO certifications, implementation times, audit scope, requirements, and support.
+- **Location**: [components/contact/FAQ.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/contact/FAQ.tsx).
+
+### 2. New Dedicated FAQ Page
+- **Route**: `/faq`.
+- **Hero Section**: Created [components/faq/FAQHero.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/faq/FAQHero.tsx) with a clean, centered layout that maintains the brand's premium identity.
+- **Creative Grid Display**: Created [components/faq/DetailedFAQ.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/faq/DetailedFAQ.tsx). Instead of a standard list, I used:
+    - **Metallic-Glass Cards**: High-end visual containers with depth and transparency.
+    - **Dynamic Icons**: Unique Lucide icons for each category (Certifications, Processes, Audit, etc.).
+    - **Interactive Hover States**: Linear light sweep effects and micro-animations that reveal more detail.
+
+### 3. Navigation Integration
+- **Header**: Added "Preguntas" to the main navigation bar.
+- **Footer**: Added "Preguntas Frecuentes" to the quick links section for easier access.
+
+## Verification Results
+
+### Automated Tests
+- Ran `npm run build` which completed with **Exit Code 0**, confirming that the new route and components are correctly integrated and typed.
+
+### Visual Audit
+- The new FAQ page showcases "creative freedom" by moving away from standard accordions towards a modern, scannable card system that keeps the professional tone.

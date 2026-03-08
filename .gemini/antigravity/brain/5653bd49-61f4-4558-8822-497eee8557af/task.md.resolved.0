@@ -1,0 +1,7 @@
+# Task List
+
+- [ ] Modify Hero Background Image
+    - [ ] Add blur effect to the background image
+    - [ ] Fix scrolling issue (prevent excessive movement)
+- [ ] Modify "Nuestra Trayectoria" Text
+    - [ ] Change text color to black

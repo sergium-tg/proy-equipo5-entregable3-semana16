@@ -1,0 +1,62 @@
+# Implementation Plan - Full Application Redesign
+
+Complete overhaul of the application design, moving away from the Apple-inspired aesthetic to a modern, vibrant blue/purple/green palette. This includes a new loading screen, a split-screen authentication layout, and a developer tips section.
+
+## User Review Required
+
+> [!IMPORTANT]
+> This is a destructive update! I will be removing the existing Apple-inspired design and components (`AppleLogo`, [GlassCard](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/ui/GlassCard.tsx#12-29), `PremiumButton`, etc.) once the new design is integrated.
+> The new design features a split-screen layout:
+> - **Left Side**: Image or Developer Tips.
+> - **Right Side**: Authentication Form (Login/Register) on a flip-card.
+> - The positions swap when switching between Login and Register.
+
+## Proposed Changes
+
+### Global Styles
+
+#### [MODIFY] [globals.css](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/globals.css)
+- Replace Apple-specific variables and classes with a new color palette (Blues, Purples, Greens).
+- Implement a global background consistent with the new theme.
+
+### Components
+
+#### [NEW] [AuthContainer.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthContainer.tsx)
+- Orchestrates the split-screen layout.
+- Manages the state for flipping and swapping sides.
+- Handles the loading transition.
+
+#### [NEW] [AuthCard.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx)
+- The core flip-card component provided by the user (adapted to include API logic).
+
+#### [NEW] [AuthCard.module.css](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.module.css)
+- The CSS provided by the user for the flip-card.
+
+#### [NEW] [DevTips.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/DevTips.tsx)
+- A component to display rotating developer tips or an image.
+
+#### [DELETE] [AuthFlipCard.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthFlipCard.tsx) & [AuthFlipCard.css](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthFlipCard.css)
+- Remove the temporary flip-card implementation.
+
+#### [DELETE] All `src/components/ui/*.tsx` files
+- Remove `AppleLogo.tsx`, [GlassCard.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/ui/GlassCard.tsx), `PremiumButton.tsx`, `FloatingInput.tsx`.
+
+### Pages
+
+#### [MODIFY] [layout.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/layout.tsx)
+- Integrate the initial loading screen logic.
+
+#### [MODIFY] [login/page.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/login/page.tsx)
+- Use `AuthContainer` set to `login`.
+
+#### [MODIFY] [register/page.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/register/page.tsx)
+- Use `AuthContainer` set to `signup`.
+
+## Verification Plan
+
+### Manual Verification
+- Verify the initial loading screen appears on app load.
+- Check the transition from loading to the auth screen.
+- Test the flip-card animation and the side-swapping layout.
+- Ensure the color palette matches the requested blues, purples, and greens.
+- Verify that login and registration still work with the backend APIs.

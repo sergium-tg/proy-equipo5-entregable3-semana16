@@ -1,0 +1,36 @@
+# Implementation Plan - New Auth Flip-Card Design
+
+The goal is to replace the current Apple-inspired login and register forms with a new "flip-card" design inspired by Uiverse.io, which allows switching between login and signup within the same visual component.
+
+## User Review Required
+
+> [!IMPORTANT]
+> The new design uses a checkbox-based flip mechanism. I will adapt this to React to ensure the state is correctly managed and that the forms function as expected with the existing backend APIs.
+
+## Proposed Changes
+
+### Components
+
+#### [NEW] [AuthFlipCard.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthFlipCard.tsx)
+- Create a new component that implements the flip-card logic.
+- Include both Login and Register forms within the card.
+- Use the provided CSS for the flip animation and styling.
+
+#### [NEW] [AuthFlipCard.css](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthFlipCard.css)
+- Add the provided CSS, adapted for the project.
+
+### Pages
+
+#### [MODIFY] [login/page.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/login/page.tsx)
+- Replace [LoginForm](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/LoginForm.tsx#12-155) with `AuthFlipCard` set to the "Login" side by default.
+
+#### [MODIFY] [register/page.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/register/page.tsx)
+- Replace [RegisterForm](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/RegisterForm.tsx#13-175) with `AuthFlipCard` set to the "Sign up" side by default.
+
+## Verification Plan
+
+### Manual Verification
+- Verify that clicking the switch flips the card between Login and Sign up.
+- Verify that both forms correctly submit to their respective API endpoints.
+- Verify that the design looks "premium" and matches the user's provided snippet.
+- Check responsiveness on mobile and desktop.

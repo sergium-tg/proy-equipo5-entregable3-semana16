@@ -1,0 +1,27 @@
+# Enhanced Liquid Glass Hover Effect
+
+The goal is to improve the "liquid glass" effect on the Benefits section cards on the home page, making it feel more premium, dynamic, and visually striking.
+
+## Proposed Changes
+
+### [MODIFY] [globals.css](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/globals.css)
+
+- Refine the `.liquid-glass` class:
+    - Add `backdrop-filter: blur(...)` for a true glass look.
+    - Improve the `::before` pseudo-element to create a smoother, more "liquid" light effect.
+    - Add a subtle border that glows on hover.
+    - Use a more complex gradient for the "liquid" reflection.
+
+### [MODIFY] [Benefits.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/Benefits.tsx)
+
+- Update the card styles to ensure they work perfectly with the new CSS.
+- Ensure the background is semi-transparent so the `backdrop-filter` is visible.
+
+## Verification Plan
+
+### Automated Tests
+- Run `npm run build` to ensure no CSS or TS issues.
+
+### Manual Verification
+- Visual inspection of the Benefits section to verify the "liquid glass" effect on hover.
+- Ensure responsiveness and performance (check for lag during hover).

@@ -1,0 +1,40 @@
+# Implementation Plan - Final Premium Sliding Auth
+
+The objective is to deliver a definitive, high-end "Sliding Overlay" authentication experience. This design moves away from complex blob shapes towards a minimalist, "Apple-meets-Terminal" aesthetic with pristine glassmorphism and perfect alignment.
+
+## Proposed Changes
+
+### [Global Styles]
+#### [MODIFY] [globals.css](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/globals.css)
+- Implement a subtly animated background: a dark gradient with soft, moving "lens flares" or slow-drifting glows.
+- Refine root variables for consistent spacing and colors.
+
+### [Auth Components]
+
+#### [MODIFY] [AuthContainer.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthContainer.tsx)
+- **Main Wrapper**: Perfect centering with a large, high-shadow outer card.
+- **Sliding Panel**: 
+    - Implement a "Glass" sliding panel with a strong `backdrop-blur`.
+    - Use a slightly more complex easing (`[0.4, 0, 0.2, 1]` or similar) for the slide.
+    - Inside the panel: High-contrast typography and the refined [DevTips](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/DevTips.tsx#12-53).
+- **Form Positioning**: Ensure the Login and Register forms are perfectly centered in their respective halves and don't "jump" during transitions.
+
+#### [MODIFY] [AuthCard.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx)
+- **Form Design**: 
+    - Use minimalist inputs with clear, understated labels.
+    - Implement "Apple-style" buttons (heavy fill, subtle hover glow).
+    - Add micro-animations (Framer Motion) for form elements as they enter/exit the viewable area.
+
+#### [MODIFY] [DevTips.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/DevTips.tsx)
+- Further refine the "Terminal" feel.
+- Ensure text wrapping and alignment are perfect for the sliding panel width.
+
+## Verification Plan
+
+### Automated Tests
+- Run `npx tsc --noEmit` to ensure type safety.
+
+### Manual Verification
+- **Visual Polish**: Verify all borders are consistent (1px width, low opacity white).
+- **Animation Check**: Ensure the sliding overlay doesn't have any layout shift artifacts.
+- **Mobile Check**: Verify the fallback (forms stacking or simplified toggle).

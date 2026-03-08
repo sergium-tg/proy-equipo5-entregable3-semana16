@@ -1,0 +1,13 @@
+# Verification of Image Error Fix
+
+I have resolved the "unconfigured query string" error and the image caching issue.
+
+## Changes Made
+- **Renamed Files**:
+    - [public/images/services/ruc.png](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/public/images/services/ruc.png) -> `public/images/services/ruc-updated.png`
+    - [public/images/services/hseq.png](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/public/images/services/hseq.png) -> `public/images/services/hseq-updated.png`
+- **Code Update**: Updated [DetailedServices.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/DetailedServices.tsx) to reference these new filenames.
+
+## Verification
+- **Error Check**: The "Runtime Error" overlay regarding query strings should disappear.
+- **Visual Check**: The images for **Registro Único RUC** and **Sistemas Integrados (HSEQ)** should now display correctly and reflect the new designs generated earlier.

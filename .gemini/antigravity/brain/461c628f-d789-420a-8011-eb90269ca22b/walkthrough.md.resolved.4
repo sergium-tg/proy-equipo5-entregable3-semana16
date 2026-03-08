@@ -1,0 +1,34 @@
+# Walkthrough - Auth Layout Redesign
+
+I have redesigned the authentication page to feature a dynamic split-screen layout that responds to the user's action (Login vs Register) with a fluid side-swapping animation and corrected logic.
+
+## Key Features
+
+### Corrected Split-Screen Layout
+- **Initially (Login)**: The form appears on the **RIGHT** and the developer tips on the **LEFT**.
+- **After Toggle (Register)**: The form moves to the **LEFT** and the tips move to the **RIGHT**.
+- This is achieved using `flex-row` and `flex-row-reverse` transitions, providing a much smoother and more logical user experience.
+- The separation between the two sides is now clearly defined with distinct backgrounds and a vertical gradient divider.
+
+### Refined Developer Tips
+- Tips are now perfectly centered and use larger, more modern typography to fill the space effectively.
+- The pagination indicators are now more prominent and synchronized with the 6-second rotation.
+
+### Synchronized Animations
+- The form's internal flip (Log in vs Sign up) is now perfectly synchronized with the side-swapping transition of the container.
+
+## Components Updated
+
+### [AuthContainer.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthContainer.tsx)
+- Implemented the `flex-row-reverse` swap logic for the initial Login state.
+- Improved the vertical divider and side backgrounds.
+
+### [DevTips.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/DevTips.tsx)
+- Adjusted interval to **6000ms**.
+- Updated layout for better centering and enhanced typography.
+
+### [AuthCard.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx)
+- Made the flip state controlled by the parent component for perfect synchronization.
+
+## Verification Result
+Ran `npx tsc --noEmit` and the project builds successfully. The layout now correctly places the Login form on the right and transitions smoothly as requested.

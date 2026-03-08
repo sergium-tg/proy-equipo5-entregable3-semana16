@@ -1,0 +1,34 @@
+# Task: Frontend Implementation for Login, Register, and Logout
+
+- [x] Planning and Design <!-- id: 0 -->
+    - [x] Research existing backend routes <!-- id: 1 -->
+    - [x] Define UI/UX design (sliding overlay, loading screen) <!-- id: 2 -->
+    - [x] Create implementation plan <!-- id: 3 -->
+- [x] Component Development (in `frontend/components`) <!-- id: 4 -->
+    - [x] Create `LoadingScreen` component <!-- id: 5 -->
+    - [x] Create `LoginForm` component <!-- id: 6 -->
+    - [x] Create `RegisterForm` component <!-- id: 7 -->
+    - [x] Create `SlidingOverlay` wrapper/manager <!-- id: 8 -->
+- [x] Page Implementation (in `src/app`) <!-- id: 9 -->
+    - [x] Implement `/login` page <!-- id: 10 -->
+    - [x] Implement `/register` page <!-- id: 11 -->
+    - [x] Implement `/logout` page <!-- id: 12 -->
+    - [x] Create root `layout.tsx` with global styles <!-- id: 13 -->
+- [x] Integration and Polishing <!-- id: 14 -->
+    - [x] Link components to backend API routes <!-- id: 15 -->
+    - [x] Add sliding transitions and loading logic <!-- id: 16 -->
+- [x] Verification <!-- id: 17 -->
+    - [x] Verify form submissions (Build Check) <!-- id: 18 -->
+    - [x] Verify transitions and loading states <!-- id: 19 -->
+    - [x] Create walkthrough.md <!-- id: 20 -->
+    - [x] Run build check <!-- id: 21 -->
+- [x] Home Page Creative Redesign <!-- id: 22 -->
+    - [x] Design immersive background elements <!-- id: 23 -->
+    - [x] Implement advanced Framer Motion animations <!-- id: 24 -->
+    - [x] Add interactive feature cards or highlights <!-- id: 25 -->
+    - [x] Final polish and verification <!-- id: 26 -->
+- [x] Platform-Specific UI Overhaul <!-- id: 27 -->
+    - [x] Create `Navbar` and `Footer` components <!-- id: 28 -->
+    - [x] Redesign Home Page with Dev-Focus (Q&A, Snippets) <!-- id: 29 -->
+    - [x] Improve Auth Forms for modern Dev experience <!-- id: 30 -->
+    - [x] Integrate new components into `layout.tsx` <!-- id: 31 -->

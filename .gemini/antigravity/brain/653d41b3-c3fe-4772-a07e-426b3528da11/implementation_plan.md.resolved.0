@@ -1,0 +1,25 @@
+# Fix Button Import Error
+
+The project is experiencing TypeScript errors because [Button.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/Button.tsx) uses named exports, but some components are trying to import it as a default export. Additionally, some components are using the [Button](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/Button.tsx#41-63) component with incorrect props.
+
+## Proposed Changes
+
+### UI Components
+
+#### [MODIFY] [header.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/header.tsx)
+- Change `import Button from "./Button";` to `import { Button } from "./Button";`.
+
+### About Page Components
+
+#### [MODIFY] [AboutCTA.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/about/AboutCTA.tsx)
+- Change `import Button from "@/components/ui/Button";` to `import { Button } from "@/components/ui/Button";`.
+- Fix [Button](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/Button.tsx#41-63) usage: [Button](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/Button.tsx#41-63) does not accept `href` directly. Wrap it in a `Link` with `asChild`.
+- Fix `size="large"` to `size="lg"`.
+
+## Verification Plan
+
+### Automated Tests
+- Run `npm run build` or check if the dev server error disappears.
+
+### Manual Verification
+- Check the header and the About page CTA to ensure the buttons are rendered correctly and functional.

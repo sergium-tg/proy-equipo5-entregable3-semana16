@@ -1,0 +1,57 @@
+# Walkthrough - Button Import and Usage Fixes
+
+I have fixed the issue where the [Button](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/Button.tsx#41-63) component was being imported as a default export despite being a named export. I also corrected some incorrect prop usage in the [AboutCTA](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/about/AboutCTA.tsx#4-28) component.
+
+## Changes Made
+
+### UI Components
+
+#### [header.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/header.tsx)
+- Corrected the import of [Button](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/Button.tsx#41-63) to use named import:
+```diff
+-import Button from "./Button";
++import { Button } from "./Button";
+```
+
+### About Page Components
+
+#### [AboutCTA.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/about/AboutCTA.tsx)
+- Corrected the import of [Button](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/Button.tsx#41-63).
+- Updated [Button](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/Button.tsx#41-63) props:
+    - Replaced `size="large"` with `size="lg"`.
+    - Wrapped the button content in a `Link` component and used `asChild` prop on the [Button](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/Button.tsx#41-63) because the shadcn [Button](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/Button.tsx#41-63) does not accept an `href` prop directly.
+```diff
+-import Button from "@/components/ui/Button";
++import { Button } from "@/components/ui/Button";
+
+...
+
+-                <Button
+-                    href="/contact"
+-                    variant="secondary"
+-                    size="large"
+-                    className="bg-white text-blue-600 border-white hover:bg-blue-50 hover:text-blue-700"
+-                >
+-                    Agendar Consulta
+-                </Button>
++                <Button
++                    asChild
++                    variant="secondary"
++                    size="lg"
++                    className="bg-white text-blue-600 border-white hover:bg-blue-50 hover:text-blue-700"
++                >
++                    <Link href="/contact">
++                        Agendar Consulta
++                    </Link>
++                </Button>
+```
+
+## Verification Results
+
+### Automated Tests
+- Ran `npm run build` which completed successfully:
+```
+✓ Compiled successfully in 2.9s
+✓ Finished TypeScript in 1994.0ms
+```
+This confirms that the module export/import error and the prop type errors are resolved.

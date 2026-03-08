@@ -1,0 +1,35 @@
+# Professional Email Submission with Resend
+
+We will implement a robust system to capture the "Diagnóstico Preliminar" form data and send it directly to your corporate email using **Resend** and Next.js **Server Actions**.
+
+## Steps to Implement
+
+### 1. Install Dependencies
+We need to install the Resend library to interact with their API.
+```bash
+npm install resend
+```
+
+### 2. Configure Environment Variables
+You will need to create or update a `.env.local` file with your Resend API Key.
+
+### 3. Create Server Action [NEW]
+We will create `app/actions/send-email.ts` to handle the logic of:
+- Receiving the form data.
+- Formatting it into a professional HTML email.
+- Sending it via Resend.
+
+### 4. Update Contact Form [MODIFY]
+We will refactor [components/contact/ContactForm.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/contact/ContactForm.tsx) to:
+- Use React state to track form inputs.
+- Show a "Sending..." state on the button.
+- Display success or error messages after submission.
+
+## Verification Plan
+
+### Automated
+- Run `npm run build` to ensure the Server Action is correctly integrated and typed.
+
+### Manual
+- You will need to provide a Resend API Key.
+- Test the form by submitting a diagnostic and checking your inbox (or Resend's dashboard during testing).

@@ -1,0 +1,35 @@
+# Implementación de Frontend Moderno
+
+He completado la creación del frontend en Next.js utilizando una arquitectura basada en componentes. El diseño es vibrante, cuenta con efectos de glassmorphism y transiciones fluidas.
+
+## Cambios Realizados
+
+### Componentes en `frontend/components/`
+- **[LoadingScreen.tsx](file:///Users/santiagovalencia/Documents/proyecto_informatico_1/Proyecto_Informatico/frontend/components/LoadingScreen.tsx)**: Pantalla de carga animada con orbes y gradientes.
+- **[LoginForm.tsx](file:///Users/santiagovalencia/Documents/proyecto_informatico_1/Proyecto_Informatico/frontend/components/LoginForm.tsx)**: Formulario de inicio de sesión con validación y manejo de estados.
+- **[RegisterForm.tsx](file:///Users/santiagovalencia/Documents/proyecto_informatico_1/Proyecto_Informatico/frontend/components/RegisterForm.tsx)**: Formulario de registro con campos para `username` y `role`.
+- **[AuthContainer.tsx](file:///Users/santiagovalencia/Documents/proyecto_informatico_1/Proyecto_Informatico/frontend/components/AuthContainer.tsx)**: Gestor de estados que maneja el "sliding overlay" entre Login y Register.
+
+### Páginas en `src/app/`
+- **[page.tsx](file:///Users/santiagovalencia/Documents/proyecto_informatico_1/Proyecto_Informatico/src/app/page.tsx)**: Nueva landing page minimalista.
+- **[login/page.tsx](file:///Users/santiagovalencia/Documents/proyecto_informatico_1/Proyecto_Informatico/src/app/login/page.tsx)**: Entrada para el inicio de sesión.
+- **[register/page.tsx](file:///Users/santiagovalencia/Documents/proyecto_informatico_1/Proyecto_Informatico/src/app/register/page.tsx)**: Entrada para el registro de usuarios.
+- **[logout/page.tsx](file:///Users/santiagovalencia/Documents/proyecto_informatico_1/Proyecto_Informatico/src/app/logout/page.tsx)**: Maneja el cierre de sesión y redirección.
+
+### Configuración y Estilos
+- Configuración de **Tailwind CSS v4** con soporte nativo en Next.js.
+- **[globals.css](file:///Users/santiagovalencia/Documents/proyecto_informatico_1/Proyecto_Informatico/src/app/globals.css)**: Definición de gradientes y estilos globales.
+
+## Verificación Realizada
+
+- **Build Check**: Ejecuté `npm run build` exitosamente, validando que todas las rutas y componentes compilan correctamente.
+- **Integración de API**: Los componentes están vinculados a las rutas `/api/users/*`.
+- **Transiciones**: Se implementó `framer-motion` para el efecto de deslizamiento entre formularios.
+
+---
+
+Para probar el proyecto localmente, ejecuta:
+```bash
+npm run dev
+```
+Y navega a [http://localhost:3000/login](http://localhost:3000/login).

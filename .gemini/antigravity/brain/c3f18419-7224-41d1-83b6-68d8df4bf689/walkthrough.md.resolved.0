@@ -1,0 +1,23 @@
+# Project Configuration Fix
+
+I have restored the missing files and corrected the project configuration to resolve the `Cannot find module '@/components/ui/Header'` error.
+
+## Changes
+
+### 1. Restored [globals.css](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/globals.css)
+Restored Tailwind CSS directives and basic theme variables.
+
+### 2. Implemented Components
+- **Header.tsx**: Created a responsive header with navigation and call-to-action buttons.
+- **Footer.tsx**: Created a basic footer component.
+- **Button.tsx**: Verified and fixed usage of the Button component in Header.
+
+### 3. Fixed [layout.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/layout.tsx)
+- Imported [Header](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/Header.tsx#4-35) and [Footer](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/Footer.tsx#1-10).
+- Removed syntax errors.
+- Integrated components into the layout structure.
+
+## Verification
+- Validated file existence: [Header.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/Header.tsx), [Footer.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/Footer.tsx), [globals.css](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/globals.css).
+- Validated [layout.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/layout.tsx) content and imports.
+- The application should now load without module resolution errors.

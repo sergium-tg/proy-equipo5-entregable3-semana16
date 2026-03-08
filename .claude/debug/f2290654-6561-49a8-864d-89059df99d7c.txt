@@ -1,0 +1,9 @@
+2026-01-30T06:18:57.645Z [DEBUG] [Query.readMessages] First result received for single-turn query, closing stdin
+2026-01-30T06:19:03.526Z [DEBUG] [Query.readMessages] First result received for single-turn query, closing stdin
+2026-01-30T06:19:08.311Z [DEBUG] [Query.readMessages] First result received for single-turn query, closing stdin
+2026-01-30T06:19:13.309Z [DEBUG] [Query.readMessages] First result received for single-turn query, closing stdin
+2026-01-30T06:19:18.310Z [DEBUG] [Query.readMessages] First result received for single-turn query, closing stdin
+2026-01-30T06:19:23.311Z [DEBUG] [Query.readMessages] First result received for single-turn query, closing stdin
+2026-01-30T06:19:28.419Z [DEBUG] [Query.readMessages] First result received for single-turn query, closing stdin
+2026-01-30T06:19:33.395Z [DEBUG] [Query.readMessages] First result received for single-turn query, closing stdin
+2026-01-30T06:19:40.320Z [DEBUG] [Query.readMessages] First result received for single-turn query, closing stdin

@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary": "Implementation plan for the Next.js frontend, defining the component structure in `frontend/` and page routing in `src/app/`. Includes details on sliding transitions, loading screen, and backend integration.",
+  "updatedAt": "2026-03-07T21:40:02.347657Z"
+}

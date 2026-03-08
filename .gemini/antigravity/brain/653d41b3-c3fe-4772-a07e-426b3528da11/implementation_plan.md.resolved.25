@@ -1,0 +1,22 @@
+# Animated Counters for Nuestra Trayectoria
+
+The user wants the numbers in the "Nuestra Trayectoria" section of the Hero component to animate as counters from 0 to their target value when the page loads.
+
+## Proposed Changes
+
+### [Hero Component]
+#### [MODIFY] [Hero.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/Hero.tsx)
+- Add a `"use client"` directive to enable hooks.
+- Implement an `AnimatedCounter` component using `useState`, `useEffect`, and `useRef`.
+- The counter will use `requestAnimationFrame` for a smooth, high-performance animation.
+- Update the `stats` mapping to use the `AnimatedCounter` component for each stat.
+- Ensure the animation is fast (around 1.5 - 2 seconds total duration).
+
+## Verification Plan
+
+### Automated Tests
+- Run `npm run build` to ensure no issues with client components or hooks.
+
+### Manual Verification
+- Refresh the home page and verify the numbers in the "Nuestra Trayectoria" section animate from 0 to their final values (100+, 50+, 15+).
+- Check that the animation is fluid and responsive.

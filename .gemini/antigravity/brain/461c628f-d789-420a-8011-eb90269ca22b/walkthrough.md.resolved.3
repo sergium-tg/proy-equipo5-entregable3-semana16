@@ -1,0 +1,40 @@
+# Walkthrough - Auth Layout Redesign
+
+I have redesigned the authentication page to feature a dynamic split-screen layout that responds to the user's action (Login vs Register) with a fluid side-swapping animation.
+
+## Key Features
+
+### Corrected Split-Screen Layout
+- **Initially (Login)**: The form appears on the **RIGHT** and the tips on the **LEFT**.
+- **After Toggle (Register)**: The form moves to the **LEFT**- [x] Correcting side-swapping logic and visual separation <!-- id: 14 -->
+    - [x] Update [AuthContainer](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthContainer.tsx#13-66) to use `flex-row-reverse` for Login <!-- id: 15 -->
+    - [x] Ensure Form on RIGHT for Login, LEFT for Signup <!-- id: 16 -->
+    - [x] Improve divider and background contrast <!-- id: 17 -->
+is now clearly defined with distinct backgrounds and a vertical gradient divider.
+
+### Refined Developer Tips
+- Tips are now perfectly centered and use larger, more modern typography to fill the space effectively.
+- The pagination indicators are now more prominent and synchronized with the 6-second rotation.
+
+### Synchronized Animations
+- The form's internal flip (Log in vs Sign up) is now perfectly synchronized with the side-swapping transition of the container.
+## Components Updated
+
+### [AuthContainer.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthContainer.tsx)
+- Implemented the `order-1`/`order-2` swap logic with Framer Motion.
+- Added the "Toggle" button inside the tips section.
+
+### [DevTips.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/DevTips.tsx)
+- Adjusted interval to **6000ms**.
+- Updated layout to be centered and responsive.
+
+#### [InitialLoader.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/ui/InitialLoader.tsx)
+- Added `import React` to ensure correct typing for `React.ReactNode`.
+- Converted the function to a constant arrow function to match common patterns and ensure it's correctly exported.
+- **RESTORED**: Added `"use client";` to the top of the file, which was accidentally removed. This is required for components using `useState` and `useEffect`.
+
+### [AuthCard.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx)
+- Made the flip state controlled by the parent component for perfect synchronization.
+
+## Verification Result
+Ran `npx tsc --noEmit` and the project builds successfully. The animations provide a high-end feel as requested.

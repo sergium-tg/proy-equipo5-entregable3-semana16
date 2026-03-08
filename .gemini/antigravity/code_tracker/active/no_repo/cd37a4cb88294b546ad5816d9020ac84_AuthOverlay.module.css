@@ -1,0 +1,32 @@
+ã.backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    background: rgba(5, 5, 10, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    animation: fadeIn 0.2s ease both;
+}
+
+.panelWrapper {
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+}
+
+/* Mobile: full-screen */
+@media (max-width: 640px) {
+    .backdrop {
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .panelWrapper {
+        width: 100%;
+        height: auto;
+        max-height: 96vh;
+    }
+}ã*cascade082dfile:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/components/auth/AuthOverlay.module.css

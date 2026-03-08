@@ -1,0 +1,5 @@
+- [x] Optimize Mobile Widths
+    - [x] Analyze `CoreAdvisory` width (`min-w-[280px]` vs `85vw`)
+    - [x] Analyze `DetailedServices` width (`min-w-full` vs `85vw`)
+    - [x] Fix Build Errors
+    - [x] Update walkthrough

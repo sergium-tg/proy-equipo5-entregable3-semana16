@@ -1,0 +1,45 @@
+# Create Services Page and Update Navigation
+
+The goal is to create a dedicated Services page with detailed information, while removing the "Clientes" section from the global navigation (Header and Footer).
+
+## User Review Required
+
+> [!IMPORTANT]
+> The "Clientes" section will be removed from the Header, Footer, and also from the home page to maintain consistency.
+
+## Proposed Changes
+
+### Global Components
+
+#### [MODIFY] [Header.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/shared/Header.tsx)
+- Remove the "Clientes" link from the navigation menu.
+- Update the "Servicios" link to point to `/services` instead of a section anchor.
+
+#### [MODIFY] [Footer.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/shared/Footer.tsx)
+- Ensure the "Servicios" link points to `/services`.
+
+### Services Page Components [NEW]
+
+#### [NEW] [ServicesHero.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/ServicesHero.tsx)
+- A premium hero section with a title, description, and vibrant background (dark or gradient).
+
+#### [NEW] [DetailedServices.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/DetailedServices.tsx)
+- A detailed list of services with icons, descriptions, and feature lists, using a clean and modern layout.
+
+### App Routes
+
+#### [NEW] [page.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/services/page.tsx)
+- The main entry point for the services page, composing the new components.
+
+#### [MODIFY] [page.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/page.tsx)
+- Remove the `Clients` component from the home page.
+
+## Verification Plan
+
+### Automated Tests
+- Run `npm run build` to ensure no broken links or TypeScript errors.
+
+### Manual Verification
+- Verify that the "Clientes" link is gone from the header.
+- Verify that clicking "Servicios" navigates to the new `/services` page.
+- Verify the design of the new Services page.

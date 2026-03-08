@@ -1,0 +1,21 @@
+# Mission & Vision: Intensified Neumorphic Effect
+
+We will further enhance the [MissionVision.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/about/MissionVision.tsx) component to make the neumorphic effect significantly more visible and "marked" as requested.
+
+## Proposed Changes
+
+### [Mission & Vision Component]
+#### [MODIFY] [MissionVision.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/about/MissionVision.tsx)
+- Increase shadow distance and blur (e.g., from 15px/30px to 20px/40px).
+- Intensify the shadow contrast by slightly darkening the shadow color.
+- Ensure the white highlight is crisp for maximum 3D effect.
+- Apply similar intensification to the icon containers.
+
+## Verification Plan
+
+### Automated Tests
+- Run `npm run build` to ensure no UI breakages.
+
+### Manual Verification
+- Visual inspection of the high-contrast neumorphic shadows.
+- Ensure the effect feels "deep" and "physical".

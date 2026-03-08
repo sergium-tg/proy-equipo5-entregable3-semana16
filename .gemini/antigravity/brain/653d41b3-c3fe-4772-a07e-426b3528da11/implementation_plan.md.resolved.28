@@ -1,0 +1,23 @@
+# Applying Immersion Neumorphism to Service Cards
+
+The user requested that the "Auditoría" and "Asesorías" cards on the Service page adopt the same immersion neumorphism (inset shadows) effect used elsewhere.
+
+## Proposed Changes
+
+### [Services Page]
+#### [MODIFY] [DetailedServices.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/DetailedServices.tsx)
+- The file likely contains the cards for "Auditoría" and "Asesorías". I need to identify the specific array or component mapping these.
+- Replace current card styles (likely `bg-white` or `liquid-glass`) with the immersion style:
+    - Background: `#FAF9F6`
+    - Shadow: `shadow-[inset_10px_10px_20px_#d1cfcc,inset_-10px_-10px_20px_#ffffff]`
+    - Border: None (or very subtle pure white/dark borders if needed for depth).
+    - Remove hover translations that conflict with the "carved" look.
+- Ensure text and icon contrast is maintained against the `#FAF9F6` background.
+
+### [Task List]
+- Update [task.md](file:///Users/santiagovalencia/.gemini/antigravity/brain/653d41b3-c3fe-4772-a07e-426b3528da11/task.md) to track this refinement.
+
+## Verification Plan
+### Manual Verification
+- Visual check of the Services page to confirm the "Auditoría" and "Asesorías" cards now look "carved" into the page.
+- Ensure hover effects are subtle (color changes) rather than movement-heavy.

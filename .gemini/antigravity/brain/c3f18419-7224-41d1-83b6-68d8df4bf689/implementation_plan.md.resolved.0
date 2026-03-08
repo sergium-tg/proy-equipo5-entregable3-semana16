@@ -1,0 +1,27 @@
+# Fix Missing Header and Project Config
+
+The project seems to have empty [globals.css](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/globals.css) and [Header.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/Header.tsx) files, causing import errors and styling issues. [layout.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/layout.tsx) references Tailwind classes, so we will restore Tailwind configuration.
+
+## Proposed Changes
+
+### Configuration
+#### [MODIFY] [globals.css](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/globals.css)
+- Add Tailwind directives (`@tailwind base;`, etc.)
+
+### Components
+#### [MODIFY] [Header.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/Header.tsx)
+- Implement a responsive Header component with a logo and navigation.
+
+### Layout
+#### [MODIFY] [layout.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/layout.tsx)
+- Import `Header` component.
+- Add `Header` to the `<body>`.
+
+## Verification Plan
+
+### Automated Tests
+- Run `npm run dev` and ensure the page loads without errors.
+
+### Manual Verification
+- Check that the Header appears.
+- Check that styles are applied (Tailwind working).

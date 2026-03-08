@@ -1,0 +1,28 @@
+# Walkthrough - Metallic-Glass Aesthetic Refinement
+
+I have upgraded the "liquid glass" effect to a "metallic-glass" look that is cleaner, more aesthetic, and sober, while removing unnecessary UI text elements.
+
+## Changes Made
+
+### 1. Metallic-Glass CSS Upgrade
+Refined the `.liquid-glass` class in [globals.css](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/globals.css) to achieve a professional, high-end feel:
+- **Metallic Sweep**: Replaced the radial light with a **linear sweep highlight** that crosses the card on hover, simulating a polished metallic surface.
+- **Chiseled Borders**: Implemented ultra-fine, multi-layered borders to create a "machined" edge look.
+- **Sober Colors**: Neutralized the color palette to silver/white tones, keeping the design professional and expensive-looking without distractions.
+- **Deep Glass**: Increased the backdrop blur to `20px` for a more substantial glass feel.
+
+### 2. Carousel Refinement
+- **Text Removal**: As requested, removed the "DESLICE PARA VER MÁS • PAUSE AL PASAR EL CURSOR" text from the bottom of the services section to maintain a cleaner, more minimalist layout.
+- **UI Cleaning**: Removed redundant spacing and empty containers in the [Services.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/Services.tsx) component.
+
+### 3. Card Proportions
+- Updated the Benefits and Services cards to have more generous padding and a refined corner radius that complements the metallic aesthetic.
+
+## Verification Results
+
+### Automated Tests
+- Ran `npm run build` which completed successfully.
+
+### Visual Audit
+- The "metallic sweep" provides a premium interaction cue that is more subtle and high-end than the previous radial light effect.
+- The removal of the help text significantly improves the "sober" and professional look of the home page.

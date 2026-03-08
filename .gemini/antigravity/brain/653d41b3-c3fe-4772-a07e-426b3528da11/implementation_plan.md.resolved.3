@@ -1,0 +1,41 @@
+# Refactor Services and Contact Pages Design
+
+The goal is to unify the visual identity of the Services and Contact pages by matching the [AboutHero](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/about/AboutHero.tsx#1-17) style and organizing components more logically.
+
+## User Review Required
+
+> [!NOTE]
+> I will be creating a new `components/services` directory and moving the relevant components there as requested.
+
+## Proposed Changes
+
+### Component Reorganization
+
+#### [MOVE] [ServicesHero.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/ServicesHero.tsx) -> [ServicesHero.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/ServicesHero.tsx)
+#### [MOVE] [DetailedServices.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/DetailedServices.tsx) -> [DetailedServices.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/DetailedServices.tsx)
+
+### Design Updates
+
+#### [MODIFY] [ServicesHero.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/ServicesHero.tsx)
+- Change background to `bg-gradient-to-b from-orange-50/50 to-white`.
+- Update text colors: Title to `text-orange-500`, description to `text-gray-500`.
+- Update layout to match [AboutHero](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/about/AboutHero.tsx#1-17) (spacing, divider).
+
+#### [MODIFY] [ContactHero.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/contact/ContactHero.tsx)
+- Update design to match [AboutHero](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/about/AboutHero.tsx#1-17):
+    - Title: `text-orange-500`, `text-5xl md:text-7xl`.
+    - Background: `bg-gradient-to-b from-orange-50/50 to-white`.
+    - Spacing and divider style.
+
+### Page Integration
+
+#### [MODIFY] [page.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/services/page.tsx)
+- Update import paths for [ServicesHero](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/ServicesHero.tsx#5-37) and [DetailedServices](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/DetailedServices.tsx#93-164).
+
+## Verification Plan
+
+### Automated Tests
+- Run `npm run build` to ensure all imports are correct and types are valid.
+
+### Manual Verification
+- Visual inspection of `/services` and `/contact` to ensure they match the `/about` hero style.

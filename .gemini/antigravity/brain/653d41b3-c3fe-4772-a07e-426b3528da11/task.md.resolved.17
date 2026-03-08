@@ -1,0 +1,8 @@
+# Global Immersion Neumorphism
+
+- [/] Apply Immersion Style to All Neumorphic Components
+    - [x] Update implementation plan
+    - [/] Refactor [Benefits.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/Benefits.tsx) (Remove hover movement, apply inset)
+    - [ ] Refactor [MissionVision.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/about/MissionVision.tsx) (Switch to inset, remove movement)
+    - [ ] Refactor [CorporateValues.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/about/CorporateValues.tsx) (Switch to inset, remove movement)
+    - [ ] Final build check

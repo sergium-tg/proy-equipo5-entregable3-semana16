@@ -1,0 +1,8 @@
+# Benefits Immersion Redesign
+
+- [/] Implement Immersion Neumorphism in Benefits Cards
+    - [x] Research target component
+    - [x] Create implementation plan
+    - [ ] Apply inset shadow system in [Benefits.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/Benefits.tsx)
+    - [ ] Update hover animations (static card + moving icon)
+    - [ ] Final visual polish and build check

@@ -1,0 +1,46 @@
+# Frontend Development Plan (Auth & Tailwind)
+
+This plan outlines the steps to build a modern, responsive frontend for login, register, and logout functionality within the existing Next.js project.
+
+## Proposed Changes
+
+### Configuration & Styles
+#### [NEW] [tailwind.config.ts](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/tailwind.config.ts)
+Configuration for Tailwind CSS content paths and theme extensions.
+
+#### [NEW] [postcss.config.js](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/postcss.config.js)
+PostCSS configuration for processing Tailwind.
+
+#### [NEW] [src/app/globals.css](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/globals.css)
+Global CSS file with Tailwind directives and basic styling.
+
+---
+
+### Core Layout & Components
+#### [NEW] [src/app/layout.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/layout.tsx)
+Root layout setting up the HTML structure, fonts (Inter), and global styles.
+
+#### [NEW] [src/app/page.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/page.tsx)
+Home page featuring a hero section and call-to-action buttons for Login/Register.
+
+---
+
+### Auth UI
+#### [NEW] [src/app/login/page.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/login/page.tsx)
+Responsive login form styled with Tailwind, integrating with `/api/users/login`.
+
+#### [NEW] [src/app/register/page.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/register/page.tsx)
+Responsive registration form integrating with `/api/users/register`.
+
+---
+
+## Verification Plan
+
+### Automated Tests
+1. Run `npm run build` to ensure no TypeScript or CSS errors.
+2. Verify `node_modules` includes Tailwind packages.
+
+### Manual Verification
+1. Run `npm run dev` and navigate to `/login` and `/register`.
+2. Test the responsive design on mobile and desktop views.
+3. Perform a test registration and login flow.

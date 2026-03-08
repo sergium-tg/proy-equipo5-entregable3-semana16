@@ -1,0 +1,54 @@
+¢@import "tailwindcss";
+
+@theme {
+    --color-brand-blue: #3b82f6;
+    --color-brand-purple: #8b5cf6;
+    --color-dark-bg: #020617;
+}
+
+/* Custom layers in Tailwind v4 */
+@utility text-balance {
+    text-wrap: balance;
+}
+
+@utility shadow-glass {
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+:root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 2, 6, 23;
+    --background-end-rgb: 0, 0, 0;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    color: rgb(var(--foreground-rgb));
+    background: black;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes gradient-flow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animate-gradient-flow {
+    animation: gradient-flow 6s ease infinite;
+} *cascade08*cascade08 *cascade08	*cascade08	 *cascade08*cascade08 *cascade08*cascade08 *cascade08≠*cascade08≠µ *cascade08µ∂*cascade08∂∏ *cascade08∏π*cascade08π⁄ *cascade08⁄‹*cascade08‹Ç *cascade08ÇÑ*cascade08Ñ¶ *cascade08¶ß*cascade08ß™ *cascade08™´*cascade08´≠ *cascade08≠Æ*cascade08ÆØ*cascade08Ø∞ *cascade08∞∏*cascade08∏Ω *cascade08Ωæ*cascade08æ¬ *cascade08¬ƒ*cascade08ƒ» *cascade08» *cascade08 À*cascade08ÀÃ *cascade08ÃÕ*cascade08Õ— *cascade08—“*cascade08“” *cascade08”’*cascade08’÷ *cascade08÷⁄ *cascade08⁄€*cascade08€› *cascade08›ﬂ*cascade08ﬂ‡ *cascade08‡·*cascade08·‚ *cascade08‚Ï*cascade08ÏÌ *cascade08ÌÔ*cascade08Ô *cascade08Û *cascade08Û˘*cascade08˘˙ *cascade08˙Ñ *cascade08Ñà*cascade08àî *cascade08îñ*cascade08ñó *cascade08óö*cascade08ö§ *cascade08§®*cascade08®© *cascade08©´*cascade08´≠ *cascade08≠Ø*cascade08Ø» *cascade08»Œ*cascade08Œœ *cascade08œ”*cascade08”’ *cascade08’‰*cascade08‰Ê *cascade08ÊÁ*cascade08ÁË *cascade08ËÈ*cascade08ÈÍ *cascade08ÍÏ*cascade08ÏÌ *cascade08ÌÓ*cascade08ÓÒ *cascade08Ò¯*cascade08¯˘ *cascade08˘˝*cascade08˝ˇ *cascade08ˇà*cascade08àä *cascade08äê*cascade08êñ *cascade08ñü *cascade08üü*cascade08ü¢ *cascade08"(72bd7035e7a959ee4bbfe129beb12c2a2dd46bad2hfile:///Users/santiagovalencia/Documents/proyecto_informatico_1/Proyecto_Informatico/src/app/globals.css:Tfile:///Users/santiagovalencia/Documents/proyecto_informatico_1/Proyecto_Informatico

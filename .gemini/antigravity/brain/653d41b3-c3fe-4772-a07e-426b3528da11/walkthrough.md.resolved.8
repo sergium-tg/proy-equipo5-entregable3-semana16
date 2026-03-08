@@ -1,0 +1,30 @@
+# Walkthrough - Home Page Content Expansion
+
+I have successfully integrated the missing corporate content into the Home page, ensuring a comprehensive and professional overview of SIPRAC's identity and capabilities.
+
+## Changes Made
+
+### 1. Mission & Vision Integration
+- **Component**: Created [components/sections/MissionVisionSnippet.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/MissionVisionSnippet.tsx).
+- **Design**: Implemented Mission and Vision using the **metallic-glass** aesthetic to match the site's premium feel.
+- **Content**: Accurate descriptions highlighting SIPRAC's commitment to excellence and sustainability.
+
+### 2. Services Catalog Update
+- **New Service**: Added **Plan Estratégico de Seguridad Vial (PESV)** to the [Services.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/Services.tsx) carousel.
+- **Visuals**: Included a new `Car` icon and tailored description focused on road safety management.
+
+### 3. "Experiencia" Emphasis
+- **Hero Update**: Refined the statistics area in [Hero.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/Hero.tsx) to clearly highlight SIPRAC's **15+ years of experience** and trajectory.
+- **Aesthetic**: Added a subtle "Nuestra Trayectoria" label and a refined top border to distinguish the experience metrics.
+
+### 4. Layout Optimization
+- Updated [app/page.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/page.tsx) to include the new [MissionVisionSnippet](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/MissionVisionSnippet.tsx#6-48) immediately after the Hero section, creating a logical flow from who SIPRAC is to what they offer.
+
+## Verification Results
+
+### Automated Tests
+- Ran `npm run build` which completed successfully.
+
+### Visual Audit
+- The home page now contains all essential corporate data while maintaining a clean, high-end look.
+- All headings and subheadings follow the established `font-black` and `uppercase` brand style.

@@ -1,0 +1,24 @@
+# Counters and Homepage Cleanup
+
+1. Implement animated counters in the Trayectoria section of the Hero.
+2. Remove Mission and Vision sections from the home page.
+
+## Proposed Changes
+
+### [Hero Component]
+#### [MODIFY] [Hero.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/Hero.tsx)
+- [x] Implement [AnimatedCounter](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/Hero.tsx#5-42) component.
+- [x] Integrate counters into the stats section.
+
+### [Homepage]
+#### [MODIFY] [page.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/page.tsx)
+- [x] Remove reference to [MissionVision](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/about/MissionVision.tsx#1-37) component.
+
+## Verification Plan
+
+### Automated Tests
+- Run `npm run build` to verify the page structure is correct.
+
+### Manual Verification
+- Verify the counters animate on the home page.
+- Verify the Mission and Vision sections are no longer visible on the home page.

@@ -1,0 +1,30 @@
+# Walkthrough - Blob Design Integration
+
+I have integrated the "Blob" design aesthetic into the DevAuth authentication flow, combining organic, serpent-like animations with our professional dark developer theme.
+
+## Key Features
+
+### 1. Organic "Serpent" Animations
+- Integrated custom keyframes (`snakeMove`, `snakeFloat`, `snakeWiggle`) into [globals.css](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/globals.css) to drive the movement of background elements.
+- Background "blobs" now move gracefully across the screen, creating a dynamic and premium feel.
+
+### 2. Motion-Driven Auth Components
+- **AuthContainer**: Features a new large "DevAuth Login/SignUp" animated title that reacts to the current state.
+- **AuthCard**: Adopted the user's provided `itemVariants` and `inputHoverVariants` for ultra-smooth form interactions.
+- Added glowing background shapes that change position and color between Login and Register states.
+
+### 3. Integrated Side-Swapping
+- Maintained the requested side-swapping logic (Login on Right, Register on Left).
+- The transition is now even more fluid, with the entire container and background shapes reacting synchronously to the toggle.
+
+### 4. Technical Refinement
+- Resolved 21 TypeScript errors related to Framer Motion variant types to ensure project stability.
+- Simplified CSS dependencies to ensure the layout remains perfectly centered without content being cut off.
+
+## Components Updated
+- [globals.css](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/globals.css)
+- [AuthContainer.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthContainer.tsx)
+- [AuthCard.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx)
+
+## Verification Result
+Ran `npx tsc --noEmit` and the project builds successfully. The organic animations are active and the form flow is stable.

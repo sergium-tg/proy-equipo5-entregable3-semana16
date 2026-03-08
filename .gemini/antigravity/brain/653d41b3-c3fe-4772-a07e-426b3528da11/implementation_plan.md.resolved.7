@@ -1,0 +1,26 @@
+# Metallic-Glass Aesthetic Upgrade
+
+The goal is to refine the "liquid glass" effect into a "metallic-glass" look that is highly aesthetic and high-end, yet maintains a sober and professional identity.
+
+## Proposed Changes
+
+### [MODIFY] [globals.css](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/globals.css)
+
+- **Metallic Sheen**: Replace the radial light effect with a linear "sweep" highlight in the `::before` pseudo-element. This simulates light reflecting off a polished metallic surface.
+- **Chiseled Edges**: Update the borders to use a dual-layer effect (subtle dark and bright borders) to create a "machined" or "engraved" look.
+- **Sober Transparency**: Adjust the base background to a more neutral, high-quality white/gray mix with high transparency and deep blur.
+- **Refined Hover**: Instead of just scaling, the "metallic" highlight will sweep across the card on hover.
+
+### [MODIFY] [Benefits.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/Benefits.tsx)
+
+- Update the icon container to feel more like a "medal" or "badge" integrated into the metallic surface.
+- Refine typography to be cleaner and more authoritative.
+
+## Verification Plan
+
+### Automated Tests
+- Run `npm run build` to ensure stability.
+
+### Manual Verification
+- Visual inspection of the "metallic" sweep on hover.
+- Ensure the "sober" requirement is met: the effect shouldn't be distracting, but should feel expensive.

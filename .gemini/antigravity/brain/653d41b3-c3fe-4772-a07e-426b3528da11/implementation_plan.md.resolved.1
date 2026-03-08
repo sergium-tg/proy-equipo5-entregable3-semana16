@@ -1,0 +1,33 @@
+# Move Header and Footer to Shared Folder
+
+The user wants to move [Header.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/Header.tsx) and [Footer.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/Footer.tsx) from `components/ui/` to `components/shared/`. This will help organize the components better, as these are shared across the entire application rather than being atomic UI elements.
+
+## Proposed Changes
+
+### File Restructuring
+
+#### [MOVE] [Header.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/Header.tsx) -> [Header.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/shared/Header.tsx)
+#### [MOVE] [Footer.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/Footer.tsx) -> [Footer.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/shared/Footer.tsx)
+
+### Import Updates
+
+#### [MODIFY] [Header.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/shared/Header.tsx)
+- Update the relative import of [Button](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/Button.tsx#41-63) to use the correct path or alias:
+  `import { Button } from "../ui/Button";` or `import { Button } from "@/components/ui/Button";`
+
+#### [MODIFY] [layout.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/layout.tsx)
+- Update imports of [Header](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/header.tsx#7-82) and [Footer](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/Footer.tsx#3-73):
+  ```diff
+  -import Header from '@/components/ui/Header'
+  -import Footer from '@/components/ui/Footer'
+  +import Header from '@/components/shared/Header'
+  +import Footer from '@/components/shared/Footer'
+  ```
+
+## Verification Plan
+
+### Automated Tests
+- Run `npm run build` to verify that there are no broken imports and the project builds successfully.
+
+### Manual Verification
+- Verify the website locally to ensure the Header and Footer are still rendered correctly on all pages.

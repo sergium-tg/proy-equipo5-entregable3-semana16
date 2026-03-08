@@ -1,0 +1,12 @@
+# Task: Neumorphic Sliding Auth Redesign
+
+- [x] Planning the neumorphic pivot <!-- id: 0 -->
+- [x] Configure Neumorphic Design System <!-- id: 1 -->
+    - [x] Add neumorphic shadows to [tailwind.config.ts](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/tailwind.config.ts) <!-- id: 2 -->
+    - [x] Set base background in [globals.css](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/globals.css) <!-- id: 3 -->
+- [x] Build Neumorphic Navbar <!-- id: 4 -->
+- [x] Implement Neumorphic Sliding [AuthContainer](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthContainer.tsx#8-84) <!-- id: 5 -->
+- [x] Redesign [AuthCard](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx#179-180) forms with Neumorphism <!-- id: 6 -->
+    - [x] Elevated buttons <!-- id: 7 -->
+    - [x] Inset input fields <!-- id: 8 -->
+- [x] Final Polishing & Verification <!-- id: 9 -->

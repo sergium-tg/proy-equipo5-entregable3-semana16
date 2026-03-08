@@ -1,0 +1,14 @@
+# Verification of Corporate Values Centering
+
+I have addressed the issue where corporate value cards were not centered.
+
+## Changes Made
+- **Container Alignment**: Added `md:mx-auto` to the [MobileCarousel](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/MobileCarousel.tsx#12-48) component in [CorporateValues.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/about/CorporateValues.tsx). This overrides the default `md:mx-0` styling that was forcing left alignment on desktop screens.
+- **Justification**: Added `justify-center` to ensure grid items are centered within the container.
+
+## Verification
+- **Desktop/Tablet**:
+    - The grid of cards should now be centered on the page when the screen width exceeds the grid content width.
+    - Check that the section title "Valores Corporativos" aligns with the centered grid.
+- **Mobile**:
+    - The carousel behavior should remain unchanged (horizontal scrolling).

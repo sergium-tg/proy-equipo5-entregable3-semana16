@@ -1,0 +1,34 @@
+# Implementation Plan - Branding Cleanup & Design Refinement
+
+The goal is to remove all "MediSync" references, refine the overall design via [globals.css](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/globals.css), and ensure the Navbar is only visible when the user is logged in.
+
+## Proposed Changes
+
+### [Design & Branding]
+#### [MODIFY] [globals.css](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/globals.css)
+- Implement a more sophisticated dark design system.
+- Add better variables for backgrounds, borders, and glassmorphism.
+- Refine typography and smooth scrolling.
+
+#### [MODIFY] [Navbar.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/ui/Navbar.tsx)
+- Replace "MediSync" with "DevAuth".
+- Update branding icon (M -> D).
+- Remove "Sign In" and "Get Started" links from the main Navbar as it will only show when logged in (replace with Dashboard/Profile).
+
+#### [MODIFY] [AuthCard.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx)
+- Remove all "MediSync" text in descriptions and branding panels.
+- Replace with "DevAuth" and updated technical copy.
+
+### [Logic & Navigation]
+#### [MODIFY] [layout.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/layout.tsx)
+- Check for authenticated user using [getAuthenticatedUser()](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/modules/users/users.service.ts#118-142).
+- Conditionally render the [Navbar](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/ui/Navbar.tsx#9-59).
+
+## Verification Plan
+
+### Manual Verification
+- **Branding Check**: Verify no mention of "MediSync" remains in the UI.
+- **Session Check**: 
+    - Log out and verify the Navbar is hidden on the login/register pages.
+    - Log in and verify the Navbar appears on the dashboard.
+- **Visual Polish**: Ensure the new [globals.css](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/globals.css) styles look consistent and premium.

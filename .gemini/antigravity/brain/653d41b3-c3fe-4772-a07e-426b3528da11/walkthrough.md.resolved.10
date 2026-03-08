@@ -1,0 +1,39 @@
+# Walkthrough - Detailed Contact Questionnaire Refactor
+
+I have refactored the contact form on the Contact page to function as a **preliminary diagnostic tool**. This allows SIPRAC to gather essential data for a more accurate and professional first response.
+
+## Changes Made
+
+### 1. Multi-Section Form Structure
+The form is now organized into three logical, easy-to-read sections:
+
+- **Datos de Identificación**:
+    - Nombre Completo / Cargo
+    - Razón Social
+    - Correo Electrónico Corporativo
+    - Número de Teléfono / WhatsApp
+- **Perfil Operativo**:
+    - Número de Empleados (Selectores rápidos: 1-10, 11-50, etc.)
+    - Nivel de Riesgo ARL (Clase I a V)
+    - Sector Económico / Actividad Principal
+- **Estado Actual del Sistema**:
+    - % de Avance del SG-SST
+    - Índice de Accidentalidad (Último año)
+    - Inventario de Sistemas de Gestión actuales (ISO, RUC, etc.)
+
+### 2. Premium Design Integration
+- **Aesthetic**: Maintained the high-end corporate look with `orange-500` icons, `font-black` headings, and consistent padding.
+- **Interactivity**: Added hover effects to the icons and improved focus states for the inputs.
+- **Micro-interactions**: The submit button ("Enviar Diagnóstico") now features a subtle arrow animation on hover.
+
+### 3. Improved UX
+- **Data-centric**: By using specific [Select](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/select.tsx#9-14) components for complexity-driven fields (Employees, Risk Level), we reduce the effort required from the user to provide accurate data.
+- **Sober & Professional**: The form uses neutral backgrounds and clear hierarchy to remain professional while being visually striking.
+
+## Verification Results
+
+### Automated Tests
+- Ran `npm run build` which completed successfully, confirming no TypeScript or import issues.
+
+### Visual Audit
+- The "stepper-like" sectioning improves the scannability of the form, making it less overwhelming despite having more fields.

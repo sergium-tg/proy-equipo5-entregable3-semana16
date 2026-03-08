@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_TASK",
+  "summary": "This task documents the steps needed to resolve the import error of the `@/lib/utils` module. It includes diagnosing the `tsconfig.json` configuration, adding a missing `baseUrl`, and verifying that the dependencies are correctly installed.",
+  "updatedAt": "2026-03-07T18:12:08.349194Z"
+}

@@ -1,0 +1,21 @@
+# Email Card Enhancement: Icons and Justification
+
+We will refine the "Correos Electrónicos" card in [ContactInfo.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/contact/ContactInfo.tsx) by adding a semantic icon and improving text alignment.
+
+## Proposed Changes
+
+### [Contact Component]
+#### [MODIFY] [ContactInfo.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/contact/ContactInfo.tsx)
+- Import `Send` from `lucide-react`.
+- Update the "Correos Electrónicos" items to display the `Send` icon next to each email address.
+- Change the alignment of phone and email items to `justify-start` (previously `justify-center`) to better accommodate long email addresses and the new icons. This will provide a cleaner, more professional "list" look.
+- Ensure the icon size and spacing are consistent with the phone card.
+
+## Verification Plan
+
+### Automated Tests
+- Run `npm run build` to verify imports and compilation.
+
+### Manual Verification
+- Visual inspection of the "Correos Electrónicos" card to confirm the `Send` icon and the new left-alignment.
+- Verify that the layout remains balanced on both mobile and desktop.

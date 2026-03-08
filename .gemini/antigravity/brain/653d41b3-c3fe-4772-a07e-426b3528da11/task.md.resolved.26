@@ -1,0 +1,8 @@
+- [x] Implement Animated Counters
+    - [x] Locate "Nuestra Trayectoria" section
+    - [x] Create implementation plan
+    - [x] Implement [AnimatedCounter](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/Hero.tsx#5-42) in [Hero.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/faq/FAQHero.tsx)
+    - [x] Verify animation speed and fluidity
+- [x] Home Page Cleanup
+    - [x] Remove Mission/Vision from [app/page.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/page.tsx)
+    - [x] Final build check

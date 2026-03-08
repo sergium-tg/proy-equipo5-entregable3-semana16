@@ -1,0 +1,46 @@
+# Walkthrough - Full Website Redesign (DevAuth)
+
+I have completed a total overhaul of the application, transforming it from the previous Apple-inspired aesthetic into a modern, vibrant developer-centric platform called **DevAuth**.
+
+## Core Renovations
+
+### 1. New Visual Identity
+- **Palette**: Shifted to a high-contrast theme using deep blues (`#0a0b1e`), vibrant purples, and emerald greens.
+- **Typography**: Optimized Inter for a more brutalist, technical feel.
+- **Global Styles**: Updated [globals.css](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/globals.css) with radial gradients and glassmorphism effects tailored for the new palette.
+
+### 2. Initial Loading Experience
+- **InitialLoader**: Implemented a "Gatekeeper" component in the root layout that catches the first visit.
+- **LoadingScreen**: Updated with a multi-layered "Nawsome" animation from Uiverse.io, featuring depth and fluid motion.
+
+### 3. Split-Screen Authentication Flow
+- **AuthContainer**: A new intelligent layout that divides the screen:
+  - **Social/Dev Side**: Features the [DevTips](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/DevTips.tsx#25-81) component with rotating advice for developers.
+  - **Form Side**: Houses the [AuthCard](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx#12-170).
+- **Side-Swapping Animation**: When switching between "Log in" and "Sign up", the container gracefully swaps the positions of the tips and the form.
+- **Flip-Card Integration**: Your custom flip-card design is now the centerpiece of the authentication flow, fully wired into the backend APIs.
+
+### 4. Code Cleanup
+- Removed all legacy Apple-styled components (`AppleLogo`, `GlassCard`, `PremiumButton`, `FloatingInput`).
+- Resolved all import dependencies to ensure a clean, modern codebase.
+
+## Technical Verification
+
+### Build & Type Check
+I ran `npx tsc --noEmit` and the project is 100% type-safe with no broken imports after the deletions.
+
+### Functional Testing
+- **Loading**: Verified the 2s initial loader appears on first load.
+- **Auth Flip**: The card flips smoothly and swaps sides as requested.
+- **Integration**: All forms (Login/Register) are correctly sending data to the existing API routes.
+
+```bash
+# Verification of project integrity
+$ npx tsc --noEmit
+# Success: No errors found.
+```
+
+## How to use
+1. Open the app to see the **Loading Screen**.
+2. You will be greeted by the **Login** screen (Form on right, tips on left).
+3. Click **"Regístrate aquí"** or use the **Slider** to see the swap animation (Form moves to left, tips to right).

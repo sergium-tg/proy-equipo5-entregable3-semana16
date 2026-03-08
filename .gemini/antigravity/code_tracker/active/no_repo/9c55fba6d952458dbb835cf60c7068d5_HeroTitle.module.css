@@ -1,0 +1,121 @@
+�.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-6);
+    text-align: center;
+    animation: fadeInUp 0.7s var(--ease-bounce) both;
+}
+
+/* ─── Badge ─── */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius-full);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    animation: fadeInDown 0.5s var(--ease-bounce) both;
+}
+
+.badge_primary {
+    background: rgba(99, 102, 241, 0.12);
+    border-color: rgba(99, 102, 241, 0.3);
+    color: var(--color-primary-light);
+}
+
+.badge_violet {
+    background: rgba(139, 92, 246, 0.12);
+    border-color: rgba(139, 92, 246, 0.3);
+    color: #a78bfa;
+}
+
+.badge_cyan {
+    background: rgba(6, 182, 212, 0.12);
+    border-color: rgba(6, 182, 212, 0.3);
+    color: #22d3ee;
+}
+
+.badgeDot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* ─── Heading ─── */
+.heading {
+    font-size: clamp(2.5rem, 7vw, 5.5rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    cursor: pointer;
+    user-select: none;
+    color: var(--color-text);
+    transition: transform var(--transition-fast);
+    animation: fadeInUp 0.7s var(--ease-bounce) both;
+}
+
+.heading:active {
+    transform: scale(0.99);
+}
+
+/* ─── Gradient text ─── */
+.gradient {
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    display: inline;
+}
+
+.gradient_primary {
+    background-image: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #06b6d4 100%);
+}
+
+.gradient_violet {
+    background-image: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+}
+
+.gradient_cyan {
+    background-image: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+}
+
+/* ─── Sub-heading ─── */
+.sub {
+    font-size: clamp(1rem, 2.2vw, 1.2rem);
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    max-width: 560px;
+    animation: fadeInUp 0.7s var(--ease-bounce) both;
+}
+
+.mono {
+    font-family: var(--font-mono);
+    font-size: 0.85em;
+    color: var(--color-text-subtle);
+    display: inline-block;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fadeIn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fadeOut {
+    opacity: 0;
+    transform: translateY(-5px);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 640px) {
+    .sub {
+        font-size: 0.95rem;
+    }
+}� *cascade08��*cascade08�� *cascade082mfile:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/components/hero/components/HeroTitle.module.css

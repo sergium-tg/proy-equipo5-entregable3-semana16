@@ -1,0 +1,35 @@
+# Add 'Asesoría y Consultoría' Section to Services Page
+
+The goal is to integrate a new high-level advisory section that consolidates SIPRAC's core consulting strengths: SGI, RUC, Environmental, SST, and PESV.
+
+## Proposed Changes
+
+### [NEW] [CoreAdvisory.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/CoreAdvisory.tsx)
+- Create a new component to display the "Asesoría y Consultoría" services.
+- **Design Strategy**:
+    - Use a **liquid-glass card grid** (possibly 2 or 3 columns).
+    - Each card will feature:
+        - A relevant Lucide icon.
+        - The title and the specific detailed description provided by the user.
+        - The metallic-glass hover effect (light sweep, chiseled border).
+- **Layout Position**: Place this section *before* [DetailedServices](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/DetailedServices.tsx#93-164) to act as a high-level overview or *after* it as a summary of core areas. Given the level of detail, placing it as a dedicated section between [ValuedAudits](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/ValuedAudits.tsx#33-79) and [DetailedServices](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/DetailedServices.tsx#93-164) might be a bit much. I propose placing it as the first main content section after [ServicesHero](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/ServicesHero.tsx#5-21) to set the stage.
+
+### [MODIFY] [page.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/services/page.tsx)
+- Import `CoreAdvisory`.
+- Insert it before [DetailedServices](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/DetailedServices.tsx#93-164).
+
+## Services to be Added
+1.  **Sistemas de Gestión Integrado (SGI)**: Focus on unified structure and agility.
+2.  **Registro Único de Contratistas (RUC)**: Focus on competitiveness in tenders.
+3.  **Gestión Ambiental**: Focus on sustainability and CSR.
+4.  **Seguridad y Salud en el Trabajo (SST)**: Focus on integrity and legal standards.
+5.  **Plan estratégico de seguridad vial (PESV)**: Focus on mobility and prevention culture.
+
+## Verification Plan
+
+### Automated Tests
+- Run `npm run build` to verify types and component integration.
+
+### Manual Verification
+- Ensure the descriptions are exactly as requested.
+- Verify the mobile grid layout (should stack on small screens).

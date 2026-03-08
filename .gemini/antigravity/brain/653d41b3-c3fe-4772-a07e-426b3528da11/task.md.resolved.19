@@ -1,0 +1,5 @@
+- [x] Apply Immersion Style to Contact Cards
+    - [x] Research target component
+    - [x] Create implementation plan
+    - [x] Apply inset shadow system in [ContactInfo.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/contact/ContactInfo.tsx)
+    - [x] Final visual polish and build check

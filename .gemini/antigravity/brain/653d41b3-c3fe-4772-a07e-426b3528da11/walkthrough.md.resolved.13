@@ -1,0 +1,28 @@
+# Walkthrough - 'Asesoría y Consultoría' Redesign
+
+I have updated the design of the advisory section on the Services page to introduce a more dynamic, non-uniform layout that emphasizes SIPRAC's technical authority.
+
+## Changes Made
+
+### 1. Architectural Staggered Grid
+- **Modern Layout**: Instead of a standard uniform grid, I implemented a **staggered arrangement** (`md:mt-24` on alternating items) that creates visual movement and a more "curated" feel.
+- **Dynamic Hierarchy**: 
+    - The section header now utilizes a **split-level typography** approach with a bold quote/description on the right.
+    - **Large Background Numbers**: Added light-grey watermark numbers (01, 02...) behind each card to reinforce the systematic nature of the services.
+
+### 2. Enhanced Glassmorphism
+- **Design Refinements**:
+    - The `liquid-glass` cards now have a more pronounced border that glows on hover.
+    - Icons now feature a **rotation animation** on hover, adding a touch of interactivity.
+    - Added **architectural accent lines** and soft background glows to tie the section together.
+
+### 3. Integrated Information
+- All 5 core services (SGI, RUC, Ambiental, SST, PESV) are maintained with their full, original descriptions.
+
+## Verification Results
+
+### Automated Tests
+- Ran `npm run build` which completed successfully (**Exit Code 0**).
+
+### Visual Audit
+- The new design breaks the monotony of the page while maintaining the established "Metallic-Glass" brand identity, making the advisory services stand out as a premium offering.

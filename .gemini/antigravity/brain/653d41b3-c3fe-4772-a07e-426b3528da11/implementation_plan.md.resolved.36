@@ -1,0 +1,29 @@
+# Standardizing Mobile Carousels
+
+User wants the **Benefits** carousel logic applied to **Advisory** and **Services**.
+-   **Benefits Style**: `flex overflow-x-auto pb-12 -mx-4 px-4 ... snap-x snap-mandatory`. Items: `min-w-[280px] flex-shrink-0 snap-center`.
+-   **Target 1: CoreAdvisory**: Previously updated, but maybe needs the exact padding/margin tweak (`-mx-4 px-4`) to ensure edge-to-edge scrolling with padding. I will minimize the difference.
+-   **Target 2: Services.tsx**: Currently likely using `animate-infinite-scroll`.
+    -   **Action**: On mobile (`md:hidden`), disable the infinite scroll and use the manual Carousel pattern (`overflow-x-auto`, `snap-x`).
+    -   This gives the user control which is often better for "Servicios" than an auto-scroll that might move too fast or slow.
+
+## Proposed Changes
+### [Services Sections]
+#### [MODIFY] [CoreAdvisory.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/CoreAdvisory.tsx)
+-   Ensure the wrapper uses consistent negative margins `mx-4 px-4` so cards start flush but have padding when scrolling.
+-   Match `min-w` to [Benefits](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/Benefits.tsx#24-56) or similar appropriate size (`300px` is close to `280px`).
+
+#### [MODIFY] [Services.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/Services.tsx)
+-   **Current**: Infinite Scroll.
+-   **New Mobile**: Manual Carousel.
+    -   Wrapper: `flex overflow-x-auto snap-x snap-mandatory pb-8 -mx-4 px-4 md:hidden`.
+    -   Items: `min-w-[280px] snap-center`.
+    -   **Desktop**: Keep Infinite Scroll (`hidden md:flex animate-infinite-scroll`).
+    -   Actually, [Services.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/Services.tsx) currently has `animate-infinite-scroll`. I need to conditionally split this.
+    -   I will wrap the list in a `div` that is *scrollable* on mobile and *animated* on desktop.
+    -   Or duplicate the rendering if the structure is very different, but CSS toggle is cleaner: `className="... md:animate-infinite-scroll flex overflow-x-auto md:overflow-visible ..."`?
+    -   Infinite scroll usually duplicates items to loop seamlessly. If I transparently switch to scroll, I might see the duplicates. I should check if [Services.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/Services.tsx) duplicates items for the effect. If so, I might need to hide the duplicates on mobile.
+
+## Verification
+-   **Mobile**: Services and Advisory should swipe exactly like Benefits.
+-   **Desktop**: Services should likely strictly use the manual grid or keep infinite scroll? The user said "responsive... volvera carrusel". Usually implies purely mobile.

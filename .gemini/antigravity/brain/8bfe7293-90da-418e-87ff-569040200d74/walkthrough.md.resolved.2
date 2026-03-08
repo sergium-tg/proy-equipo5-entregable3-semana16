@@ -1,0 +1,24 @@
+# Walkthrough - Refactor Services with MobileCarousel
+
+I have applied the responsive [MobileCarousel](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/MobileCarousel.tsx#11-36) component to [ValuedAudits](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/ValuedAudits.tsx#34-80), [CoreAdvisory](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/CoreAdvisory.tsx#40-115) and [DetailedServices](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/DetailedServices.tsx#101-181).
+
+## Changes
+
+### [components/ui/MobileCarousel.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/MobileCarousel.tsx)
+
+Created a reusable carousel wrapper that provides horizontal scrolling with snap points on mobile and grid layout on desktop.
+
+### `components/services`
+
+Refactored three components to use [MobileCarousel](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/MobileCarousel.tsx#11-36), removing custom `useState`/`useEffect` logic in each file.
+
+- **[ValuedAudits.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/ValuedAudits.tsx)**: Simplified carousel logic.
+- **[CoreAdvisory.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/CoreAdvisory.tsx)**: Replaced manual carousel with [MobileCarousel](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/MobileCarousel.tsx#11-36).
+- **[DetailedServices.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/DetailedServices.tsx)**: Wrapped service cards with [MobileCarousel](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/MobileCarousel.tsx#11-36), preserving the rich layout of detailed services.
+
+## Verification Results
+
+### Implementation
+- [MobileCarousel](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/MobileCarousel.tsx#11-36) is used consistently across all three components.
+- Manual state management (`currentIndex`, event listeners) has been removed from the individual components, reducing code duplication.
+- `framer-motion` dependency is installed.

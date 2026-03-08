@@ -1,0 +1,5 @@
+# Tasks
+
+- [ ] Analyze `CoreAdvisory.tsx` for TypeScript error <!-- id: 0 -->
+- [ ] Fix the `className` property issue <!-- id: 1 -->
+- [ ] Verify the fix <!-- id: 2 -->

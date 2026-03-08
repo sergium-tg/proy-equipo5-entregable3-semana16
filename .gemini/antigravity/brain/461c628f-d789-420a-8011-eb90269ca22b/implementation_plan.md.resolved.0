@@ -1,0 +1,21 @@
+# Implementation Plan - Fix InitialLoader Import Error
+
+The user is encountering a "Cannot find module" error for `@/components/ui/InitialLoader`. Despite the file existing and the alias being configured, the error persists. This plan aims to resolve the issue by ensuring the component is correctly defined and resolved.
+
+## Proposed Changes
+
+### [Component UI]
+#### [MODIFY] [InitialLoader.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/ui/InitialLoader.tsx)
+- Add `import React from 'react';` to ensure `React.ReactNode` is correctly typed, as some environments require it even with the new JSX transform.
+
+#### [MODIFY] [layout.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/layout.tsx)
+- If the above doesn't work, temporarily switch to a relative import to verify if the issue is with the `@/` path alias resolution.
+
+## Verification Plan
+
+### Automated Tests
+- Run `npx tsc --noEmit` to check for TypeScript errors.
+- Check the output of `npm run dev` to see if the error persists in the console/overlay.
+
+### Manual Verification
+- Verify that the loading screen appears and then fades out as expected when the app starts.

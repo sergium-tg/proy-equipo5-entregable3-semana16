@@ -1,0 +1,7 @@
+# Mission & Vision Neumorphic Redesign
+
+- [/] Implement Neumorphism in Mission & Vision Cards
+    - [x] Research target component
+    - [x] Create implementation plan
+    - [ ] Apply pronounced neumorphic shadow system in [MissionVision.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/about/MissionVision.tsx)
+    - [ ] Final visual polish and build check

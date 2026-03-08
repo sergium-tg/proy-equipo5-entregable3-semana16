@@ -1,0 +1,29 @@
+# Redesign Services Carousel
+
+The goal is to elevate the "Services" carousel (infinite scroll) on the home page to a more premium and interactive experience, following the established design language.
+
+## Proposed Changes
+
+### [MODIFY] [Services.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/Services.tsx)
+
+- **Card Evolution**: 
+    - Replace FontAwesome icons with more refined **Lucide React** icons.
+    - Implement a "Glassmorphism" footer or header within the card.
+    - Add a subtle background watermark or pattern to each card.
+    - Improve the typography hierarchy using `font-black` for titles and refined weights for lists.
+- **Carousel Enhancements**:
+    - Add a "pause on hover" functionality.
+    - Improve the edge gradients for a more "seamless" look on large screens.
+    - Add a hover effect that slightly expands the card and brightens the icon.
+- **Section Styling**:
+    - Add subtle background decorative elements (blobs or mesh) to the section background.
+
+## Verification Plan
+
+### Automated Tests
+- Run `npm run build` to ensure all new icons and components are correctly imported and typed.
+
+### Manual Verification
+- Verify the carousel animation is smooth on different screen sizes.
+- Ensure the "pause on hover" works as expected.
+- Visual inspection of the card designs.

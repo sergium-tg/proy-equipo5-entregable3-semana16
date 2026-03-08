@@ -1,0 +1,17 @@
+# Task: Final Premium Auth Redesign
+
+- [x] Planning the definitive redesign <!-- id: 0 -->
+    - [x] Analyze user's manual aesthetic choices <!-- id: 1 -->
+    - [x] Draft high-end "Apple-Terminal" hybrid design <!-- id: 2 -->
+- [x] Implement Premium [globals.css](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/globals.css) <!-- id: 3 -->
+    - [x] Add soft lens-flare background animations <!-- id: 4 -->
+- [x] Build Definitive [AuthContainer](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthContainer.tsx#8-103) <!-- id: 5 -->
+    - [x] Create high-shadow glass container <!-- id: 6 -->
+    - [x] Implement ultra-smooth sliding overlay <!-- id: 7 -->
+- [x] Build Definitive [AuthCard](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx#186-187) <!-- id: 8 -->
+    - [x] Material-design inspired inputs with subtle focus glows <!-- id: 9 -->
+    - [x] Entrance animations for form fields <!-- id: 10 -->
+- [x] Refine [DevTips](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/DevTips.tsx#12-60) for full integration <!-- id: 11 -->
+- [x] Final Verification & Polish <!-- id: 12 -->
+    - [x] Ensure perfect centering and zero layout shifts <!-- id: 13 -->
+    - [x] Test mobile responsiveness <!-- id: 14 -->

@@ -1,0 +1,7 @@
+- [x] optimize_mobile_and_animations
+    - [x] Analyze vertical service components
+    - [x] Refactor CoreAdvisory to Mobile Carousel
+    - [x] Refactor ValuedAudits to Mobile Carousel
+    - [x] Refactor DetailedServices to Mobile Carousel
+    - [x] Implement IntersectionObserver for Hero Counters
+    - [x] Update walkthrough

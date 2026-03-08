@@ -1,0 +1,30 @@
+# Responsive Carousels & View Animations
+
+The user wants to optimize the mobile experience by reducing vertical scrolling (converting stacks to carousels) and ensuring animations only play when visible.
+
+## Proposed Changes
+### [Services Sections]
+#### [MODIFY] [CoreAdvisory.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/CoreAdvisory.tsx)
+-   **Old Layout**: Grid (1 column on mobile).
+-   **New Layout**: Horizontal Scroll Container on Mobile (`overflow-x-auto`, `snap-x`).
+    -   Add padding to ensure cards aren't cut off awkwardly.
+    -   Keep grid for tablets/desktop.
+
+#### [MODIFY] [ValuedAudits.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/ValuedAudits.tsx)
+-   Similar treatment: Convert the grid to a flex container with overflow scrolling on small screens.
+
+#### [MODIFY] [DetailedServices.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/DetailedServices.tsx)
+-   This is more complex. I will wrap the list in a horizontal scrolling container for mobile.
+-   Consider using a "Snap" effect to make it feel like a real carousel.
+
+### [Homepage Hero]
+#### [MODIFY] [Hero.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/Hero.tsx)
+-   **Current State**: AnimatedCounter runs immediately on load (`useEffect`).
+-   **Upgrade**: Implement `IntersectionObserver`.
+    -   Refactor [AnimatedCounter](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/Hero.tsx#5-42) to wait until `entry.isIntersecting` is true before starting the `requestAnimationFrame` loop.
+    -   Once played, it should not reset (unless desired, but usually play-once is standard for counters).
+
+## Verification
+-   **Mobile**: Check each section (Advisory, Audits, Detailed) for horizontal scrolling.
+-   **Desktop**: Ensure grids remain intact.
+-   **Counters**: Scroll down to them; ensure they start at 0 and count up only when they enter the viewport.

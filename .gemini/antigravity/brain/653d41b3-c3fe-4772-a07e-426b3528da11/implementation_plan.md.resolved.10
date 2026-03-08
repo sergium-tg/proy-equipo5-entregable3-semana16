@@ -1,0 +1,43 @@
+# Detailed Contact Questionnaire Refactor
+
+Update the contact form to act as a preliminary diagnostic tool, collecting detailed corporate and operational data to provide a more accurate service proposal.
+
+## Proposed Changes
+
+### [MODIFY] [ContactForm.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/contact/ContactForm.tsx)
+
+#### 1. Form Structure
+- Divide the form into three logical sections with clear headers:
+    - **Datos de Identificación**: Core contact and company data.
+    - **Perfil Operativo**: Context about the company size and risk level.
+    - **Estado Actual del Sistema**: Preliminary data about their current management systems.
+
+#### 2. Specific Field Updates
+- **Identification**:
+    - "Nombre Completo / Cargo"
+    - "Razón Social" (Replacing current company field)
+    - "Correo Electrónico Corporativo"
+    - "Número de Teléfono / WhatsApp"
+- **Operating Profile**:
+    - "Número de Empleados" (Select: 1-10, 11-50, 51-200, 200+)
+    - "Nivel de Riesgo ARL" (Select: I, II, III, IV, V)
+    - "Sector Económico / Actividad Principal" (Input)
+- **System Status**:
+    - "% de Avance del SG-SST" (Input or Slider-like select)
+    - "Índice de Accidentalidad (Último año)" (Input)
+    - "¿Cuenta con Sistemas de Gestión implementados?" (Input/Textarea for listing ISO, RUC, etc.)
+
+#### 3. Styling
+- Use a **stepper-like** vertical layout or distinct **liquid-glass** colored zones to guide the user.
+- Maintain the premium aesthetic with `orange-500` icons and `font-black` typography.
+- Ensure the form remains responsive and accessible.
+
+## Verification Plan
+
+### Automated Tests
+- Run `npm run build` to ensure all UI components are correctly typed and integrated.
+
+### Manual Verification
+- Visual audit of the form sections.
+- Verify that all new fields are properly aligned and labeled.
+- Check that the [Select](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/select.tsx#9-14) components function correctly on mobile.

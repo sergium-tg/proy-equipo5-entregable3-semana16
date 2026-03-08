@@ -1,0 +1,31 @@
+# Walkthrough - Resolve `@/lib/utils` Import Error
+
+I have successfully resolved the issue where the `@/lib/utils` module could not be found.
+
+## Root Cause
+
+The error "Cannot find module '@/lib/utils' or its corresponding type declarations" occurred because the [tsconfig.json](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/tsconfig.json) was missing the `baseUrl` property. Even though `paths` was defined, TypeScript needs a `baseUrl` to know from which directory it should start resolving those paths.
+
+## Changes Made
+
+### Configuration
+
+#### [MODIFY] [tsconfig.json](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/tsconfig.json)
+
+- Added `"baseUrl": "."` to the `compilerOptions`.
+
+## Verification Results
+
+### Automated Tests
+- I ran `npx tsc --noEmit` which now passes without any errors related to `@/lib/utils`.
+- I verified that the required dependencies (`clsx` and `tailwind-merge`) are correctly installed.
+
+```bash
+$ npm list clsx tailwind-merge
+backend-proyecto@1.0.0 /Users/santiagovalencia/proyecto informatico_1 frontend/Proyecto_Informatico
+├── clsx@2.1.1
+└── tailwind-merge@3.5.0
+```
+
+### Visual Check
+- The [GlassCard.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/ui/GlassCard.tsx) file should no longer show any import errors in your IDE.

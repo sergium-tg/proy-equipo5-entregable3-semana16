@@ -1,0 +1,26 @@
+# Hero Section Enhancements Plan
+
+Add dynamic, interactive elements to the Hero section to improve engagement and visual appeal.
+
+## Proposed Changes
+
+### [Component] [Hero](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/components/hero)
+
+#### [MODIFY] [HeroTitle.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/components/hero/components/HeroTitle.tsx)
+- Implement a `TextCycler` logic to rotate between different security and developer-focused phrases.
+- Add fade transitions between phrases using CSS classes.
+
+#### [MODIFY] [AnimatedBackground.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/components/hero/components/AnimatedBackground.tsx)
+- Add a scroll listener to track `window.scrollY`.
+- Pass scroll progress as a CSS variable or directly as styles to the background elements (orbs) to create a parallax/scroll-reactive effect.
+
+#### [MODIFY] [AnimatedBackground.module.css](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/components/hero/components/AnimatedBackground.module.css)
+- Use CSS variables for `transform` properties to react to the scroll position efficiently.
+- Add subtle scale and blur changes based on scroll depth.
+
+## Verification Plan
+
+### Manual Verification
+- Scroll the page to ensure the background orbs move/react smoothly.
+- Observe the Hero sub-heading to verify it cycles through phrases with proper transitions.
+- Check for performance issues during scrolling.

@@ -1,0 +1,32 @@
+# Implementation Plan - Auth Layout Redesign
+
+The goal is to redesign the authentication page into a split-screen layout where the login/sign-up form and a "developer tips" section swap sides with a fluid animation.
+
+## Proposed Changes
+
+### [Auth Components]
+
+#### [MODIFY] [DevTips.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/DevTips.tsx)
+- Update the interval to **6 seconds**.
+- Ensure a smooth fade-in/fade-out for the tips using `AnimatePresence`.
+- Refine the layout to be more flexible for different screen positions.
+
+#### [MODIFY] [AuthContainer.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthContainer.tsx)
+- Re-implement the layout using Framer Motion's `layout` prop for smooth transitions when swapping sides.
+- In the "Tips" side, add a button to toggle between Login and Sign-up.
+- Ensure the form side and tips side occupy 50% of the screen each on desktop.
+- Implement the "split" visual separation.
+
+#### [MODIFY] [AuthCard.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx)
+- Optional: Simplify the component if the toggle logic is fully managed by [AuthContainer](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthContainer.tsx#13-72).
+
+## Verification Plan
+
+### Automated Tests
+- N/A (UI-focused changes).
+
+### Manual Verification
+- Verify the **6-second** rotation of developer tips.
+- Test the "Register" button's animation: the form and tips should swap positions smoothly.
+- Test the "Login" button's animation: the components should swap back.
+- Ensure the layout is responsive (stacking on mobile if needed, though the request implies desktop-first split).

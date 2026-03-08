@@ -1,0 +1,23 @@
+# Walkthrough - Shared Architecture & White Card Redesign
+
+I have completed a major structural refactor and visual redesign, moving global components to a dedicated `shared` directory and overhauling the authentication experience with a premium white card layout.
+
+## 1. Structural Refactor: `src/components/shared`
+To improve organization and scalability, I've created a `shared` folder for high-level UI components:
+- **[Header.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/shared/Header.tsx)**: Now encapsulates the navigation logic and is rendered globally.
+- **[Navbar.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/shared/Navbar.tsx)**: Moved from `/ui` to `/shared`. It handles session-based visibility (only shows when logged in).
+- **[Footer.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/shared/Footer.tsx)**: A new global footer with clean branding and useful links, satisfying the requirement for white typography on the dark base.
+
+## 2. Authentication Redesign: The White Card
+The login and registration forms have been completely transformed:
+- **Centered Layout**: Forms are now perfectly centered on the screen using a flexible column structure.
+- **Premium White Card**: Both `LoginForm` and `RegisterForm` are housed within an elegant white card with deep shadows and rounded corners (`rounded-[2.5rem]`).
+- **Space Optimization**: I've refined the input spacing and internal margins to make the forms feel more compact and professional.
+- **Dual-Panel Branding**: The cards maintain a high-contrast side panel (Blue for Login, Purple for Register) with **white branding text** and decorative patterns.
+
+## 3. Global Integration
+- **[layout.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/layout.tsx)**: Successfully integrated the `Header` and `Footer`. Restored the `InitialLoader` and fixed all import paths.
+- **Branding Accents**: Added subtle white "Acceso Seguro" and "Configurar Identidad" labels above the cards to enhance the premium feel.
+
+## Final Result
+The application now features a more organized codebase and a significantly more polished, professional UI that balances the clean white card design with the technical "white font" aesthetic on dark backgrounds.

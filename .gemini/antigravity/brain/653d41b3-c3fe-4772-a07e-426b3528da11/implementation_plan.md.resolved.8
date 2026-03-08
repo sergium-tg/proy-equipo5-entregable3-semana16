@@ -1,0 +1,30 @@
+# Home Page Content Expansion: Mission, Vision, and Specialized Services
+
+The goal is to integrate the missing Misión and Visión content onto the home page, add a more detailed "Experiencia" focus, and update the services catalog to include the "Plan Estratégico de Seguridad Vial".
+
+## Proposed Changes
+
+### [NEW] [MissionVisionSnippet.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/MissionVisionSnippet.tsx)
+- Create a new, modern section for Mission and Vision.
+- **Design**: Use the recently developed `metallic-glass` effect for the cards.
+- **Content**: Adopt the text from [components/about/MissionVision.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/about/MissionVision.tsx) but with a more concise, "home page-friendly" layout.
+
+### [MODIFY] [Services.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/Services.tsx)
+- Add "Plan Estratégico de Seguridad Vial" (PESV) to the services array.
+- **Icon**: Use a relevant Lucide icon (e.g., `Car`, `ShieldAlert`).
+- **Description**: Focused on road safety compliance and management.
+
+### [MODIFY] [Hero.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/Hero.tsx)
+- Enhance the "Stats" section to emphasize "Experiencia" more clearly, perhaps by adding a subtitle or adjusting the visual weight of the years of experience.
+
+### [MODIFY] [page.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/page.tsx)
+- Integrate the new `MissionVisionSnippet` between [Hero](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/Hero.tsx#1-59) and [Services](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/Services.tsx#60-132) (or another logical location).
+
+## Verification Plan
+
+### Automated Tests
+- Run `npm run build` to ensure all new components are correctly integrated.
+
+### Manual Verification
+- Verify that "Plan Estratégico de Seguridad Vial" appears in the carousel.
+- Ensure the new Mission/Vision section matches the metallic-glass aesthetic.

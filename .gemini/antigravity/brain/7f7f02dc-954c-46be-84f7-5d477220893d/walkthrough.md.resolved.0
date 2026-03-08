@@ -1,0 +1,29 @@
+# Project Startup Fix
+
+The project was failing to start due to a stale lock file and background processes from a previous session. I have resolved this by:
+
+1.  **Terminating background processes**: Identified and killed existing `node` and `next-server` processes that were occupying the development environment.
+2.  **Clearing the lock file**: Removed the [.next/dev/lock](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/.next/dev/lock) file that was preventing a new instance of the dev server from starting.
+3.  **Restarting the server**: Successfully initiated `npm run dev`.
+
+## Project Status
+
+The development server is now running and ready.
+
+- **URL**: [http://localhost:3000](http://localhost:3000)
+- **Status**: Ready in 714ms (Turbopack)
+
+> [!NOTE]
+> If you encounter this error again, you can usually fix it by running:
+> `rm -f ".next/dev/lock"`
+
+## Verification Output
+
+```text
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.1.66:3000
+
+✓ Starting...
+✓ Ready in 714ms
+```

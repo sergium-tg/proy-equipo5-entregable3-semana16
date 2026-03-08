@@ -1,0 +1,30 @@
+# Implementation Plan - Creative Auth Redesign
+
+The previous layout had centering issues and logical inversions. This plan focuses on a "zero-legacy" approach, simplifying the components to use modern Tailwind and Framer Motion for a robust, high-end experience.
+
+## Proposed Changes
+
+### [Auth Components]
+
+#### [MODIFY] [AuthCard.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx)
+- **Simplify Structure**: Remove the legacy CSS classes (`switch`, `slider`, `cardSide`).
+- **Modern UI**: Implement a clean, high-contrast card using Tailwind and Glassmorphism.
+- **Form Toggle**: Use Framer Motion's `AnimatePresence` to switch between Login and Register forms with a smooth cross-fade, instead of the 3D flip which was causing layout shifts.
+
+#### [MODIFY] [AuthContainer.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthContainer.tsx)
+- **Correct Positions**: 
+    - **Login**: Tips on LEFT, Form on RIGHT.
+    - **Register**: Form on LEFT, Tips on RIGHT.
+- **Centering**: Use `min-h-screen`, `flex`, and `items-center` to ensure perfectly centered content without anything being cut off.
+- **Visual Separation**: Use a hard split with contrasting background colors (Deep Deep Blue vs Subtle Gradient Blue) and a sharp vertical divider.
+
+#### [MODIFY] [DevTips.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/DevTips.tsx)
+- Fine-tune positioning to be perfectly balanced with the new form side.
+
+## Verification Plan
+
+### Manual Verification
+- **Login screen**: Verify form is on the RIGHT and Tips on the LEFT.
+- **Register screen**: Verify form is on the LEFT and Tips on the RIGHT.
+- **Vertical Centering**: Ensure the entire form is visible on Standard Laptop and Desktop screens.
+- **Responsiveness**: Check that it falls back gracefully on mobile (likely stacking the form).

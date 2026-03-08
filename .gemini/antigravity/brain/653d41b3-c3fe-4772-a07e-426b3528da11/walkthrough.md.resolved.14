@@ -1,0 +1,34 @@
+# Walkthrough - Resend Email Integration
+
+I have successfully implemented a professional email submission system for your "Diagnóstico Preliminar" form.
+
+## Changes Made
+
+### 1. Server Action Integration
+- **File**: [app/actions/send-email.ts](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/actions/send-email.ts)
+- **Logic**: This "Server Action" receives the raw form data, formats it into a clean HTML layout with sections for "Datos de Identificación," "Perfil Operativo," and "Estado Actual," and sends it using the Resend API.
+- **Recipient**: Configured to send to `sipracsiprac@gmail.com`.
+
+### 2. Enhanced Contact Form
+- **Component**: [components/contact/ContactForm.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/contact/ContactForm.tsx)
+- **Dynamic States**: 
+    - **Loading**: The button now shows a "Procesando Diagnóstico..." animation while sending.
+    - **Success**: Upon successful submission, a friendly "¡Diagnóstico Enviado!" screen replaces the form, confirming that a consultant will follow up.
+    - **Error Handling**: Added a shake-animated alert box if something goes wrong (e.g., API key missing or network issues).
+
+### 3. Setup Template
+- **File**: [.env.example](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/.env.example)
+- Created a template file to help you set up your API Key safely.
+
+## Verification Results
+
+### Automated Tests
+- Ran `npm run build` which completed with **Exit Code 0**, confirming that the Client Component directives and Server Actions are perfectly integrated.
+
+### Next Steps for You
+1.  **Get an API Key**: Go to [resend.com/api-keys](https://resend.com/api-keys) and create a free key.
+2.  **Environment Setup**: Create a file named `.env.local` in your root folder and paste:
+    ```bash
+    RESEND_API_KEY=tu_clave_aqui
+    ```
+3.  **Domain Verification (Optional)**: For production, you can verify your domain in Resend to send emails from your own address (e.g., `info@siprac.com`).

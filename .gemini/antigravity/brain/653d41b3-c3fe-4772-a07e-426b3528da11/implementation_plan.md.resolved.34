@@ -1,0 +1,23 @@
+# Mobile Detailed Services Cards
+
+The user wants the "Detailed Services" section to render as "Cards" on mobile to avoid information cutoff and improve layout.
+Current state: Horizontal scroll of loose content blocks.
+Target state: Horizontal scroll of unified Cards (Image + Text inside a container).
+
+## Proposed Changes
+### [Components]
+#### [MODIFY] [DetailedServices.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/DetailedServices.tsx)
+-   **Container Logic**: 
+    -   Mobile (`< md`): Render items as unified Cards.
+        -   `bg-white` (or neumorphic), `rounded-3xl`, `p-6`.
+        -   Layout: Image top (aspect video/square), Title & Description bottom.
+    -   Desktop (`>= md`): Keep the existing Zig-Zag (Text/Image alternating) layout.
+-   **Implementation Details**:
+    -   I can use specific classes to toggle styles, or just style the wrapper `div` to look like a card on mobile.
+    -   Wrapper: `className="... md:bg-transparent md:shadow-none bg-[#FAF9F6] shadow-[...] ..."`
+    -   Wait, the background is already `#FAF9F6`. So the card should probably be `bg-white` or a raised neumorphic element to stand out.
+    -   Let's stick to the styling used in [CoreAdvisory](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/CoreAdvisory.tsx#39-104) (Neumorphic) or just clean white cards for contrast. Given the complexity, a **clean White Card** with shadow might be best for readability of the "Detailed" content.
+
+## Verification
+-   **Mobile**: Verify horizontal swipe involves distinct cards. Text shouldn't overflow.
+-   **Desktop**: Verify original design is untouched.

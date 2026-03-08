@@ -1,0 +1,62 @@
+# Project Enhancements: Hero Section
+
+I have added dynamic and interactive elements to the Hero section to enhance the user experience and visual appeal.
+
+## New Features
+
+1.  **Dynamic Text Phrases**: The sub-heading now cycles through multiple security and developer-focused phrases with a smooth fade animation.
+2.  **Scroll-Reactive Background**: The background orbs now respond to page scrolling with a parallax effect, moving at different speeds to create a sense of depth.
+
+## Implementation Details
+
+````carousel
+```tsx
+// HeroTitle.tsx - Dynamic Phrase Cycling
+const [phraseIndex, setPhraseIndex] = useState(0);
+const [isTransitioning, setIsTransitioning] = useState(false);
+
+useEffect(() => {
+    const interval = setInterval(() => {
+        setIsTransitioning(true);
+        setTimeout(() => {
+            setPhraseIndex((prev) => (prev + 1) % PHRASES.length);
+            setIsTransitioning(false);
+        }, 500); 
+    }, 4000); 
+    return () => clearInterval(interval);
+}, []);
+```
+<!-- slide -->
+```tsx
+// AnimatedBackground.tsx - Scroll Parallax
+useEffect(() => {
+    const handleScroll = () => {
+        if (!containerRef.current) return;
+        const scrollY = window.scrollY;
+        containerRef.current.style.setProperty('--scroll-y', `${scrollY}px`);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+}, []);
+```
+<!-- slide -->
+```css
+/* AnimatedBackground.module.css - Parallax CSS */
+.parallaxWrapper {
+    position: absolute;
+    inset: 0;
+    will-change: transform;
+    transform: translateY(calc(var(--scroll-y, 0px) * var(--parallax-speed, 0)));
+}
+```
+````
+
+## Project Status
+
+The development server is running, and the new animations are active.
+
+- **URL**: [http://localhost:3000](http://localhost:3000)
+- **Status**: Ready with 0 issues detected.
+
+> [!TIP]
+> Try scrolling the page slowly to see the background orbs move at different speeds!

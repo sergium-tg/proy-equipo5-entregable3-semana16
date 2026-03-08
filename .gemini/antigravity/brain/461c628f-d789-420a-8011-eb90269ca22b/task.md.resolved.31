@@ -1,0 +1,12 @@
+# Task: Shared Components & White Card Redesign
+
+- [/] Refactoring Architecture <!-- id: 28 -->
+    - [x] Create `shared` directory <!-- id: 29 -->
+    - [ ] Implement `Header.tsx` and move [Navbar.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/ui/Navbar.tsx) <!-- id: 30 -->
+    - [ ] Implement `Footer.tsx` <!-- id: 31 -->
+- [ ] Authentication Redesign <!-- id: 32 -->
+    - [ ] Redesign [LoginForm](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx#17-152) as a centered white card <!-- id: 33 -->
+    - [ ] Redesign [RegisterForm](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx#153-287) as a centered white card <!-- id: 34 -->
+- [ ] Integration & Cleanup <!-- id: 35 -->
+    - [ ] Update [layout.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/layout.tsx) with Header/Footer <!-- id: 36 -->
+    - [ ] Final Verification <!-- id: 37 -->

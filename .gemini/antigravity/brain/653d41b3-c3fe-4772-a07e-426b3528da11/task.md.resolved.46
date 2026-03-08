@@ -1,0 +1,7 @@
+# Standard Carousels
+
+- [/] Standardize Mobile Carousels
+    - [x] Analyze Benefits styling
+    - [ ] Align CoreAdvisory to Benefits Carousel style
+    - [ ] Convert Services.tsx to Manual Carousel on Mobile
+    - [ ] Update walkthrough

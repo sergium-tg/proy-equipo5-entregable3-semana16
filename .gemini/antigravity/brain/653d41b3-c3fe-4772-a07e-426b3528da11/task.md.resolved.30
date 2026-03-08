@@ -1,0 +1,6 @@
+- [x] Apply Immersion Neumorphism to Service Cards
+    - [x] Create implementation plan
+    - [x] Locate specific cards in [DetailedServices.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/DetailedServices.tsx)
+    - [x] Apply inset shadows and styling logic
+    - [x] Verify visual consistency
+    - [x] Update walkthrough

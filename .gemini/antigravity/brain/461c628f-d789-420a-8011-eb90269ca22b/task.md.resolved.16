@@ -1,0 +1,18 @@
+# Task: Sliding Panel Auth Redesign
+
+- [x] Planning sliding panel implementation <!-- id: 0 -->
+    - [x] Analyze video reference (Sliding Overlay Panel) <!-- id: 1 -->
+    - [x] Draft new component structure for [AuthContainer](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthContainer.tsx#12-83) <!-- id: 2 -->
+- [x] Implement Sliding [AuthContainer](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthContainer.tsx#12-83) <!-- id: 3 -->
+    - [x] Create fixed-size Auth Card container <!-- id: 4 -->
+    - [x] Implement sliding overlay panel with Framer Motion <!-- id: 5 -->
+    - [x] Integrate background blobs into the card structure <!-- id: 6 -->
+- [x] Refactor [AuthCard](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx#191-192) for sliding layout <!-- id: 7 -->
+    - [x] Separate Login and Register forms into distinct containers <!-- id: 8 -->
+    - [x] Ensure forms align with the sliding reveal <!-- id: 9 -->
+- [x] Refine [DevTips](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/DevTips.tsx#25-81) for overlay panel <!-- id: 10 -->
+    - [x] Adjust typography and spacing for the moving panel <!-- id: 11 -->
+- [x] Verification <!-- id: 12 -->
+    - [x] Test slide animation and logic <!-- id: 13 -->
+    - [x] Confirm mobile responsiveness (likely stack forms) <!-- id: 14 -->
+    - [x] Fix TypeScript errors and property definitions <!-- id: 15 -->

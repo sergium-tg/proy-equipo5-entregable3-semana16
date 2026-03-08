@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "sessionId": "8efa6531-f9cf-4cb0-9740-eee26c642f03",
+      "fullPath": "/Users/santiagovalencia/.claude/projects/-/8efa6531-f9cf-4cb0-9740-eee26c642f03.jsonl",
+      "fileMtime": 1769753937642,
+      "firstPrompt": "what is 2+2?",
+      "messageCount": 2,
+      "created": "2026-01-30T06:18:57.402Z",
+      "modified": "2026-01-30T06:18:57.627Z",
+      "gitBranch": "",
+      "projectPath": "/",
+      "isSidechain": false
+    },
+    {
+      "sessionId": "d3424431-444c-4ac1-9270-c8b82237e9a5",
+      "fullPath": "/Users/santiagovalencia/.claude/projects/-/d3424431-444c-4ac1-9270-c8b82237e9a5.jsonl",
+      "fileMtime": 1769753943523,
+      "firstPrompt": "what is 2+2?",
+      "messageCount": 2,
+      "created": "2026-01-30T06:19:03.286Z",
+      "modified": "2026-01-30T06:19:03.506Z",
+      "gitBranch": "",
+      "projectPath": "/",
+      "isSidechain": false
+    },
+    {
+      "sessionId": "b71d62e4-68de-46b7-8109-acfae097961b",
+      "fullPath": "/Users/santiagovalencia/.claude/projects/-/b71d62e4-68de-46b7-8109-acfae097961b.jsonl",
+      "fileMtime": 1769753948308,
+      "firstPrompt": "what is 2+2?",
+      "messageCount": 2,
+      "created": "2026-01-30T06:19:08.035Z",
+      "modified": "2026-01-30T06:19:08.282Z",
+      "gitBranch": "",
+      "projectPath": "/",
+      "isSidechain": false
+    },
+    {
+      "sessionId": "3a556416-f817-4544-8ff7-cada68662636",
+      "fullPath": "/Users/santiagovalencia/.claude/projects/-/3a556416-f817-4544-8ff7-cada68662636.jsonl",
+      "fileMtime": 1769753953307,
+      "firstPrompt": "what is 2+2?",
+      "messageCount": 2,
+      "created": "2026-01-30T06:19:13.039Z",
+      "modified": "2026-01-30T06:19:13.277Z",
+      "gitBranch": "",
+      "projectPath": "/",
+      "isSidechain": false
+    },
+    {
+      "sessionId": "fb9bec61-decb-46f5-b3e1-44eea824fdb5",
+      "fullPath": "/Users/santiagovalencia/.claude/projects/-/fb9bec61-decb-46f5-b3e1-44eea824fdb5.jsonl",
+      "fileMtime": 1769753958307,
+      "firstPrompt": "what is 2+2?",
+      "messageCount": 2,
+      "created": "2026-01-30T06:19:18.105Z",
+      "modified": "2026-01-30T06:19:18.291Z",
+      "gitBranch": "",
+      "projectPath": "/",
+      "isSidechain": false
+    },
+    {
+      "sessionId": "7304c13e-8b2c-4bd8-9ca8-cefa1d9579e0",
+      "fullPath": "/Users/santiagovalencia/.claude/projects/-/7304c13e-8b2c-4bd8-9ca8-cefa1d9579e0.jsonl",
+      "fileMtime": 1769753963308,
+      "firstPrompt": "what is 2+2?",
+      "messageCount": 2,
+      "created": "2026-01-30T06:19:23.059Z",
+      "modified": "2026-01-30T06:19:23.283Z",
+      "gitBranch": "",
+      "projectPath": "/",
+      "isSidechain": false
+    },
+    {
+      "sessionId": "65e9fd0d-e8cb-42e4-90c9-f751e7bdf8e7",
+      "fullPath": "/Users/santiagovalencia/.claude/projects/-/65e9fd0d-e8cb-42e4-90c9-f751e7bdf8e7.jsonl",
+      "fileMtime": 1769753968416,
+      "firstPrompt": "what is 2+2?",
+      "messageCount": 2,
+      "created": "2026-01-30T06:19:28.177Z",
+      "modified": "2026-01-30T06:19:28.397Z",
+      "gitBranch": "",
+      "projectPath": "/",
+      "isSidechain": false
+    },
+    {
+      "sessionId": "a4db4b00-3b19-4187-b093-09a159741d93",
+      "fullPath": "/Users/santiagovalencia/.claude/projects/-/a4db4b00-3b19-4187-b093-09a159741d93.jsonl",
+      "fileMtime": 1769753973392,
+      "firstPrompt": "what is 2+2?",
+      "messageCount": 2,
+      "created": "2026-01-30T06:19:33.117Z",
+      "modified": "2026-01-30T06:19:33.365Z",
+      "gitBranch": "",
+      "projectPath": "/",
+      "isSidechain": false
+    }
+  ]
+}

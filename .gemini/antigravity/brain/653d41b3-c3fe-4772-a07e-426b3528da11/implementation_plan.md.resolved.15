@@ -1,0 +1,21 @@
+# Benefits Section: Neumorphic Redesign
+
+We will update the [Benefits.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/Benefits.tsx) component to implement a neumorphic (soft UI) effect on the benefit cards, giving them a high-end "integrated" look.
+
+## Proposed Changes
+
+### [Benefits Component]
+#### [MODIFY] [Benefits.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/Benefits.tsx)
+-   Implement dual shadow system (light highlight and dark shadow) to create the neumorphic effect.
+-   Adjust background colors to harmonize with the soft UI aesthetic.
+-   Add an "inset" effect on hover or active states to make cards feel like they are being pressed into the screen.
+-   Ensure the design stays clean and doesn't conflict with the existing "Liquid Glass" theme elsewhere.
+
+## Verification Plan
+
+### Automated Tests
+- Run `npm run build` to ensure no UI breakages.
+
+### Manual Verification
+- Visual inspection of the soft UI shadows on different screen sizes.
+- Verify that the card looks "inside" the screen as requested.

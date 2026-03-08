@@ -1,0 +1,18 @@
+# Mobile Neumorphic Text-Only Cards
+
+User feedback: The image cards on mobile are not working well.
+New Requirement: **Remove images on mobile** entirely. Use **Neumorphic Cards** for the text content.
+
+## Proposed Changes
+### [DetailedServices.tsx]
+#### [MODIFY] [DetailedServices.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/DetailedServices.tsx)
+-   **Image Container**: Add `hidden md:block`. This will completely remove it from the mobile flow.
+-   **Card Container**:
+    -   Apply Neumorphic styles on mobile: `bg-[#FAF9F6] shadow-[inset_...]` or raised shadow `shadow-[10px_10px_20px_#d1cfcc,-10px_-10px_20px_#ffffff]`.
+    -   The user mentioned "neumorphism effect". I'll use the "extruded" (raised) effect used in [CoreAdvisory](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/CoreAdvisory.tsx#39-104) as it looks cleaner for cards than the "inset" (sunken) one.
+    -   **Mobile Layout**: `flex-col`, `min-w-[85vw]`, `snap-center`, `p-8`.
+    -   **Desktop Layout**: Reset to `md:p-0`, `md:shadow-none`, `md:bg-transparent`.
+
+## Verification
+-   **Mobile**: Check that images are gone. Verify the card looks like a tactile, raised physical object (neumorphism).
+-   **Desktop**: Ensure images and zig-zag layout reappear.

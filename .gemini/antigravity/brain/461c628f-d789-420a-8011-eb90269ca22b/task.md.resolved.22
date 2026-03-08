@@ -1,0 +1,14 @@
+# Task: Separate Auth Pages & Navbar
+
+- [x] Planning the refactor <!-- id: 0 -->
+- [ ] Create Modern Navbar <!-- id: 1 -->
+    - [ ] Build `Navbar.tsx` component <!-- id: 2 -->
+    - [ ] Integrate into [layout.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/layout.tsx) <!-- id: 3 -->
+- [ ] Refactor Auth into Separate Pages <!-- id: 4 -->
+    - [ ] Update [AuthCard.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx) with lighter, centered cards <!-- id: 5 -->
+    - [ ] Update [login/page.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/login/page.tsx) <!-- id: 6 -->
+    - [ ] Update [register/page.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/register/page.tsx) <!-- id: 7 -->
+    - [ ] Remove [AuthContainer.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthContainer.tsx) <!-- id: 8 -->
+- [ ] Visual Polish & Final Check <!-- id: 9 -->
+    - [ ] Ensure Aceternity input effects are functional <!-- id: 10 -->
+    - [ ] Verify contrasting "light-dark" card shades <!-- id: 11 -->

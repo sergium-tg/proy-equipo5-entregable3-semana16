@@ -1,0 +1,8 @@
+# Animated Trayectoria Counters
+
+- [/] Implement Animated Counters
+    - [x] Locate "Nuestra Trayectoria" section
+    - [x] Create implementation plan
+    - [ ] Implement `AnimatedCounter` in [Hero.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/faq/FAQHero.tsx)
+    - [ ] Verify animation speed and fluidity
+    - [ ] Update walkthrough

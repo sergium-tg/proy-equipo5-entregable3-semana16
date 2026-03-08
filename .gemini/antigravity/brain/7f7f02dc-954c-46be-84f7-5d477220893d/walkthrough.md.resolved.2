@@ -1,0 +1,49 @@
+# Project Enhancements: Advanced Hero Scroll
+
+I have significantly improved the scroll animations to ensure they are visible and provide a "premium" feel. 
+
+## Key Improvements
+
+1.  **Scrollable Page Content**: Added a "Features" section below the Hero. Previously, the page had no content to scroll to, which made scroll-based animations impossible to see.
+2.  **Dramatic Background Reaction**: As you scroll, the background orbs now **increase in blur** and **decrease in opacity**, naturally transitioning into the next section.
+3.  **Content Fade & Lift**: The Hero title and buttons now **fade out and move upward** as you scroll away, creating a smooth and modern entrance for the rest of the page.
+
+## Technical Details
+
+````carousel
+```tsx
+// Scroll Progress Calculation
+const handleScroll = () => {
+    const scrollY = window.scrollY;
+    const viewportHeight = window.innerHeight;
+    const progress = Math.min(scrollY / viewportHeight, 1);
+    
+    // Set CSS variables for background
+    container.style.setProperty('--scroll-progress', `${progress}`);
+};
+```
+<!-- slide -->
+```css
+/* Dynamic Blur & Opacity */
+.orb {
+    filter: blur(calc(80px + var(--scroll-progress, 0) * 100px));
+    opacity: calc(1 - var(--scroll-progress, 0) * 0.5);
+    transition: filter 0.2s ease;
+}
+```
+<!-- slide -->
+```tsx
+// Content Layer Animation
+content.style.opacity = `${1 - progress}`;
+content.style.transform = `translateY(${progress * -50}px) scale(${1 - progress * 0.05})`;
+```
+````
+
+## How to Test
+
+1.  Open the page in your browser.
+2.  **Scroll down**: Notice how the Hero content gently disappears while the background blurs out to make way for the "Features" section.
+3.  **Scroll up**: Watch the Hero section cleanly re-appear.
+
+> [!TIP]
+> The scroll effect is now tied to the first 50-100% of the viewport height, making it very responsive to even small scrolls.

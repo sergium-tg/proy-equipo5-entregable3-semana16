@@ -1,0 +1,28 @@
+# FAQ Optimization and Redesign
+
+The user reported performance issues (lag) in the FAQ accordion and requested a visual update to the "immersion" neumorphic style used across the site.
+
+## Proposed Changes
+
+### [UI Components]
+#### [MODIFY] [accordion.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/accordion.tsx)
+- Review animation logic. If it's using heavy CSS transitions or multiple layout triggers, optimize them.
+
+### [FAQ Components]
+#### [MODIFY] [FAQ.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/contact/FAQ.tsx)
+- Apply persistent **inset** shadows to accordion items.
+- Remove background hover transitions that might cause recalculations.
+- Enhance typography legibility.
+
+#### [MODIFY] [DetailedFAQ.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/faq/DetailedFAQ.tsx)
+- Apply the same immersion style consistently.
+- Ensure efficient rendering of multiple items.
+
+## Verification Plan
+
+### Automated Tests
+- Run `npm run build` to ensure no UI breakages.
+
+### Manual Verification
+- Test accordion responsiveness in the browser.
+- Verify the "inset" look matches other sections.

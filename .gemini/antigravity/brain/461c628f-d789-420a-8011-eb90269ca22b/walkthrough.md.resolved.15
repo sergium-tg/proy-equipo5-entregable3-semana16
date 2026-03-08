@@ -1,0 +1,24 @@
+# Walkthrough - Supabase Robustness Fix
+
+I have resolved the **Runtime Error** that was crashing the application due to missing Supabase credentials. The system is now more robust and provides clear guidance on how to complete the setup.
+
+## Key Changes
+
+### 1. Defensive Client Initialization
+- **Server Client**: Updated [server.ts](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/lib/supabase/server.ts) to check for `NEXT_PUBLIC_SUPABASE_URL` and `ANON_KEY`. If missing, it logs a clear server-side error and returns `null` instead of crashing.
+- **Browser Client**: Applied similar logic to [client.ts](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/lib/supabase/client.ts) to ensure the frontend doesn't break during browser-side initialization.
+
+### 2. Error Resilience in Services
+- **User Service Protection**: Wrapped the [getAuthenticatedUser](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/modules/users/users.service.ts#121-151) logic in a `try/catch` block. This ensures that even if Supabase is not configured, the [RootLayout](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/layout.tsx#16-36) can continue rendering (hiding the Navbar as intended) without a fatal error.
+
+### 3. Configuration Template
+- **.env.example**: Created a comprehensive example file at the root of the project. This serves as a template so you know exactly which keys are required to reconnect the database and authentication services.
+
+## Files Modified/Created
+- [server.ts](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/lib/supabase/server.ts)
+- [client.ts](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/lib/supabase/client.ts)
+- [users.service.ts](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/modules/users/users.service.ts)
+- [.env.example](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/.env.example)
+
+## Final Result
+The application should now load correctly at `localhost:3000/login`. To restore full functionality (Navbar, Login, etc.), simply copy [.env.example](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/.env.example) to `.env.local` and fill in your Supabase credentials.

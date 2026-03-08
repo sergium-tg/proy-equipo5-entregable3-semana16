@@ -1,0 +1,6 @@
+{
+  "artifactType": "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary": "Technical plan for implementing a premium Apple-inspired UI. The plan focuses on minimal aesthetics, glassmorphism, fluid animations with Framer Motion, and a robust component-based architecture. It includes detailed specs for Login, Register, and Logout states.",
+  "updatedAt": "2026-03-07T18:06:42.023165Z",
+  "version": "3"
+}

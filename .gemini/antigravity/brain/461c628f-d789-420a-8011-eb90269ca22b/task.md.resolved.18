@@ -1,0 +1,16 @@
+# Task: Polish Sliding Auth Aesthetics
+
+- [x] Planning premium overhaul <!-- id: 0 -->
+    - [x] Define "card-in-card" design elements <!-- id: 1 -->
+    - [x] Select high-contrast typography and mesh gradients <!-- id: 2 -->
+- [x] Polishing [AuthCard](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx#214-215) forms <!-- id: 3 -->
+    - [x] Implement inner glass cards for forms <!-- id: 4 -->
+    - [x] Refine inputs with inner shadows and glows <!-- id: 5 -->
+    - [x] Update labels for technical aesthetic <!-- id: 6 -->
+- [x] Polishing [AuthContainer](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthContainer.tsx#12-109) <!-- id: 7 -->
+    - [x] Add mesh gradient to sliding panel <!-- id: 8 -->
+    - [x] Implement outer glow and grid overlay <!-- id: 9 -->
+    - [x] Redesign switch button for premium feel <!-- id: 10 -->
+- [x] Refine [DevTips](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/DevTips.tsx#25-81) typography <!-- id: 11 -->
+- [x] Final Verification <!-- id: 12 -->
+    - [x] Run build and test transitions <!-- id: 13 -->

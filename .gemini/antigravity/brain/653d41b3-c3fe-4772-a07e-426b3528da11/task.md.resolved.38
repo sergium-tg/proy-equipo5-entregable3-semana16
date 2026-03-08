@@ -1,0 +1,9 @@
+# Responsive & Animation Upgrades
+
+- [/] optimize_mobile_and_animations
+    - [x] Analyze vertical service components
+    - [ ] Refactor CoreAdvisory to Mobile Carousel
+    - [ ] Refactor ValuedAudits to Mobile Carousel
+    - [ ] Refactor DetailedServices to Mobile Carousel
+    - [ ] Implement IntersectionObserver for Hero Counters
+    - [ ] Update walkthrough

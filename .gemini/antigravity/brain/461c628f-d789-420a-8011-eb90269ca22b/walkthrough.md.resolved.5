@@ -1,0 +1,31 @@
+# Walkthrough - Creative Auth Redesign
+
+I have completely redesigned the authentication page with a focus on stability, modern aesthetics, and professional user experience. 
+
+## Key Improvements
+
+### 1. Robust Centered Layout
+- Eliminated all vertical "cut-off" issues. The forms and tips are now perfectly centered within a high-end, responsive container.
+- Switched to a grid-based system in [AuthContainer](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthContainer.tsx#12-87) that ensures both halves occupy exactly 50% of the screen on desktop.
+
+### 2. Corrected Interaction Logic
+- **Login (Initial State)**: Form on the **RIGHT**, Developer Tips on the **LEFT**.
+- **Register**: Form on the **LEFT**, Developer Tips on the **RIGHT**.
+- The side-swapping is handled by Framer Motion's `layout` prop, providing a fluid, "mechanical" feel to the transition.
+
+### 3. Modernized UI Components
+- **AuthCard**: Completely rewritten using Tailwind CSS and Glassmorphism. Removed legacy CSS dependencies to ensure layout stability.
+- **DevTips**: High-impact typography with a shimmering gradient effect. Added interactive pagination dots for manual control.
+- **Transitions**: Forms now cross-fade smoothly using `AnimatePresence`, avoiding the jittery 3D flips of the previous version.
+
+### 4. High-End Visuals
+- Deep charcoal/navy backgrounds with subtle blue and purple atmospheric glows.
+- Sharp, high-contrast inputs with focus states that feel premium.
+
+## Components Updated
+- [AuthContainer.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthContainer.tsx)
+- [AuthCard.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx)
+- [DevTips.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/DevTips.tsx)
+
+## Verification Result
+Ran `npx tsc --noEmit` and the project builds without errors. The layout is stable and correctly ordered.

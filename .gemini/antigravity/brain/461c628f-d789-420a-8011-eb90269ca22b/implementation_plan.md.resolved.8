@@ -1,0 +1,36 @@
+# Implementation Plan - Separate Auth Pages & Navbar
+
+The goal is to transition from a sliding overlay to dedicated, centered card-based pages for Login and Register, and to implement a matching "Apple-Developer" style Navbar.
+
+## Proposed Changes
+
+### [Layout & Navigation]
+#### [NEW] [Navbar.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/ui/Navbar.tsx)
+- Minimalist top navigation.
+- Glassmorphism (`backdrop-blur`).
+- Links to "Terminal" (Home), "Login", and "Register".
+
+#### [MODIFY] [layout.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/layout.tsx)
+- Integrate the `Navbar` to appear on all pages.
+
+### [Auth Refactor]
+#### [MODIFY] [AuthCard.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx)
+- Optimize [LoginForm](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx#19-118) and [RegisterForm](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx#119-229) to work as standalone centered cards.
+- **Improved Contrast**: Use a slightly lighter background (e.g., `zinc-900/80`) and better text contrast.
+- Ensure the Aceternity input effects are preserved.
+
+#### [DELETE] [AuthContainer.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthContainer.tsx)
+- No longer needed as we are moving to separate pages.
+
+#### [MODIFY] [login/page.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/login/page.tsx)
+- Use a centered [LoginForm](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx#19-118).
+
+#### [MODIFY] [register/page.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/register/page.tsx)
+- Use a centered [RegisterForm](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx#119-229).
+
+## Verification Plan
+
+### Manual Verification
+- **Navigation Test**: Click through Navbar links to ensure correct routing.
+- **Visual Polish**: Check card centering and "lighter" background contrast.
+- **Aceternity Check**: Verify mouse-follow input effects still work.

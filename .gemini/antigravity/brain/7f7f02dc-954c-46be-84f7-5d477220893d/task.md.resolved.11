@@ -1,0 +1,7 @@
+# Community Section Implementation
+
+- [x] Create [CommunitySection](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/components/community/CommunitySection.tsx#48-124) component and styles
+- [x] Implement scroll-based "fade-in" logic for the section
+- [x] Design interactive widgets (Solved Doubts, Shared Code, User Ratings)
+- [x] Replace placeholder in [page.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/app/page.tsx)
+- [x] Verify animations and layout

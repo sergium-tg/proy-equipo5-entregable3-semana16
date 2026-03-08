@@ -1,0 +1,25 @@
+# Benefits Carousel & Mobile CTA
+
+The user wants to continue the mobile optimization trend.
+1.  **Benefits Section**: Transform the grid into a swipeable carousel on mobile.
+2.  **Header CTA**: Ensure the "Solicitar Asesoría" button is present on the main mobile header, not just inside the hamburger menu.
+
+## Proposed Changes
+### [Sections]
+#### [MODIFY] [Benefits.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/Benefits.tsx)
+-   Apply the standard horizontal scroll pattern: `flex overflow-x-auto snap-x ...`.
+-   Ensure individual benefit cards have a `min-width` (e.g., `min-w-[280px]`) and `snap-center` class.
+-   Maintain grid layout for [md](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/README.md) and up.
+
+### [Shared]
+#### [MODIFY] [Header.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/shared/Header.tsx)
+-   Currently, the "Solicitar Asesoría" button is wrapped in `hidden md:flex`.
+-   **Change**: Make it visible on mobile, perhaps simplified (icon + text or just "Asesoría" if space is tight).
+-   **Layout**: Adjust flex alignment to accommodate Logo + CTA + Hamburger.
+    -   Proposed order: [Hamburger] [Logo] [CTA]. Or [Logo] ... [CTA] [Hamburger].
+    -   User requested "Keep it in the main navbar".
+    -   I'll place it to the right of the logo, or next to the menu button.
+
+## Verification
+-   **Mobile View**: Verify Benefits section swipes horizontally.
+-   **Mobile Header**: Ensure "Solicitar Asesoría" is visible and clickable without opening the menu.

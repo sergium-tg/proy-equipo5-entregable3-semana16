@@ -1,0 +1,7 @@
+# Mission & Vision Neumorphic Intensification
+
+- [/] Intensify Neumorphism in Mission & Vision Cards
+    - [x] Research shadow parameters
+    - [x] Create implementation plan
+    - [ ] Apply stronger shadows and contrast in [MissionVision.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/about/MissionVision.tsx)
+    - [ ] Final visual polish and build check

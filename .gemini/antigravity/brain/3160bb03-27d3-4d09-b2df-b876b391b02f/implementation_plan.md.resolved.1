@@ -1,0 +1,50 @@
+# Frontend Implementation Plan
+
+The goal is to create a modern, vibrant Next.js frontend with Login, Register, and Logout functionality. The UI will feature sliding transitions between forms and a dedicated loading screen.
+
+## Proposed Changes
+
+### [Frontend Components]
+The UI components will be stored in the root `frontend/components` directory to keep the design logic separate from the routing logic.
+
+#### [NEW] [LoadingScreen.tsx](file:///Users/santiagovalencia/Documents/proyecto_informatico_1/Proyecto_Informatico/frontend/components/LoadingScreen.tsx)
+- A full-screen animated loading overlay with vibrant gradients.
+- Uses Framer Motion for smooth entry/exit animations.
+
+#### [NEW] [AuthForm.tsx](file:///Users/santiagovalencia/Documents/proyecto_informatico_1/Proyecto_Informatico/frontend/components/AuthForm.tsx)
+- A reusable form container that handles the "sliding overlay" effect.
+- Will contain both Login and Register views.
+
+#### [NEW] [LoginForm.tsx](file:///Users/santiagovalencia/Documents/proyecto_informatico_1/Proyecto_Informatico/frontend/components/LoginForm.tsx)
+- The login form component.
+
+#### [NEW] [RegisterForm.tsx](file:///Users/santiagovalencia/Documents/proyecto_informatico_1/Proyecto_Informatico/frontend/components/RegisterForm.tsx)
+- The registration form component.
+
+---
+
+### [Next.js Pages]
+The pages will be entry points in `src/app` that call the corresponding components.
+
+#### [NEW] [login/page.tsx](file:///Users/santiagovalencia/Documents/proyecto_informatico_1/Proyecto_Informatico/src/app/login/page.tsx)
+#### [NEW] [register/page.tsx](file:///Users/santiagovalencia/Documents/proyecto_informatico_1/Proyecto_Informatico/src/app/register/page.tsx)
+---
+
+### [Creative Home Page]
+Redesigning `src/app/page.tsx` to be a high-impact landing page.
+
+#### [MODIFY] [page.tsx](file:///Users/santiagovalencia/Documents/proyecto_informatico_1/Proyecto_Informatico/src/app/page.tsx)
+- Immersive background with animated mesh gradients.
+- Entrance animations for all text and CTA elements.
+- Interactive "Card" sections highlighting features.
+- Dynamic typography using viewport units and responsive scaling.
+
+## Verification Plan
+
+### Automated Tests
+- N/A (Manual verification via browser tool).
+
+### Manual Verification
+- Verify that navigating between `/login` and `/register` triggers the sliding overlay.
+- Verify that form submissions correctly call the `/api/users/*` routes.
+- Verify the loading screen appearance on page transitions.

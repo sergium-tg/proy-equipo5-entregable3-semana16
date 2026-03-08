@@ -1,0 +1,7 @@
+# Responsive Optimization
+
+- [/] Optimize Mobile Widths
+    - [ ] Analyze [CoreAdvisory](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/CoreAdvisory.tsx#39-104) width (`min-w-[280px]` vs `85vw`)
+    - [ ] Analyze [DetailedServices](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/DetailedServices.tsx#100-181) width (`min-w-full` vs `85vw`)
+    - [ ] Fix Build Errors
+    - [ ] Update walkthrough

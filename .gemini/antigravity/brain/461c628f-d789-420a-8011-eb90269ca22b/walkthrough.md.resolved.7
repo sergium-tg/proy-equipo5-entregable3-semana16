@@ -1,0 +1,31 @@
+# Walkthrough - Sliding Panel Auth Redesign
+
+I have implemented a professional "Sliding Panel" authentication layout, inspired by your reference. This design features a tactile, high-end experience where the content shifts horizontally to reveal the appropriate form.
+
+## Key Features
+
+### 1. Sliding Overlay Panel
+- A fixed-size glassmorphism card now houses both forms.
+- A vibrant blue overlay panel (Side A) slides horizontally over the forms.
+- The panel uses a custom ease function `[0.6, 0.05, -0.01, 0.9]` to feel "mechanical" and weighted.
+
+### 2. Strategic Form Placement
+- **LoginForm**: Fixed on the right half of the main card.
+- **RegisterForm**: Fixed on the left half of the main card.
+- As the overlay slides, it reveals the form underneath, creating a sophisticated "sliding drawer" effect.
+
+### 3. Integrated DevTips
+- The [DevTips](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/DevTips.tsx#25-81) now reside permanently inside the sliding overlay.
+- Typography has been scaled down to fit perfectly within the 50% width of the overlay without feeling cramped.
+
+### 4. Cohesive Design Line
+- Maintained the DevAuth dark theme colors, shimmering gradients, and glowing background blobs.
+- Subtle background decor (floating circles/rectangles) added inside the sliding panel for extra depth.
+
+## Components Updated
+- [AuthContainer.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthContainer.tsx)
+- [AuthCard.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx)
+- [DevTips.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/DevTips.tsx)
+
+## Verification Result
+Ran `npx tsc --noEmit` and the project builds successfully. The sliding logic is stable and responsive.

@@ -1,0 +1,6 @@
+# Task: Homogenize Card Sizes in Services Section
+
+- [ ] Analyze `Services.tsx` structure and current styling <!-- id: 0 -->
+- [ ] Create implementation plan to unify card heights <!-- id: 1 -->
+- [ ] Implement responsive height and font size adjustments <!-- id: 2 -->
+- [ ] Verify fix across different screen sizes <!-- id: 3 -->

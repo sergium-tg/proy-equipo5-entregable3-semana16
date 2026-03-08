@@ -1,0 +1,8 @@
+# UI Enhancements
+
+- [/] Mobile Navbar & Neumorphism
+    - [x] Analyze current components
+    - [ ] Implement Mobile Sidebar with Focus/Blur effect
+    - [ ] Create Reusable Neumorphic Card Component
+    - [ ] Update Home Services section
+    - [ ] Update walkthrough

@@ -1,0 +1,29 @@
+# Add 'Auditorías de Valor' Section to Services Page
+
+The goal is to integrate a new section on the Services page that highlights specific, high-value auditing services provided by SIPRAC.
+
+## Proposed Changes
+
+### [NEW] [ValuedAudits.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/ValuedAudits.tsx)
+- Create a new component to display the "Auditorías de Valor".
+- **Design Strategy**:
+    - Use a dedicated section with a clean, high-contrast background (either off-white or very dark to contrast with [DetailedServices](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/DetailedServices.tsx#93-164)).
+    - Implement a grid of cards using the **metallic-glass** aesthetic.
+    - Each card will feature:
+        - A relevant Lucide icon (e.g., `ShieldCheck`, `Car`, `FileCheck`, `ClipboardCheck`).
+        - The specific title and detailed description provided by the user.
+        - A "chiseled" border and "light sweep" effect on hover.
+- **Section Title**: "Auditorías de Valor" in the established `font-black`, `uppercase`, `text-black` style.
+
+### [MODIFY] [page.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/services/page.tsx)
+- Import the new `ValuedAudits` component.
+- Place it between [DetailedServices](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/DetailedServices.tsx#93-164) and [Benefits](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/Benefits.tsx#24-56) to maintain a logical flow of "General Services -> Specific Audits -> Why Us".
+
+## Verification Plan
+
+### Automated Tests
+- Run `npm run build` to ensure all imports and types are correct.
+
+### Manual Verification
+- Visual inspection of the Services page to ensure the new section fits the brand's premium identity.
+- Verify responsiveness on mobile and tablet.

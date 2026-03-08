@@ -1,0 +1,7 @@
+# Email Redesign
+
+- [/] Redesign Email Template
+    - [x] Analyze current email logic
+    - [ ] Create neumorphic HTML structure
+    - [ ] Update [send-email.ts](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/actions/send-email.ts)
+    - [ ] Update walkthrough

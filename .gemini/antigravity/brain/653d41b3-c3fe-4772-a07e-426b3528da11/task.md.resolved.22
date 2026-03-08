@@ -1,0 +1,8 @@
+# Contact Page UI Final Polishing
+
+- [/] Refine Email and Phone Card Layouts
+    - [x] Research current implementation
+    - [x] Create implementation plan
+    - [ ] Import and integrate `Send` icon in [ContactInfo.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/contact/ContactInfo.tsx)
+    - [ ] Update item alignment to `justify-start` for clearer lists
+    - [ ] Final visual audit and build check

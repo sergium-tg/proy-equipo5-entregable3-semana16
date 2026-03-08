@@ -1,0 +1,6 @@
+- [x] Compact Neumorphic CTA
+    - [x] Create implementation plan
+    - [x] Implement compact horizontal design in [CTA.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/CTA.tsx)
+    - [x] Apply inset shadows for "carved" effect
+    - [x] Verify responsiveness and visual integration
+    - [x] Update walkthrough

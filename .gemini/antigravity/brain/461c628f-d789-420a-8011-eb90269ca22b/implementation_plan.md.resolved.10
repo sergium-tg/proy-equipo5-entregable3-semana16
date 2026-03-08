@@ -1,0 +1,34 @@
+# Implementation Plan - MediSync Styled Auth (Separate Pages)
+
+The objective is to implement a dual-panel card layout for Login and Register as standalone pages. This design replaces the sliding overlay with a fixed, high-contrast container inspired by the user's provided snippet.
+
+## Proposed Changes
+
+### [Layout & Navigation]
+#### [MODIFY] [Navbar.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/ui/Navbar.tsx)
+- Refine to match a cleaner, more traditional "Product" aesthetic rather than purely neumorphic.
+- Standard glassmorphism with high-contrast labels.
+
+### [Auth Refactor]
+#### [MODIFY] [AuthCard.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx)
+- **Container Structure**: Implement the `login-container` with two halves:
+    - **Control/Form Half (Left)**: Minimalist inputs, high-contrast text, primary action button.
+    - **Info/Branding Half (Right)**: Decorative text, secondary links.
+- **Styling**: Use a "lighter" card background (higher value dark or clean light) to ensure impeccable readability.
+- **Next.js Integration**: Adapt the user's `react-router-dom` snippet to Next.js (`useRouter`, [Link](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/ui/Navbar.tsx#32-43)).
+
+#### [MODIFY] [login/page.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/login/page.tsx)
+- Use the centered, dual-panel [LoginForm](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx#20-92).
+
+#### [MODIFY] [register/page.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/register/page.tsx)
+- Adapt the same dual-panel layout for the [RegisterForm](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx#93-168).
+
+#### [DELETE] [AuthContainer.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthContainer.tsx)
+- Remove as the sliding logic is no longer desired.
+
+## Verification Plan
+
+### Manual Verification
+- **Visual Balance**: Ensure the card is perfectly centered and both panels have equal visual weight.
+- **Contrast Check**: Verify that text is easily readable on the "lighter" card background.
+- **Responsiveness**: Check that the dual-panel collapses gracefully to a single panel on mobile.

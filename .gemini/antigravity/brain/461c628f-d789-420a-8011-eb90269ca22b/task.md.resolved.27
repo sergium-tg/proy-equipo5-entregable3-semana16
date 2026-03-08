@@ -1,0 +1,8 @@
+# Task: Branding Cleanup & Design Refinement
+
+- [/] Refining Design & Branding Cleanup <!-- id: 17 -->
+    - [ ] Replace all "MediSync" references in [Navbar.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/ui/Navbar.tsx) and [AuthCard.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx) <!-- id: 18 -->
+    - [ ] Create an enhanced [globals.css](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/globals.css) <!-- id: 19 -->
+- [ ] Refactor Navbar Visibility <!-- id: 20 -->
+    - [ ] Implement server-side session check in [layout.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/layout.tsx) <!-- id: 22 -->
+- [ ] Final Verification & Polish <!-- id: 16 -->

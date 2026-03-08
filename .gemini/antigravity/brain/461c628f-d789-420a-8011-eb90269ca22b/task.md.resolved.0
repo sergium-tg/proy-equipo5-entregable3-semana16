@@ -1,0 +1,10 @@
+# Task: Fix InitialLoader Import Error
+
+- [/] Investigate cause of "Cannot find module '@/components/ui/InitialLoader'" <!-- id: 0 -->
+    - [x] Verify file existence <!-- id: 1 -->
+    - [x] Check tsconfig.json configuration <!-- id: 2 -->
+    - [/] Check for case sensitivity issues in paths <!-- id: 3 -->
+- [ ] Implement fix <!-- id: 4 -->
+    - [ ] Try relative import <!-- id: 5 -->
+    - [ ] Add missing React import in InitialLoader.tsx <!-- id: 6 -->
+- [ ] Verify fix <!-- id: 7 -->

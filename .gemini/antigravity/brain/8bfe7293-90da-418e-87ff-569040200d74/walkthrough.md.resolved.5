@@ -1,0 +1,41 @@
+# Walkthrough - MobileCarousel Refactor & Duplication Fix
+
+## Changes
+
+### [components/ui/MobileCarousel.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/MobileCarousel.tsx)
+
+**Enhanced with `staticOnMobile` prop:**
+- When `staticOnMobile={true}`: renders a static grid on both mobile and desktop
+- When `staticOnMobile={false}` (default): maintains horizontal scroll carousel on mobile, grid on desktop
+- Card width reduced to `75vw` with `gap-4` spacing
+
+### Refactored Components
+
+#### Using MobileCarousel with scroll (default behavior):
+- [ValuedAudits.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/ValuedAudits.tsx)
+- [CoreAdvisory.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/CoreAdvisory.tsx)
+- [DetailedServices.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/DetailedServices.tsx)
+- [ContactInfo.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/contact/ContactInfo.tsx)
+
+#### Using MobileCarousel with static grid (`staticOnMobile={true}`):
+- [CorporateValues.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/about/CorporateValues.tsx)
+
+## Bug Fix - Duplication Issue
+
+**Causa del bug:** El componente [MobileCarousel](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/MobileCarousel.tsx#12-48) usa `React.Children.map` que envuelve cada hijo en un `div` adicional. En algunos casos, esto puede causar efectos visuales de duplicación cuando se combina con ciertas propiedades CSS de scroll.
+
+**Solución:** Se agregó el prop `staticOnMobile` que permite usar un simple `grid` estático en lugar del scroll horizontal, eliminando la duplicación visual en mobile mientras mantiene el comportamiento de grid en desktop.
+
+## Uso
+
+```tsx
+// Carousel móvil (scroll horizontal)
+<MobileCarousel className="grid-cols-1 md:grid-cols-2 gap-4">
+  {items.map(...)}
+</MobileCarousel>
+
+// Grid estático en mobile y desktop  
+<MobileCarousel staticOnMobile={true} className="grid-cols-1 md:grid-cols-2 gap-4">
+  {items.map(...)}
+</MobileCarousel>
+```

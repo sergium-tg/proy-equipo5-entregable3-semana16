@@ -1,0 +1,27 @@
+# Compact & Sober CTA Redesign
+
+The user requested a cleaner, less intrusive Call to Action (CTA) that doesn't consume as much space as the current large card design. They suggested potentially integrating it into the footer or making it more "sober".
+
+## Proposed Solution: Compact Neumorphic Strip
+
+Instead of burying the CTA in the links footer (which lowers conversion), we will redesign the [CTA.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/CTA.tsx) component to be a **slim, full-width neumorphic strip**.
+
+### Key Design Changes:
+1.  **Reduced Height**: Switch from a large vertical card to a horizontal layout (on desktop).
+2.  **Sober Aesthetics**: Remove the heavy white card container. Use the page background (`#FAF9F6`) with a subtle **inset shadow** to create a "carved path" effect, or a simple clean divider.
+3.  **Horizontal Flow**:
+    - Left: "Transform your organization" (Concise text).
+    - Right: The Action Button.
+4.  **Integration**: This will act as a "Pre-Footer" visual anchor without dominating the viewport.
+
+### [CTA Component]
+#### [MODIFY] [CTA.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/CTA.tsx)
+- Change container from `flex-col` to `flex-row` (on md+).
+- Reduce padding from `py-24` to `py-12`.
+- Remove the large white bg and drop shadows.
+- Use `shadow-[inset...]` for the container to give it depth without bulk.
+
+## Verification Plan
+### Manual Verification
+- Verify the new CTA takes up significantly less vertical space.
+- Check responsiveness (stacks neatly on mobile, spreads on desktop).

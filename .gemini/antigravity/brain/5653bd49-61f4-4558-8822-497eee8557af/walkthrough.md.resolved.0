@@ -1,0 +1,15 @@
+# Verification of Hero Section Modifications
+
+I have modified the Hero section as requested.
+
+## Changes Made
+- **Background Image**: Removed the `fixed` attachment to prevent the "jumping" effect on scroll.
+- **Blur Effect**: Applied a `blur(8px)` filter to the background image.
+- **Text Color**: Changed the "Nuestra Trayectoria" text color to black.
+
+## Verification
+- **Visual Check**:
+    - The background image should now be blurred.
+    - The "Nuestra Trayectoria" text should be black.
+- **Scroll Check**:
+    - Scrolling up and down should feel smoother without the background image trying to stay fixed.

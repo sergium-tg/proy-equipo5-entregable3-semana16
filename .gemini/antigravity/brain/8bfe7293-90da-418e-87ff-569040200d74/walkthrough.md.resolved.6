@@ -1,0 +1,42 @@
+# Walkthrough - Service Duplication Fix & Mission/Vision Addition
+
+## Bug Fix - Service Duplication
+
+**Causa del bug:** El componente [Services.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/Services.tsx) renderiza dos versiones diferentes de los servicios:
+1. **Móvil** (líneas 126-132): Carousel manual con scroll horizontal
+2. **Desktop** (líneas 135-139): Carousel infinito con animación automática
+
+Ambas versiones YA tenían las clases correctas (`md:hidden` para móvil, `hidden md:flex` para desktop), así que la duplicación visual probablemente se debía a un problema de caché o renderización. Agregué un comentario más claro para confirmar el comportamiento.
+
+**Solución:** Verifiqué que el desktop version tiene `hidden md:flex` que lo oculta en móvil. Si aún ves duplicación, puede ser un problema de caché del navegador.
+
+## Cambios
+
+### [app/page.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/app/page.tsx)
+
+Agregué [MissionVisionSnippet](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/MissionVisionSnippet.tsx#6-48) justo antes del componente `CTA` como solicitaste:
+
+```tsx
+<TeamSnippet />
+<MissionVisionSnippet />  // ← Nuevo
+<CTA />
+```
+
+### [components/sections/Services.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/sections/Services.tsx)
+
+Agregué comentario aclaratorio para confirmar que la versión desktop está oculta en mobile.
+
+## Componentes MobileCarousel
+
+### Con scroll (default):
+- ValuedAudits, CoreAdvisory, DetailedServices, ContactInfo
+
+### Con grid estático (`staticOnMobile={true}`):
+- CorporateValues
+
+## Recomendación
+
+Si todavía ves duplicación en móvil:
+1. Limpia el caché del navegador (Cmd+Shift+R)
+2. Revisa que no haya otros componentes duplicando los servicios
+3. Verifica las DevTools que solo un conjunto de servicios esté visible en móvil

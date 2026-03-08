@@ -1,0 +1,6 @@
+# Project Startup Task
+
+- [x] Identify running next processes
+- [x] Kill running next processes
+- [ ] Remove stale lock file
+- [ ] Start dev server

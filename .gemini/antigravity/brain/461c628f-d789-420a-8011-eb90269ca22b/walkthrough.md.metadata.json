@@ -1,0 +1,6 @@
+{
+  "artifactType": "ARTIFACT_TYPE_WALKTHROUGH",
+  "summary": "Final walkthrough covering the architectural refactor, white card redesign, and multiple build error fixes (Server Components and Client Directives). Details the resolution of the recent motion component crash.",
+  "updatedAt": "2026-03-07T21:33:14.982081Z",
+  "version": "18"
+}

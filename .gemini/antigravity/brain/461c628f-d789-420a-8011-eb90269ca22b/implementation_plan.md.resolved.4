@@ -1,0 +1,33 @@
+# Implementation Plan - Blob Integration & Creative Redesign
+
+The objective is to integrate the user's provided "Blob" design (animations, variants, and structure) into the existing DevAuth dark theme. This will create a hybrid design that features glowing, animated background shapes while maintaining the professional developer aesthetic.
+
+## Proposed Changes
+
+### [Core Styles]
+#### [MODIFY] [globals.css](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/globals.css)
+- Add custom keyframes for blob animations: `snakeMove`, `snakeFloat`, `snakeWiggle`, `blobMove`, `blobFloatLarge`, `blobPulse`, `blobSpin`, and `blobBounce`.
+- These keyframes will drive the organic movement of the background shapes.
+
+### [Auth Components]
+#### [MODIFY] [AuthContainer.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthContainer.tsx)
+- Integrate the animated "blobs" into the background.
+- For Login state: Large animated text ("DevAuth Login") and moving shapes in the side panel.
+- Maintain the side-swapping logic (isSignup toggle).
+- Use the user's `containerVariants` for the main wrapper.
+
+#### [MODIFY] [AuthCard.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx)
+- Re-implement the forms using the user's provided structure and `itemVariants`.
+- Style the inputs and buttons using the DevAuth color palette (Deep Blue, Emerald, Blue Gradients).
+- Ensure the layout matches the provided template's spacing and professional feel.
+
+## Verification Plan
+
+### Automated Tests
+- Run `npx tsc --noEmit` to ensure no TypeScript regressions.
+
+### Manual Verification
+- **Animation Check**: Verify background blobs move organically as defined by the user's keyframes.
+- **Side Swap**: Ensure the fluid transition between Login (RIGHT) and Register (LEFT) works correctly.
+- **Centering**: Verify that all form elements are visible and centered on desktop and laptop screens.
+- **Responsiveness**: Check the mobile fallback (stacked forms).

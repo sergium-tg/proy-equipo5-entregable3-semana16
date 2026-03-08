@@ -1,0 +1,32 @@
+# Walkthrough - MediSync Styled Auth Refactor
+
+I have completely overhauled the authentication system to follow the **MediSync dual-panel card** layout you provided. This design prioritizes impeccable readability, high contrast, and a professional product feel.
+
+## Key Implementation Details
+
+### 1. Dual-Panel Card Architecture
+- **Login & Register**: Each form is now centered on its own page within a large, high-contrast card.
+- **Form Panel (Left)**: Features high-contrast typography, clear labels, and the interactive Aceternity-style inputs you liked.
+- **Branding Panel (Right)**: Includes marketing copy, helpful links, and a subtle technical background pattern to reinforce the MediSync identity.
+
+### 2. Standalone Pages
+- Replaced the sliding overlay with dedicated routes: `/login` and `/register`.
+- This ensures a more traditional and stable user experience focused on one task at a time.
+
+### 3. High-Contrast Contrast
+- **Visual Clarity**: Used a deeper `#0c0d21` background for the form panels and `zinc-900` for the cards to make text and input borders razor-sharp.
+- **Typography**: Bold, black headers with tight tracking for a high-end feel.
+
+### 4. MediSync Navbar
+- Implemented a sleek, top-positioned Navbar that follows the same design line.
+- Provides clear navigation between the Dashboard, Sign In, and Register pages.
+
+## Components Implemented/Updated
+- [AuthCard.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthCard.tsx)
+- [Navbar.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/ui/Navbar.tsx)
+- [login/page.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/login/page.tsx)
+- [register/page.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/app/register/page.tsx)
+- **Deleted**: [AuthContainer.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/auth/AuthContainer.tsx)
+
+## Verification
+Project builds successfully with `npx tsc --noEmit`. The interactive Aceternity inputs are fully functional within the new card structure.

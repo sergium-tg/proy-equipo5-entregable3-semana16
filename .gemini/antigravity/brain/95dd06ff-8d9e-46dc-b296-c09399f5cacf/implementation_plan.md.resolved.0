@@ -1,0 +1,18 @@
+# Implementation Plan - Fix `@/lib/utils` Import Error
+
+The goal is to resolve the TypeScript error "Cannot find module '@/lib/utils' or its corresponding type declarations" by ensuring the path mapping in [tsconfig.json](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/tsconfig.json) is correctly configured and recognized by the TypeScript compiler.
+
+## Proposed Changes
+
+### Configuration
+
+#### [MODIFY] [tsconfig.json](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/tsconfig.json)
+
+- Add `"baseUrl": "."` to `compilerOptions`. This ensures that the `paths` mapping relative to `./src/*` is correctly resolved from the project root.
+
+## Verification Plan
+
+### Manual Verification
+- I will check the [GlassCard.tsx](file:///Users/santiagovalencia/proyecto%20informatico_1%20frontend/Proyecto_Informatico/src/components/ui/GlassCard.tsx) file for any remaining TypeScript errors after the change.
+- I will run `npm run lint` if available to see if it reports any import errors.
+- I will check the output of the development server if it's running.

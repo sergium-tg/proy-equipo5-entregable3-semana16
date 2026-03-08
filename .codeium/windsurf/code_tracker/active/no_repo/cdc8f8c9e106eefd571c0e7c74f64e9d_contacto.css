@@ -1,0 +1,1001 @@
+ƒŠ/* ===== VARIABLES ESPECÃFICAS PARA CONTACTO ===== */
+:root {
+    --contact-gradient: linear-gradient(135deg, 
+        rgba(245, 124, 0, 0.1) 0%, 
+        rgba(255, 179, 0, 0.05) 100%);
+    --whatsapp-green: #25D366;
+    --form-bg: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+}
+
+/* ===== HERO CONTACTO ===== */
+.hero-contacto {
+    margin-top: 80px;
+    padding: var(--spacing-xl) 0;
+    background: var(--contact-gradient);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-contacto .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 3rem;
+    color: var(--negro);
+    margin-bottom: var(--spacing-sm);
+    animation: fadeInUp 0.8s ease;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: var(--gris-medio);
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease;
+}
+
+/* ===== INFORMACIÃ“N DE CONTACTO ===== */
+.contact-info {
+    background-color: var(--blanco);
+    padding: var(--spacing-xl) 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+    max-width: 1000px;
+    margin: 0 auto var(--spacing-xl);
+}
+
+.contact-card {
+    background: var(--blanco);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-sm);
+    border-top: 4px solid var(--naranja-principal);
+    transition: all 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 160px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-top-color: var(--amarillo-secundario);
+}
+
+.contact-card:hover .contact-icon {
+    background: var(--naranja-principal);
+}
+
+.contact-card:hover .contact-icon i {
+    color: var(--blanco);
+}
+
+.contact-icon {
+    width: 42px;
+    height: 42px;
+    background: rgba(245, 124, 0, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-sm);
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+    background: var(--naranja-principal);
+    transform: scale(1.1);
+}
+
+.contact-icon i {
+    font-size: 1.5rem;
+    color: var(--naranja-principal);
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover .contact-icon i {
+    color: var(--blanco);
+}
+
+.contact-title {
+    font-size: 1.4rem;
+    color: var(--negro);
+    margin-bottom: var(--spacing-md);
+}
+
+.contact-details {
+    flex: 1;
+    width: 100%;
+    margin: 0 auto var(--spacing-md);
+    color: var(--negro);
+    text-align: center;
+}
+
+.contact-details p {
+    color: var(--negro) !important;
+    text-align: center;
+    margin: 0.5rem 0;
+    width: 100%;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.75rem;
+    border-radius: var(--border-radius-sm);
+    background: rgba(245, 124, 0, 0.05);
+    color: var(--gris-oscuro);
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    background: rgba(245, 124, 0, 0.1);
+    color: var(--naranja-principal);
+    transform: translateX(5px);
+}
+
+.contact-link i {
+    color: var(--naranja-principal);
+    font-size: 1.1rem;
+}
+
+.contact-note, .contact-note p {
+    color: var(--negro) !important;
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+/* BotÃ³n WhatsApp especial */
+.btn-whatsapp {
+    background-color: var(--whatsapp-green);
+    color: var(--blanco);
+    padding: 0.875rem 1.75rem;
+    border-radius: 50px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: -5.0;
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128C7E;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+    color: var(--blanco);
+}
+
+/* ===== FORMULARIO DE CONTACTO ===== */
+.formulario-contacto {
+    background: linear-gradient(135deg, 
+        rgba(245, 124, 0, 0.05) 0%, 
+        rgba(255, 179, 0, 0.02) 100%);
+    padding: var(--spacing-xl) 0;
+}
+
+.form-container {
+    background: #ffffff;
+    border-radius: 25px;
+    padding: 2.5em;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 0 auto;
+    transition: 0.4s ease-in-out;
+}
+
+.form-container:hover {
+    transform: scale(1.01);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Modern Form Styles */
+.modern-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    width: 100%;
+}
+
+#form-heading {
+    text-align: center;
+    color: #000;
+    font-size: 1.8em;
+    margin: 0 0 1em 0;
+    font-weight: 600;
+}
+
+.form-field {
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+    background: #f8f8f8;
+    border-radius: 15px;
+    padding: 0.8em 1.2em;
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.form-field:focus-within {
+    border-color: var(--naranja-principal);
+    box-shadow: 0 0 0 2px rgba(245, 124, 0, 0.2);
+}
+
+.input-icon {
+    height: 1.3em;
+    width: 1.3em;
+    color: var(--naranja-principal);
+    flex-shrink: 0;
+}
+
+.form-input {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #000 !important;
+    font-size: 1em;
+    padding: 0.5em 0;
+}
+
+.form-input::placeholder {
+    color: #666 !important;
+}
+
+textarea.form-input {
+    resize: vertical;
+    min-height: 100px;
+    padding: 0.8em 0;
+    line-height: 1.6;
+}
+
+select.form-input {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23F57C00' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.658l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.5em center;
+    background-size: 12px 12px;
+    padding-right: 2em;
+}
+
+.form-legal {
+    margin: 0.5em 0;
+    padding: 0 1em;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8em;
+    color: #000 !important;
+    font-size: 0.9em;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-top: 0.3em;
+    accent-color: var(--naranja-principal);
+}
+
+.privacy-link {
+    color: var(--naranja-principal);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.privacy-link:hover {
+    color: #e06d00;
+    text-decoration: underline;
+}
+
+.form-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+    gap: 1em;
+}
+
+.submit-btn {
+    background: var(--naranja-principal);
+    color: white;
+    border: none;
+    padding: 1em 2.5em;
+    border-radius: 50px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+    box-shadow: 0 4px 15px rgba(245, 124, 0, 0.3);
+}
+
+.submit-btn:hover {
+    background: #e06d00;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(245, 124, 0, 0.4);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.form-note {
+    color: #333;
+    font-size: 0.85em;
+    margin: 0;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 1.5em;
+        border-radius: 15px;
+    }
+    
+    #form-heading {
+        font-size: 1.5em;
+    }
+    
+    .form-field {
+        padding: 0.7em 1em;
+    }
+    
+    .submit-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, 
+        var(--naranja-principal), 
+        var(--amarillo-secundario), 
+        var(--naranja-principal));
+    background-size: 200% 100%;
+    animation: ctaBorder 3s linear infinite;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.form-title {
+    font-size: 2rem;
+    color: #000;
+    margin-bottom: var(--spacing-sm);
+}
+
+.form-subtitle {
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.contact-form {
+    margin-top: var(--spacing-lg);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #000;
+    font-size: 0.95rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--border-radius-sm);
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--blanco);
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--naranja-principal);
+    box-shadow: 0 0 0 3px rgba(245, 124, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.form-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 140px;
+    line-height: 1.5;
+}
+
+/* Estilos para select */
+select.form-input {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23F57C00' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 16px;
+    padding-right: 2.5rem;
+}
+
+/* Checkboxes */
+.form-legal {
+    margin-bottom: var(--spacing-sm);
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.checkbox-label input[type="checkbox"] {
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.checkbox-label input[type="checkbox"]:checked {
+    background-color: var(--naranja-principal);
+    border-color: var(--naranja-principal);
+}
+
+.privacy-link {
+    color: var(--amarillo-secundario);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.privacy-link:hover {
+    color: var(--naranja-claro);
+}
+
+/* Footer del formulario */
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-large {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    border-radius: 50px;
+}
+
+.btn-submit {
+    background: linear-gradient(135deg, var(--naranja-principal), var(--amarillo-secundario));
+    color: white;
+    border: none;
+    box-shadow: 0 4px 15px rgba(245, 124, 0, 0.3);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(135deg, var(--naranja-claro), var(--amarillo-secundario));
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(245, 124, 0, 0.4);
+}
+
+.form-note {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.875rem;
+}
+
+/* ===== MAPA Y UBICACIÃ“N ===== */
+.mapa {
+    background-color: var(--blanco);
+    padding: var(--spacing-xl) 0;
+}
+
+.mapa-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.mapa-info {
+    padding-right: var(--spacing-lg);
+}
+
+.mapa-title {
+    font-size: 1.8rem;
+    color: var(--naranja-principal);
+    margin-bottom: var(--spacing-lg);
+}
+
+.mapa-list {
+    list-style: none;
+    margin-bottom: var(--spacing-lg);
+}
+
+.mapa-list li {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1rem;
+}
+
+.mapa-list i {
+    color: var(--naranja-principal);
+    font-size: 1.1rem;
+}
+
+.mapa-contacto {
+    background: rgba(245, 124, 0, 0.05);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--naranja-principal);
+}
+
+.mapa-contacto p {
+    margin: 0.3rem auto;
+    color: var(--negro) !important;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+.mapa-contacto strong {
+    color: var(--naranja-principal);
+}
+
+.mapa-visual {
+    background: var(--contact-gradient);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 1px solid rgba(245, 124, 0, 0.1);
+}
+
+.mapa-placeholder {
+    text-align: center;
+    color: var(--gris-oscuro);
+}
+
+.mapa-placeholder i {
+    font-size: 4rem;
+    color: var(--naranja-principal);
+    margin-bottom: var(--spacing-md);
+    opacity: 0.7;
+}
+
+.mapa-placeholder p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.mapa-placeholder small {
+    color: var(--gris-medio);
+    font-size: 0.9rem;
+}
+
+/* ===== PREGUNTAS FRECUENTES ===== */
+.faq {
+    padding: var(--spacing-xl) 0;
+}
+
+.faq-grid {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--blanco);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-sm);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--gris-borde);
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--naranja-principal);
+}
+
+.faq-question {
+    width: 100%;
+    padding: var(--spacing-lg);
+    text-align: left;
+    background: none;
+    border: none;
+    font-family: var(--font-primary);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--negro);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    color: var(--naranja-principal);
+}
+
+.faq-question i {
+    color: var(--naranja-principal);
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 var(--spacing-lg);
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 var(--spacing-lg) var(--spacing-lg);
+    max-height: 500px;
+    opacity: 1;
+}
+
+.faq-answer p {
+    color: var(--gris-medio);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+    
+    .mapa-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .mapa-info {
+        padding-right: 0;
+    }
+    
+    .mapa-visual {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-contacto {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+    
+    .contact-card {
+        min-height: 140px;
+        padding: var(--spacing-sm);
+    }
+    
+    .form-container {
+        padding: var(--spacing-lg);
+    }
+    
+    .form-title {
+        font-size: 1.6rem;
+    }
+    
+    .form-footer {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        text-align: center;
+    }
+    
+    .btn-large {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .faq-question {
+        padding: var(--spacing-md);
+        font-size: 1rem;
+    }
+    
+    .mapa-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .contact-card {
+        padding: var(--spacing-md);
+    }
+    
+    .contact-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .contact-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .contact-title {
+        font-size: 1.2rem;
+    }
+    
+    .mapa-visual {
+        height: 300px;
+    }
+    
+    .mapa-placeholder i {
+        font-size: 3rem;
+    }
+    
+    .faq-answer p {
+        font-size: 0.95rem;
+    }
+}
+
+/* ===== ANIMACIONES ESPECÃFICAS ===== */
+@keyframes ctaBorder {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* AnimaciÃ³n para elementos de contacto */
+.contact-card {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.contact-card:nth-child(1) { animation-delay: 0.1s; }
+.contact-card:nth-child(2) { animation-delay: 0.2s; }
+.contact-card:nth-child(3) { animation-delay: 0.3s; }
+.contact-card:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efecto de brillo en los campos del formulario */
+.form-input:focus {
+    animation: inputGlow 1.5s infinite alternate;
+}
+
+@keyframes inputGlow {
+    from {
+        box-shadow: 0 0 0 3px rgba(245, 124, 0, 0.2);
+    }
+    to {
+        box-shadow: 0 0 0 3px rgba(245, 124, 0, 0.4);
+    }
+}ß ßö*cascade08
+öú ú€	*cascade08
+€	ş	 ş	€
+*cascade08
+€
+
+ 
+Œ
+*cascade08Œ
+
+ *cascade08
+
+*cascade08
+
+Ã
+ Ã
+Ä
+*cascade08
+Ä
+æ æ“ *cascade08“” *cascade08”•*cascade08•È *cascade08
+Èâ âö*cascade08
+öˆ ˆŠ*cascade08
+Šš šœ*cascade08
+œÛ Ûİ*cascade08İß *cascade08
+ß´ ´º*cascade08
+º½ ½¿*cascade08
+¿À ÀÌ*cascade08
+ÌÍ ÍÎ*cascade08
+Îæ æç*cascade08
+ç ‚*cascade08
+‚Â ÂÃ*cascade08
+Ã³ ³´*cascade08
+´å åç*cascade08
+çè èó*cascade08
+óô ôö*cascade08
+ö¶ ¶¼*cascade08
+¼Ò Òé *cascade08é*cascade08ƒ *cascade08
+ƒ Š*cascade08
+Š§ §¸*cascade08
+¸Ì ÌÎ*cascade08
+ÎÒ Òİ*cascade08
+İÖ 
+Ö× 
+×Ú 
+ÚŒ! Œ!!*cascade08
+!! !!*cascade08
+!¡! ¡!¨!*cascade08¨!¾! *cascade08¾!¿!*cascade08¿!Ç! *cascade08Ç!Û!*cascade08Û!‹" *cascade08‹"Œ"*cascade08Œ"" *cascade08""*cascade08"‘" *cascade08‘"’"*cascade08’"“" *cascade08“"¥"*cascade08¥"©" *cascade08©"µ"*cascade08µ"º" *cascade08º"½"*cascade08½"¾" *cascade08¾"À"*cascade08À"Ã" *cascade08Ã"Ä"*cascade08Ä"Ë" *cascade08Ë"Î"*cascade08Î"Ï" *cascade08Ï"Ñ"*cascade08Ñ"×" *cascade08×"Ø"*cascade08Ø"Ú" *cascade08Ú"Û"*cascade08Û"Ü" *cascade08Ü"İ"*cascade08İ"Ş" *cascade08Ş"ä"*cascade08ä"è" *cascade08
+è"é" é"ô"*cascade08
+ô"õ" õ"ù"*cascade08
+ù"ú" ú"ı" *cascade08ı"ÿ"*cascade08ÿ"‚# *cascade08
+‚#ƒ# ƒ#‡#*cascade08‡#‘# *cascade08
+‘#’# ’#¾# *cascade08¾#×#*cascade08×#Ø# *cascade08Ø#º$*cascade08
+º$¿$ ¿$ì$ *cascade08ì$ğ$*cascade08ğ$ö$ *cascade08ö$Œ%*cascade08Œ%’% *cascade08’%•% *cascade08•%%*cascade08%«% *cascade08
+«%¬% ¬%¾% *cascade08¾%Ã%*cascade08Ã%İ% *cascade08İ%à%*cascade08à%á% *cascade08á%è%*cascade08è%ê% *cascade08ê%ğ%*cascade08ğ%ö% *cascade08ö%ù%*cascade08ù%ı% *cascade08ı%ş%*cascade08ş%ÿ% *cascade08ÿ%&*cascade08&†& *cascade08†&Œ&*cascade08Œ&& *cascade08&&*cascade08&& *cascade08&&*cascade08&’& *cascade08’&™&*cascade08™&Ÿ& *cascade08Ÿ&£&*cascade08£&¤& *cascade08¤&¬&*cascade08¬&¯& *cascade08¯&²&*cascade08²&¸& *cascade08¸&¹&*cascade08¹&º& *cascade08º&¼&*cascade08¼&¾& *cascade08¾&¿&*cascade08¿&Á& *cascade08Á&Â&*cascade08Â&Ã& *cascade08Ã&Æ&*cascade08Æ&Ç& *cascade08Ç&Í&*cascade08Í&Ò& *cascade08Ò&Ö&*cascade08Ö&ß& *cascade08ß&å&*cascade08å&æ& *cascade08æ&ê&*cascade08ê&ñ& *cascade08ñ&õ&*cascade08õ&ö& *cascade08ö&÷&*cascade08÷&ı& *cascade08ı&ş&*cascade08ş&ÿ& *cascade08ÿ&‚'*cascade08‚'ƒ' *cascade08ƒ'‡'*cascade08‡'‰' *cascade08‰''*cascade08'‘' *cascade08‘'—'*cascade08—'˜' *cascade08˜' '*cascade08 '¡' *cascade08¡'£'*cascade08£'¤' *cascade08¤'¦'*cascade08
+¦'«' «'²'*cascade08²'×' *cascade08×'Ø'*cascade08Ø'Ù' *cascade08Ù'Ú'*cascade08Ú'Ü' *cascade08Ü'á'*cascade08á'ã' *cascade08ã'ä'*cascade08ä'å' *cascade08å'æ'*cascade08æ'ç' *cascade08ç'è'*cascade08è'é' *cascade08é'ì'*cascade08ì'î' *cascade08î'ğ'*cascade08ğ'ñ' *cascade08ñ'ö'*cascade08ö'÷' *cascade08÷'û'*cascade08û'ı' *cascade08ı'ş'*cascade08ş'ÿ' *cascade08ÿ'ƒ(*cascade08ƒ(( *cascade08(“(*cascade08“(š( *cascade08š(œ(*cascade08œ(( *cascade08((*cascade08(Ÿ( *cascade08Ÿ( (*cascade08 (£( *cascade08£(§(*cascade08§(­( *cascade08­(¯(*cascade08¯(°( *cascade08°(²(*cascade08²(µ( *cascade08µ(¹(*cascade08¹(¿( *cascade08¿(Â(*cascade08Â(Æ( *cascade08Æ(È(*cascade08
+È(É( É(Î(*cascade08
+Î(Ï( Ï(Ó(*cascade08
+Ó(Ô( Ô(Õ(*cascade08
+Õ(×( ×(Ú(*cascade08Ú(Û( *cascade08Û(Ş(*cascade08Ş(å( *cascade08å(è(*cascade08è(ê( *cascade08ê(ì(*cascade08ì(í( *cascade08í(ï(*cascade08ï(ñ( *cascade08ñ(ò(*cascade08ò(ô( *cascade08ô(ù(*cascade08ù(û( *cascade08û(‚)*cascade08‚)ƒ) *cascade08ƒ)„)*cascade08„)•) *cascade08•)™)*cascade08™)Ÿ) *cascade08Ÿ)¤)*cascade08¤)¥) *cascade08¥)§)*cascade08§)Ä) *cascade08Ä)Æ)*cascade08Æ)Ç) *cascade08Ç)É)*cascade08É)Ë) *cascade08Ë)Ï)*cascade08Ï)Õ) *cascade08Õ)Ø) *cascade08
+Ø)Ú) Ú)Ü) *cascade08Ü)İ) *cascade08İ)à)*cascade08à)ë)*cascade08ë)ñ) *cascade08ñ)ò)*cascade08ò)ó) *cascade08ó)õ)*cascade08
+õ)ö) ö)÷) *cascade08÷)ú)*cascade08ú)ü) *cascade08ü)**cascade08*ƒ* *cascade08ƒ*„**cascade08„*†* *cascade08†*‹**cascade08‹*Œ* *cascade08Œ***cascade08** *cascade08*“**cascade08“*›* *cascade08›** *cascade08* **cascade08
+ *¡* ¡*£**cascade08
+£*¤* ¤*¥* *cascade08¥*ª**cascade08ª*«* *cascade08«*­**cascade08­*®* *cascade08®*²**cascade08²*À* *cascade08À*Á* *cascade08Á*Ä**cascade08Ä*Ï**cascade08
+Ï*Ñ* Ñ*Ô* *cascade08Ô*Ü**cascade08Ü*İ* *cascade08İ*â**cascade08â*ç* *cascade08ç*ñ**cascade08ñ*ò* *cascade08ò*ó**cascade08ó*ô* *cascade08ô*÷**cascade08÷*ø* *cascade08ø*ù**cascade08ù*ú* *cascade08ú*ü**cascade08ü*ı* *cascade08ı*ÿ**cascade08ÿ*‘+ *cascade08‘+’+*cascade08’+—+ *cascade08
+—+¤+ ¤+©+*cascade08©+ª+ *cascade08ª+«+*cascade08«+±+ *cascade08±+²+*cascade08²+³+ *cascade08³+´+*cascade08´+µ+ *cascade08µ+¼+*cascade08¼+¾+ *cascade08¾+Á+*cascade08Á+Æ+ *cascade08Æ+Í+ *cascade08Í+Ò+*cascade08Ò+‰, *cascade08
+‰,Š, Š,è, *cascade08è,é,*cascade08é,ë, *cascade08ë,ì,*cascade08ì,- *cascade08--*cascade08-ß- *cascade08ß-à-*cascade08à-á- *cascade08
+á-â- â-ö-*cascade08
+ö-÷- ÷-ˆ.*cascade08
+ˆ.‰. ‰.£.*cascade08
+£.¤. ¤.¹.*cascade08
+¹.». ».Æ.*cascade08
+Æ.Ç. Ç.Ê.*cascade08
+Ê.Ë. Ë.Ï.*cascade08
+Ï.Ğ. Ğ.Ó. *cascade08Ó.Õ.*cascade08Õ.Ö. *cascade08Ö.Ø.*cascade08Ø.ï. *cascade08
+ï.ğ. ğ.ù.*cascade08
+ù.ú. ú.ÿ.*cascade08
+ÿ./ /ƒ/*cascade08
+ƒ/…/ …/‡/ *cascade08‡//*cascade08// *cascade08/“/*cascade08
+“/”/ ”/•/*cascade08•/–/ *cascade08–/›/*cascade08›/¢/ *cascade08¢/£/*cascade08£/¤/ *cascade08¤/§/*cascade08§/¯/ *cascade08
+¯/°/ °/¶/ *cascade08¶/¼/*cascade08¼/½/ *cascade08½/Ã/*cascade08Ã/Ä/ *cascade08Ä/Ë/*cascade08Ë/Í/ *cascade08Í/Ñ/*cascade08Ñ/à/ *cascade08à/á/*cascade08á/â/ *cascade08â/ã/*cascade08ã/ä/ *cascade08ä/å/*cascade08å/ì/ *cascade08
+ì/í/ í/Œ0 *cascade08Œ00*cascade0800 *cascade080‘0*cascade08‘0“0 *cascade08“0”0*cascade08”0–0 *cascade08–0œ0 *cascade08œ00 *cascade0800*cascade080Ÿ0 *cascade08Ÿ0£0 *cascade08£0¤0*cascade08¤0´0 *cascade08´0·0*cascade08·0Â0*cascade08Â0È0 *cascade08È0É0*cascade08É0Ì0 *cascade08Ì0Í0*cascade08Í0Ï0 *cascade08Ï0Ğ0*cascade08Ğ0Ô0 *cascade08Ô0Õ0 *cascade08Õ0Ö0*cascade08Ö0Ø0 *cascade08Ø0Ù0*cascade08Ù0Ş0 *cascade08Ş0ß0*cascade08ß0â0 *cascade08â0ã0*cascade08ã0ë0 *cascade08ë0î0*cascade08î0ö0 *cascade08ö0÷0 *cascade08÷0ø0*cascade08ø0‚1 *cascade08‚1ƒ1*cascade08ƒ1’1 *cascade08’1“1*cascade08“1”1 *cascade08”1•1*cascade08•1–1 *cascade08–1—1*cascade08—11 *cascade081¤1*cascade08¤1©1 *cascade08©1®1*cascade08®1µ1 *cascade08µ1¶1*cascade08¶1¸1 *cascade08¸1¹1*cascade08¹1½1 *cascade08½1¾1*cascade08¾1Á1 *cascade08Á1Â1*cascade08Â1Ã1 *cascade08Ã1Ä1*cascade08Ä1Æ1 *cascade08Æ1Ç1*cascade08Ç1Î1 *cascade08Î1Ï1 *cascade08Ï1Ğ1 *cascade08Ğ1Ò1*cascade08Ò1ñ1 *cascade08ñ1ù1 *cascade08
+ù1ú1 ú1Ó2*cascade08
+Ó2Ô2 Ô2æ2*cascade08
+æ2ç2 ç2ê2*cascade08
+ê2ì2 ì2ò2*cascade08
+ò2ô2 ô2õ2 *cascade08õ2ö2*cascade08ö2÷2 *cascade08÷23 *cascade0833*cascade083Ÿ3 *cascade08Ÿ3¡3*cascade08¡3¢3 *cascade08¢3¤3*cascade08¤3ª3 *cascade08
+ª3«3 «3²3*cascade08
+²3³3 ³3Ï3 *cascade08Ï3Ò3*cascade08Ò3±4 *cascade08±4¼4*cascade08¼4½4 *cascade08½4Â4*cascade08Â4Î4 *cascade08Î4Ò4*cascade08Ò45 *cascade08
+55 5°5*cascade08
+°5±5 ±5¶5*cascade08¶5·5*cascade08·5Í5*cascade08
+Í5Î5 Î5Ï5*cascade08Ï5İ5 *cascade08
+İ5Ş5 Ş5ï5 *cascade08
+ï5ğ5 ğ5„6 *cascade08„6…6*cascade08…6†6 *cascade08†6‡6*cascade08‡6ˆ6 *cascade08ˆ6Š6*cascade08Š66 *cascade086“6*cascade08“6™6 *cascade08™6š6*cascade08š6›6 *cascade08›66*cascade0866 *cascade086¡6*cascade08¡6¢6 *cascade08¢6£6*cascade08£6¥6 *cascade08¥6®6*cascade08®6¯6 *cascade08¯6²6*cascade08²6Á6 *cascade08Á6ë6 *cascade08ë6ì6*cascade08ì6í6 *cascade08í6î6*cascade08î6û6 *cascade08
+û6ü6 ü6Š7*cascade08
+Š7£7 £7­7 *cascade08­7±7*cascade08±7º7 *cascade08
+º7¾7 ¾7×7*cascade08×7î7 *cascade08î7ï7*cascade08
+ï7ğ7 ğ7ù7*cascade08
+ù7ú7 ú7ü7*cascade08
+ü7ı7 ı7†8 *cascade08†8‡8*cascade08‡8‹8 *cascade08‹8Œ8*cascade08Œ8¯8 *cascade08
+¯8±8 ±8µ8*cascade08µ8¹8*cascade08
+¹8º8 º8É8*cascade08
+É8Ê8 Ê8Ñ8*cascade08
+Ñ8Ò8 Ò8Ù8 *cascade08Ù8Ú8*cascade08Ú8ñ8 *cascade08ñ8õ8*cascade08õ8ö8 *cascade08
+ö8ø8 ø8ù8 *cascade08ù8ü8*cascade08ü89 *cascade089‘9*cascade08
+‘9’9 ’9™9 *cascade08™9›9*cascade08›9œ9 *cascade08œ9Ÿ9*cascade08Ÿ9¡9 *cascade08¡9¢9*cascade08¢9­9 *cascade08
+­9®9 ®9·9*cascade08
+·9¸9 ¸9É9*cascade08
+É9Ì9 Ì9Í9 *cascade08Í9Ù9*cascade08Ù9Û9 *cascade08
+Û9Ü9 Ü9â9*cascade08
+â9ã9 ã9ø9*cascade08
+ø9û9 û9ı9 *cascade08ı9ş9*cascade08
+ş9€: €::*cascade08:‚: *cascade08‚:ƒ:*cascade08ƒ:„: *cascade08„:Š:*cascade08Š:Ÿ: *cascade08Ÿ:¡:*cascade08¡:¢: *cascade08¢:¤:*cascade08¤:®: *cascade08®:¯:*cascade08¯:±: *cascade08±:´:*cascade08´:¶: *cascade08¶:¼:*cascade08¼:½: *cascade08½:Â:*cascade08Â:Ç: *cascade08Ç:É:*cascade08É:Í: *cascade08Í:Ó:*cascade08Ó:Ô: *cascade08Ô:Õ:*cascade08Õ:Ö: *cascade08Ö:Ù:*cascade08Ù:Ú: *cascade08Ú:Ü:*cascade08Ü:Ş: *cascade08Ş:ß:*cascade08
+ß:à: à:á:*cascade08á:ê: *cascade08ê:ó:*cascade08ó:ö: *cascade08ö:÷:*cascade08÷:ø: *cascade08ø:ú:*cascade08ú:‘; *cascade08‘;“;*cascade08“;”; *cascade08”;•;*cascade08
+•;–; –;¡; *cascade08¡;¦;*cascade08¦;§; *cascade08§;¨;*cascade08¨;ª; *cascade08ª;«;*cascade08«;­; *cascade08­;±;*cascade08±;Ë; *cascade08Ë;Ï;*cascade08Ï;Ü; *cascade08
+Ü;İ; İ;û;*cascade08
+û;ı; ı;†<*cascade08†<< *cascade08
+<í? í?ñ?*cascade08
+ñ?¸@ ¸@¼@*cascade08
+¼@«C «C®C*cascade08
+®Cøa øaùa*cascade08
+ùaüa üab*cascade08
+b”b ”b–b*cascade08
+–b˜b ˜bœb*cascade08
+œbb b¯b*cascade08
+¯b°b °b·b*cascade08
+·b¸b ¸b¼b*cascade08
+¼b½b ½bãb*cascade08
+ãb¼y ¼yìy *cascade08ìyíy*cascade08íyğy *cascade08ğyƒz *cascade08ƒz…z*cascade08…z†z *cascade08†z’z*cascade08’z“z *cascade08“z”z*cascade08”zƒŠ 2Ofile:///Users/santiagovalencia/Documents/mock%20up%20siprac/styles/contacto.css

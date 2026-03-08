@@ -1,0 +1,26 @@
+# Task List
+
+- [x] Modify Hero Background Image
+    - [x] Add blur effect to the background image
+    - [x] Fix scrolling issue (prevent excessive movement)
+    - [x] Revert to fixed background behavior
+- [x] Modify "Nuestra Trayectoria" Text
+    - [x] Change text color to black
+    - [x] Change stats numbers to white
+- [x] Center Corporate Value Cards
+    - [x] Update flex/grid layout in CorporateValues.tsx
+- [x] Center ContactInfo Cards
+    - [x] Locate and modify ContactInfo.tsx
+    - [x] Update MobileCarousel className in ContactInfo.tsx
+- [x] Troubleshoot Build Failure
+    - [x] Verify directory structure
+    - [x] Verify package.json scripts
+- [x] Troubleshoot Dev Server Lock
+    - [x] Identify blocking process
+    - [x] Terminate blocking process
+- [x] Troubleshoot Vercel Deployment
+    - [x] Diagnose Root Directory mismatch
+    - [x] Instruct user to update Vercel settings
+- [x] Modify Hero Stats
+    - [x] Remove "100+ Proyectos Completados"
+    - [x] Update "15+ Años de Experiencia" to "10+"

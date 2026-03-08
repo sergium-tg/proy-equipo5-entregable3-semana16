@@ -1,0 +1,41 @@
+# Walkthrough - Refactor ValuedAudits with MobileCarousel
+
+I have applied the requested responsive logic to [ValuedAudits.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/ValuedAudits.tsx) by creating a reusable [MobileCarousel](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/MobileCarousel.tsx#11-36) component.
+
+## Changes
+
+### [components/ui/MobileCarousel.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/MobileCarousel.tsx)
+
+Created a new component that handles:
+- **Mobile**: Horizontal scroll with snap behavior (`overflow-x-auto snap-x`).
+- **Desktop**: Grid or Flex layout based on parent classes.
+- **Card Sizing**: Automatically sets `w-[85vw]` on mobile tokens.
+
+### [components/services/ValuedAudits.tsx](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/ValuedAudits.tsx)
+
+Refactored to use [MobileCarousel](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/MobileCarousel.tsx#11-36), removing the manual `useState`/`useEffect` carousel logic.
+
+```diff
+-import React, { useState, useEffect, useRef, useCallback } from 'react'
++import React from 'react'
++import MobileCarousel from '../ui/MobileCarousel'
+ 
+ const ValuedAudits = () => {
+-    const [currentIndex, setCurrentIndex] = useState(0)
+-    // ... manual carousel logic removed ...
+-
+     return (
+-                {/* Controles del carrusel para móvil */}
+-                {isMobile && ( ... )}
+-
+-                <div ref={containerRef} ...>
++                <MobileCarousel className="grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 max-w-6xl mx-auto">
+                     {audits.map((audit, index) => (
+```
+
+## Verification Results
+
+### Implementation
+- [MobileCarousel](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/ui/MobileCarousel.tsx#11-36) logic matches the provided snippet (using `framer-motion` and `snap` classes).
+- [ValuedAudits](file:///Users/santiagovalencia/Documents/landing-siprac/landing-siprac/siprac-website/components/services/ValuedAudits.tsx#34-80) is now cleaner and relies on the reusable component for responsiveness.
+- Installed `framer-motion` dependency.
