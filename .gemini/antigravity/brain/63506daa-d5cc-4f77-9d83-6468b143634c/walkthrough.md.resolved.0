@@ -1,0 +1,31 @@
+# Portfolio UAO Walkthrough
+
+I have completed the professional portfolio for the Social Communication and Journalism student. The project is built with **Next.js 15 (App Router)**, **TypeScript**, **Tailwind CSS v4**, and **Framer Motion**.
+
+## Project Highlights
+
+### 1. Modern & Clean Design
+- Used a professional color palette: **UAO Blue (#2563EB)** and **UAO Bordeaux (#7F1D1D)**.
+- **Glassmorphism**: Navbar and various components use semi-transparent backgrounds with blur effects.
+- **Typography**: Inter and Poppins fonts for a sophisticated look.
+
+### 2. Interactive Features
+- **Profile Section**: Includes a placeholder photo with a hover glow effect.
+- **Stats Section**: Student achievements with entrance animations.
+- **Experience Timeline**: A vertical timeline with interactive cards and specialized tags.
+- **Contact Center**: Integration with WhatsApp, Phone, LinkedIn, and Instagram, including a "Copy to Clipboard" feature.
+
+### 3. Animations
+- **Page Transitions**: Smooth slide and fade effects when navigating between sections.
+- **Scroll Animations**: Sections fade in as they enter the viewport using Intersection Observer (via Framer Motion).
+- **Micro-interactions**: Hover scales, shadow transitions, and indicator animations.
+
+## How to use
+1. **Photo**: Place your profile picture in `public/images/profile.jpg` (or similar) and update the `src` in [components/dashboard/ProfilePhoto.tsx](file:///Users/santiagovalencia/portafolio%20profesional/portafolio-profesional/components/dashboard/ProfilePhoto.tsx).
+2. **Personal Data**: All strings are clearly marked in the components. Simply search for "Tu Nombre Aquí" or "VIII semestre" to customize.
+3. **Deployment**: The project is build-ready. Just run `npm run build` and deploy to Vercel or your preferred host.
+
+## Verification
+- Verified build with `npm run build` (Static export ready).
+- Responsive design tested for mobile, tablet, and desktop views.
+- Animations confirmed smooth and performance-optimized.

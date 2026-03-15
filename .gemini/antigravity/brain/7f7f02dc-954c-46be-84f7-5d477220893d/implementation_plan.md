@@ -1,24 +1,19 @@
-# Community Section Implementation Plan
+# Developer Role Input Implementation Plan
 
-Replace the placeholder "Features" section with a high-fidelity, interactive "Community" section that fades in as the user scrolls.
+Add a developer role selection (Frontend/Backend) to the registration form to better categorize users.
 
 ## Proposed Changes
 
-### [Component] [CommunitySection](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/components/community) [NEW]
-- Create `CommunitySection.tsx` and `CommunitySection.module.css`.
-- Implement a grid of interactive "Widgets":
-    - **Solved Doubts**: Visualizing a Q&A community.
-    - **Code Snippets**: Displaying shared logic from other devs.
-    - **Reputation/Rating**: An interactive widget showing developer levels.
-- Apply a `useIntersectionObserver` or scroll-progress based fade-in effect.
+### [Component] [FormSelect](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/components/auth/components) [NEW]
+- Create `FormSelect.tsx` and `FormSelect.module.css`.
+- Ensure it follows the same "lifted label" and "glassmorphic" aesthetic as `FormInput`.
 
-### [Page] [Home](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/app/page.tsx)
-- [MODIFY] Replace the inline `<section>` placeholder with the new `CommunitySection`.
-
-### [Component] [Hero](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/components/hero/Hero.tsx)
-- Ensure the Hero's fade-out timing aligns with the CommunitySection's fade-in.
+### [Component] [RegisterForm](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/components/auth/components/RegisterForm.tsx)
+- Add `role` to the form state (`frontend` | `backend` | '').
+- Add validation to ensure a role is selected.
+- Integrate the new `FormSelect` component.
 
 ## Verification Plan
-- Scroll from Hero to Community and verify the section "wakes up" smoothly.
-- Test interactivity on the widgets (hover effects, etc.).
-- Ensure responsive layout works on mobile.
+- Open the Auth overlay and navigate to "Sign Up".
+- Verify the new "Developer Role" selection is visible and styled correctly.
+- Test form submission with and without a selected role.

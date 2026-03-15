@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_WALKTHROUGH",
+  "summary": "Walkthrough of the fixes applied to the \"Cannot find namespace 'JSX'\" error and other TypeScript type mismatches.",
+  "updatedAt": "2026-03-08T06:45:56.037206Z"
+}

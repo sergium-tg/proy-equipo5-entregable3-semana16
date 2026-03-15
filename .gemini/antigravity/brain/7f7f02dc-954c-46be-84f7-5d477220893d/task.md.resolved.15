@@ -1,0 +1,7 @@
+# Connect Project to GitHub
+
+- [x] git init
+- [x] git remote add origin
+- [x] Create .gitignore
+- [x] Add and commit files
+- [x] Push to origin/frontend

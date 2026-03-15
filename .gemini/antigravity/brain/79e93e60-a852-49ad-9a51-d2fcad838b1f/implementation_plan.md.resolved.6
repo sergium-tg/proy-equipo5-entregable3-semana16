@@ -1,0 +1,33 @@
+# Pure Frontend Demo Refinement
+
+Este plan asegura que la aplicación funcione como una demostración visual y funcional perfecta sin necesidad de un backend.
+
+## User Review Required
+
+> [!NOTE]
+> **Eliminación de Código Backend:** He confirmado que no habrá rutas de API en el proyecto. Todo se manejará localmente en el navegador para que puedas probar el diseño sin errores de conexión.
+
+## Proposed Changes
+
+### [Core] Auth Context & Mocks
+#### [MODIFY] [AuthContext.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/context/AuthContext.tsx)
+- Añadir función `updateUser(newData)` para permitir cambios en el perfil.
+- Asegurar que `isLoading` sea robusto para evitar redirecciones falsas.
+
+### [UI] UX & Interaction Fixes
+#### [MODIFY] [page.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/app/page.tsx)
+- **Eliminar redirección automática:** Permitir que el usuario vea el landing aunque ya tenga sesión.
+
+#### [MODIFY] [UserMenu.module.css](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/components/dashboard/UserMenu.module.css)
+- **Cierre del "Gap":** Añadir un pseudo-elemento o ajustar el `top` para que el mouse no pierda el hover al bajar al menú.
+
+### [Feature] Profile Management
+#### [MODIFY] [profile/page.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/app/dashboard/profile/page.tsx)
+- Conectar el botón de "Save Changes" con el nuevo método del contexto para que los cambios se vean reflejados en el header y el dashboard.
+
+## Verification Plan
+
+1. **Dashboard:** Entrar y navegar al perfil.
+2. **Hover:** Verificar que el mouse pueda entrar al menú desplegable del avatar sin que este se cierre.
+3. **Guardado:** Editar el nombre en el perfil, guardar, y verificar que cambie en el header.
+4. **Landing:** Confirmar que `localhost:3000` carga el Hero sin mandarte al Dashboard.

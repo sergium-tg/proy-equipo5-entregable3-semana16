@@ -1,0 +1,33 @@
+# Plan de Reparación de Conectividad y Rutas
+
+Este plan aborda el error 404 en el Dashboard y la falla en los formularios de Login/Registro.
+
+## User Review Required
+
+> [!WARNING]
+> **Acción Crítica:** Debes eliminar el archivo [/Users/santiagovalencia/package-lock.json](file:///Users/santiagovalencia/package-lock.json) para que Next.js reconozca correctamente las rutas del proyecto.
+
+## Proposed Changes
+
+### [Infra] Estructura del Proyecto
+- Corregir el `workspace root` de Next.js.
+- **Implementar los endpoints de API faltantes** en `src/app/api/users/`.
+
+### [Component] API Service
+#### [MODIFY] [api.ts](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/lib/api.ts)
+- Mejorar el manejo de errores para detectar cuando la respuesta no es JSON (evitar el error de "pattern").
+- Usar rutas relativas `/api` para evitar problemas con el puerto/dominio en desarrollo.
+
+### [Component] Backend (API Routes)
+#### [NEW] [route.ts](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/app/api/users/register/route.ts)
+- Implementar mock de registro siguiendo los campos de la guía (`username`, `email`, `role`).
+#### [NEW] [route.ts](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/app/api/users/login/route.ts)
+- Implementar mock de login que devuelva un `accessToken` y datos de usuario.
+#### [NEW] [route.ts](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/app/api/users/logout/route.ts)
+- Implementar endpoint de logout vacío (200 OK).
+
+## Verification Plan
+
+1. **Dashboard:** Entrar a `/dashboard` y verificar que ya no dé 404.
+2. **Formularios:** Intentar registrarse y loguearse.
+3. **Persistencia:** Verificar que el Dashboard cargue los datos después del login exitoso.

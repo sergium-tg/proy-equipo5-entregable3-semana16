@@ -1,0 +1,35 @@
+# Protocolo de Conexión Frontend-Backend
+
+Este plan detalla los pasos para reemplazar los mocks actuales por llamadas Reales a la API de Next.js detallada en la guía.
+
+## Proposed Changes
+
+### [Component] API Service Layer
+#### [NEW] [api.ts](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/lib/api.ts)
+- Implementar un wrapper de `fetch` para manejar la `Base URL` y los headers de `Authorization` automáticamente.
+- Manejar la persistencia del `accessToken` en `localStorage`.
+
+### [Component] Authentication Hook
+#### [MODIFY] [useAuth.ts](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/hooks/useAuth.ts)
+- Reemplazar la lógica de `setTimeout` por llamadas al servicio de API.
+- Actualizar los métodos `login`, `register` y `logout`.
+- Sincronizar el estado del usuario con el token recibido.
+
+### [Component] UI Forms
+#### [MODIFY] [RegisterForm.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/components/auth/components/RegisterForm.tsx)
+- Cambiar el campo `name` por `username` para coincidir con el backend.
+- Ajustar las opciones de `role` para enviar "FRONTEND" o "BACKEND" en mayúsculas.
+
+## Verification Plan
+
+### Manual Verification
+1. **Registro:**
+   - Llenar el formulario de registro con un nuevo usuario.
+   - Verificar en la consola que la petición a `/api/users/register` sea exitosa (201).
+2. **Login:**
+   - Iniciar sesión con las credenciales creadas.
+   - Verificar que el `accessToken` se guarde correctamente y el usuario sea redirigido o el estado se actualice.
+3. **Logout:**
+   - Cerrar sesión y verificar que el token sea eliminado y la sesión se limpie.
+4. **Persistencia:**
+   - Recargar la página y verificar que el usuario siga autenticado si el token es válido (opcional, si se implementa persistencia inicial).

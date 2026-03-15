@@ -1,0 +1,30 @@
+Õ{
+    "name": "Isabella Trejos - Portafolio Profesional",
+    "short_name": "I. Trejos",
+    "description": "Portafolio profesional de Isabella Trejos, comunicadora social y periodista UAO",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#7F1D1D",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/apple-icon.png",
+            "sizes": "180x180",
+            "type": "image/png",
+            "purpose": "apple touch icon"
+        }
+    ]
+}Õ*cascade082cfile:///Users/santiagovalencia/portafolio%20profesional/portafolio-profesional/public/manifest.json

@@ -1,7 +1,7 @@
-# Connect Project to GitHub
+# Auth Form Enhancements
 
-- [x] git init
-- [x] git remote add origin
-- [/] Create .gitignore
-- [ ] Add and commit files
-- [ ] Push to main
+- [x] Create `FormSelect` component and styles
+- [x] Integrate `FormSelect` into `RegisterForm.tsx`
+- [x] Update validation and state in `RegisterForm.tsx`
+- [/] Verify functionality and design
+rigin/frontend

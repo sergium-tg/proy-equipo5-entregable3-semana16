@@ -1,0 +1,29 @@
+# Portfolio Redesign - Isabella Trejos
+
+- [x] Planning & Design System <!-- id: 100 -->
+    - [x] Update Implementation Plan with new requirements <!-- id: 101 -->
+    - [x] Define new color palette and Neumorphic design tokens <!-- id: 102 -->
+- [x] Core UI Updates <!-- id: 103 -->
+    - [x] Implement Background Navigation Animation <!-- id: 104 -->
+    - [x] Update [Navbar](file:///Users/santiagovalencia/portafolio%20profesional/portafolio-profesional/src/components/layout/Navbar.tsx#19-54) (Name change, spacing optimization) <!-- id: 105 -->
+    - [x] Fix Title rendering in subpages (Transition bug) <!-- id: 106 -->
+- [x] Dashboard Updates <!-- id: 107 -->
+    - [x] Update [HeroSection](file:///Users/santiagovalencia/portafolio%20profesional/portafolio-profesional/src/components/dashboard/HeroSection.tsx#7-30) (Name change, layout optimization) <!-- id: 108 -->
+    - [x] Remove [StatsSection](file:///Users/santiagovalencia/portafolio%20profesional/portafolio-profesional/src/components/dashboard/StatsSection.tsx#12-33) <!-- id: 109 -->
+    - [x] Implement [PhotoGallery](file:///Users/santiagovalencia/portafolio%20profesional/portafolio-profesional/src/components/dashboard/PhotoGallery.tsx#12-39) with attractive animations <!-- id: 110 -->
+- [x] Experience Page Updates <!-- id: 111 -->
+    - [x] Apply Neumorphic effect to `ExperienceCards` <!-- id: 112 -->
+    - [x] Implement [ExperienceModal](file:///Users/santiagovalencia/portafolio%20profesional/portafolio-profesional/src/components/experiencia/ExperienceModal.tsx#15-91) (Pop-up with blur and detailed info) <!-- id: 113 -->
+    - [x] Add photo section to Experience modals <!-- id: 114 -->
+- [x] Contact Page Updates <!-- id: 20 -->
+    - [x] Create [ContactLinks](file:///Users/santiagovalencia/portafolio%20profesional/portafolio-profesional/src/components/contacto/ContactLinks.tsx#38-91) <!-- id: 21 -->
+    - [x] Create `SocialIcons` <!-- id: 22 -->
+    - [x] Assemble `app/contacto/page.tsx" <!-- id: 23 -->
+- [/] SEO & Metadata Config <!-- id: 118 -->
+    - [/] Implement Global Metadata in [layout.tsx](file:///Users/santiagovalencia/portafolio%20profesional/portafolio-profesional/src/app/layout.tsx) <!-- id: 119 -->
+    - [ ] Implement Page-specific Metadata <!-- id: 120 -->
+    - [ ] Create `manifest.json`, `robots.txt`, and `sitemap.xml` <!-- id: 121 -->
+    - [ ] Generate Favicons and App Icons <!-- id: 122 -->
+- [ ] Verification & Cleanup <!-- id: 115 -->
+    - [ ] Verify SEO tags and social previews <!-- id: 116 -->
+    - [ ] Run build test <!-- id: 117 -->

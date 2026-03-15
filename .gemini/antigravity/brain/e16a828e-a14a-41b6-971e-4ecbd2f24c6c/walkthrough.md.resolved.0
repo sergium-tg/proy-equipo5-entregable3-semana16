@@ -1,0 +1,45 @@
+# Walkthrough: Fixing JSX Namespace and Type Errors
+
+I've resolved the TypeScript errors in the project, specifically the "Cannot find namespace 'JSX'" error reported in [FormInput.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/components/auth/components/FormInput.tsx), and a type mismatch in the [useClickOutside](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/hooks/useClickOutside.ts#3-23) hook.
+
+## Problem Explanation
+
+The "Cannot find namespace 'JSX'" error often occurs in modern React projects (especially with React 19) because the global `JSX` namespace is no longer automatically populated by default in some TypeScript configurations.
+
+To fix this, we need to:
+1. Use the explicit `React.JSX` namespace instead of the global `JSX` namespace.
+2. Ensure `React` is imported in the file.
+
+## Changes Made
+
+### Component Fixes
+
+#### [FormInput.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/components/auth/components/FormInput.tsx)
+
+Updated the icons record to use `React.JSX.Element` and added the `React` import.
+
+```diff
+-import { useState } from 'react';
++import React, { useState } from 'react';
+
+-const icons: Record<IconType, JSX.Element> = {
++const icons: Record<IconType, React.JSX.Element> = {
+```
+
+### Hook Fixes
+
+#### [useClickOutside.ts](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/hooks/useClickOutside.ts)
+
+Fixed a type mismatch where `useRef(null)` returns a ref that can contain `null`, but the function signature was claiming it would only return a ref to an element.
+
+```diff
+-export function useClickOutside<T extends HTMLElement>(handler: () => void): RefObject<T> {
++export function useClickOutside<T extends HTMLElement>(handler: () => void): RefObject<T | null> {
+```
+
+## Verification Results
+
+I ran `npx tsc --noEmit` to verify the changes. The `JSX` namespace error is now completely resolved.
+
+> [!NOTE]
+> There are still some generated type errors in the `.next` folder, which is normal for a development environment and usually resolves itself after a clean build/restart of the dev server.

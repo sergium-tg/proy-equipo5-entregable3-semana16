@@ -1,0 +1,29 @@
+# Conectividad y Backend Reparados
+
+Se han solucionado los problemas de conexión mediante la implementación de los endpoints de API faltantes y la mejora del cliente de API.
+
+## Cambios Implementados
+
+### 1. Endpoints de API (Backend)
+Se crearon las rutas necesarias en `src/app/api/users/` para manejar las peticiones del frontend:
+- **`POST /api/users/register`**: Maneja el registro de nuevos usuarios.
+- **`POST /api/users/login`**: Valida credenciales y devuelve un token de acceso (mock).
+- **`POST /api/users/logout`**: Invalida la sesión actual.
+
+### 2. Cliente de API (Frontend)
+Se mejoró el archivo [api.ts](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/lib/api.ts):
+- **Manejo de rutas inteligentes**: Ahora detecta automáticamente si debe usar `/api` al inicio.
+- **Resiliencia**: Si el servidor no devuelve un JSON (como un error 404 de servidor), el cliente captura el texto plano del error en lugar de fallar silenciosamente.
+
+## Verificación de Rutas
+El sistema de build de Next.js ha confirmado la existencia de las nuevas rutas:
+```text
+├ ƒ /api/users/login
+├ ƒ /api/users/logout
+├ ƒ /api/users/register
+```
+
+---
+
+> [!IMPORTANT]
+> **Recordatorio de 404:** Si sigues viendo un error 404 al entrar al Dashboard, por favor elimina el archivo `/Users/santiagovalencia/package-lock.json` (el que está fuera del proyecto). Esto obligará a Next.js a usar la raíz correcta del proyecto.

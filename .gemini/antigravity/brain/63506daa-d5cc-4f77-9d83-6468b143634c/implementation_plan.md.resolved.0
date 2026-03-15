@@ -1,0 +1,39 @@
+# Professional Portfolio Implementation Plan
+
+This plan outlines the creation of a modern, responsive portfolio for a Social Communication and Journalism student at UAO.
+
+## Proposed Changes
+
+### Project Setup
+- [NEW] Initialize Next.js project with App Router, TypeScript, and Tailwind CSS.
+- [NEW] Install `framer-motion` for animations and `react-icons` for iconography.
+- [MODIFY] `tailwind.config.ts` to include UAO institutional colors (professional blue and bordeaux) and custom animations.
+
+### Base Layout & UI Components
+- [NEW] [Navbar.tsx](file:///Users/santiagovalencia/portafolio profesional/portafolio-profesional/components/layout/Navbar.tsx): Sticky navigation with active page indicators.
+- [NEW] [Footer.tsx](file:///Users/santiagovalencia/portafolio profesional/portafolio-profesional/components/layout/Footer.tsx): Simple footer with social links.
+- [NEW] [TransitionWrapper.tsx](file:///Users/santiagovalencia/portafolio profesional/portafolio-profesional/components/ui/TransitionWrapper.tsx): Handles page-to-page fade/slide transitions.
+- [NEW] [AnimatedSection.tsx](file:///Users/santiagovalencia/portafolio profesional/portafolio-profesional/components/ui/AnimatedSection.tsx): Wrapper for scroll-triggered fade-in animations.
+
+### Dashboard (Home Page)
+- [NEW] [HeroSection.tsx](file:///Users/santiagovalencia/portafolio profesional/portafolio-profesional/components/dashboard/HeroSection.tsx): Main landing area with profile photo placeholder.
+- [NEW] [GeneralInfo.tsx](file:///Users/santiagovalencia/portafolio profesional/portafolio-profesional/components/dashboard/GeneralInfo.tsx): Name, University, and Bio.
+- [NEW] [StatsSection.tsx](file:///Users/santiagovalencia/portafolio profesional/portafolio-profesional/components/dashboard/StatsSection.tsx): Student achievements metrics.
+
+### Experience Page
+- [NEW] [ExperienceTimeline.tsx](file:///Users/santiagovalencia/portafolio profesional/portafolio-profesional/components/experiencia/ExperienceTimeline.tsx): Vertical or horizontal timeline of professional growth.
+- [NEW] [ExperienceCard.tsx](file:///Users/santiagovalencia/portafolio profesional/portafolio-profesional/components/experiencia/ExperienceCard.tsx): Detailed cards for each role with tags.
+
+### Contact Page
+- [NEW] [ContactLinks.tsx](file:///Users/santiagovalencia/portafolio profesional/portafolio-profesional/components/contacto/ContactLinks.tsx): Grid of contact options (WhatsApp, Phone, LinkedIn).
+
+## Verification Plan
+
+### Automated Tests
+- Run `npm run build` to ensure project integrity.
+- Use `npm run dev` to verify visual layout and animations.
+
+### Manual Verification
+- Check responsiveness on mobile, tablet, and desktop views.
+- Verify that fade-in animations trigger correctly on scroll.
+- Ensure page transitions are smooth.

@@ -1,6 +1,6 @@
-¬import { useEffect, useRef, RefObject } from 'react';
+…import { useEffect, useRef, RefObject } from 'react';
 
-export function useClickOutside<T extends HTMLElement>(handler: () => void): RefObject<T> {
+export function useClickOutside<T extends HTMLElement>(handler: () => void): RefObject<T | null> {
     const ref = useRef<T>(null);
 
     useEffect(() => {
@@ -20,4 +20,4 @@ export function useClickOutside<T extends HTMLElement>(handler: () => void): Ref
 
     return ref;
 }
-¬*cascade082Vfile:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/hooks/useClickOutside.ts
+è *cascade08èñ*cascade08ñ… *cascade082Vfile:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/hooks/useClickOutside.ts

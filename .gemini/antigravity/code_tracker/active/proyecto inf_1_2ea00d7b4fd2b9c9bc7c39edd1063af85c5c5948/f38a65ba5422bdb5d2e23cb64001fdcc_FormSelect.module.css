@@ -1,0 +1,127 @@
+«.wrapper {
+    margin-bottom: var(--space-4);
+}
+
+.inputBox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: var(--color-surface-2);
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    transition:
+        border-color var(--transition-base),
+        box-shadow var(--transition-base);
+    overflow: hidden;
+}
+
+.inputBox.focused {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+.inputBox.errored {
+    border-color: var(--color-error);
+    box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.12);
+}
+
+.icon {
+    width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--color-text-subtle);
+    transition: color var(--transition-fast);
+}
+
+.icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+.iconFocused {
+    color: var(--color-primary-light);
+}
+
+.field {
+    flex: 1;
+    position: relative;
+    padding: 1.25rem 0.75rem 0.4rem;
+    min-height: 58px;
+}
+
+.field.hasIcon {
+    padding-left: 0;
+}
+
+.label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 0.92rem;
+    color: var(--color-text-muted);
+    pointer-events: none;
+    transition: all 0.18s var(--ease-out);
+    white-space: nowrap;
+    transform-origin: left center;
+}
+
+.labelLifted {
+    top: 0.5rem;
+    transform: translateY(0) scale(0.78);
+    color: var(--color-text-subtle);
+}
+
+.labelFocused.labelLifted {
+    color: var(--color-primary-light);
+}
+
+.select {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 0.95rem;
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    padding: 0;
+    margin-top: 0.25rem;
+    cursor: pointer;
+    appearance: none;
+}
+
+.select option {
+    background: var(--color-surface-1);
+    color: var(--color-text);
+}
+
+.arrow {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--color-text-muted);
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.focused .arrow {
+    transform: translateY(-50%) rotate(180deg);
+    color: var(--color-primary-light);
+}
+
+.errorMsg {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    margin-top: var(--space-2);
+    font-size: 0.8rem;
+    color: var(--color-error);
+    animation: fadeInDown 0.2s ease both;
+}
+
+.shake {
+    animation: shake 0.4s ease;
+}«"(2ea00d7b4fd2b9c9bc7c39edd1063af85c5c59482nfile:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/components/auth/components/FormSelect.module.css:9file:///Users/santiagovalencia/Documents/proyecto%20inf_1

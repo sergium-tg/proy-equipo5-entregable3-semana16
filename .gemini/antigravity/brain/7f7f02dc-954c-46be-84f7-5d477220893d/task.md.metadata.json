@@ -1,6 +1,6 @@
 {
   "artifactType": "ARTIFACT_TYPE_TASK",
-  "summary": "Checklist for connecting project to GitHub.",
-  "updatedAt": "2026-03-08T05:49:25.821683Z",
-  "version": "13"
+  "summary": "Checklist for adding developer role input. Component implemented, integration in progress.",
+  "updatedAt": "2026-03-08T06:37:43.756876Z",
+  "version": "17"
 }

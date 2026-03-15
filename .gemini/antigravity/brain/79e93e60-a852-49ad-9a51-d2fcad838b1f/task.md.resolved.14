@@ -1,0 +1,19 @@
+# Task: Auth Refactor & Route Stabilization
+
+- [x] Core Infrastructure
+    - [x] Create [AuthContext.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/context/AuthContext.tsx) with corrected `isLoading`
+    - [x] Integrate [AuthProvider](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/context/AuthContext.tsx#17-98) in root [layout.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/app/layout.tsx)
+    - [x] Refactor [useAuth.ts](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/hooks/useAuth.ts) to use Context
+- [x] Dedicated Routes
+    - [x] Create `/login` page
+    - [x] Create `/register` page
+    - [x] Update Landing page links
+- [ ] UX & UI Refinement
+    - [ ] Remove Home page auto-redirection [/]
+    - [ ] Fix UserMenu hover gap [ ]
+    - [ ] Add `updateUser` to [AuthContext](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/context/AuthContext.tsx#99-106) [ ]
+    - [ ] Implement saving in Profile page [ ]
+- [ ] Verification
+    - [ ] Verify Landing page access while logged in [ ]
+    - [ ] Verify stable hover in UserMenu [ ]
+    - [ ] Verify profile changes persist in session [ ]

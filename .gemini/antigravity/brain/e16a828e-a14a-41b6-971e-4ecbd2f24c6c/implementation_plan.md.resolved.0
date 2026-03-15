@@ -1,0 +1,27 @@
+# Plan: Fix "Cannot find namespace 'JSX'"
+
+The project is experiencing a TypeScript error where the `JSX` namespace cannot be found. This is a common issue with React 19 and certain TypeScript configurations where the global `JSX` namespace is not automatically populated.
+
+## Proposed Changes
+
+### [Component Layer]
+
+#### [MODIFY] [FormInput.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/components/auth/components/FormInput.tsx)
+
+- Update `JSX.Element` to `React.JSX.Element`.
+- Import `React` to ensure the namespace is available.
+
+### [Build/Config Layer]
+
+#### [MODIFY] [tsconfig.json](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/tsconfig.json)
+
+- Ensure `compilerOptions.jsx` is set to `react-jsx` (already is, but worth double-checking if any additional flags like `jsxImportSource` are needed).
+- Add `@types/react` to `compilerOptions.types` if necessary.
+
+## Verification Plan
+
+### Automated Tests
+- Run `npm run lint` or `npx tsc --noEmit` to verify TypeScript errors are resolved in the project.
+
+### Manual Verification
+- Check the [FormInput.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/components/auth/components/FormInput.tsx) file in the IDE once changes are applied to see if the red underline disappears.

@@ -1,0 +1,6 @@
+# Tareas de Análisis y Documentación de Endpoints
+
+- [ ] Identificar todos los archivos de rutas (`route.ts`) <!-- id: 0 -->
+- [ ] Analizar la funcionalidad de cada endpoint <!-- id: 1 -->
+- [ ] Documentar los endpoints (URL, método, descripción, body esperado) <!-- id: 2 -->
+- [ ] Crear el reporte final para el usuario <!-- id: 3 -->

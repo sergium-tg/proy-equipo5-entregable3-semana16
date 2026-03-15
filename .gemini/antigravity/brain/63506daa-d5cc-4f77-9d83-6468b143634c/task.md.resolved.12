@@ -1,0 +1,20 @@
+# Portfolio Redesign - Isabella Trejos
+
+- [/] Planning & Design System <!-- id: 100 -->
+    - [x] Update Implementation Plan with new requirements <!-- id: 101 -->
+    - [x] Define new color palette and Neumorphic design tokens <!-- id: 102 -->
+- [x] Core UI Updates <!-- id: 103 -->
+    - [x] Implement Background Navigation Animation <!-- id: 104 -->
+    - [x] Update [Navbar](file:///Users/santiagovalencia/portafolio%20profesional/portafolio-profesional/src/components/layout/Navbar.tsx#19-54) (Name change, spacing optimization) <!-- id: 105 -->
+    - [x] Fix Title rendering in subpages (Transition bug) <!-- id: 106 -->
+- [/] Dashboard Updates <!-- id: 107 -->
+    - [/] Update [HeroSection](file:///Users/santiagovalencia/portafolio%20profesional/portafolio-profesional/src/components/dashboard/HeroSection.tsx#7-30) (Name change, layout optimization) <!-- id: 108 -->
+    - [ ] Remove [StatsSection](file:///Users/santiagovalencia/portafolio%20profesional/portafolio-profesional/src/components/dashboard/StatsSection.tsx#12-33) <!-- id: 109 -->
+    - [/] Implement `PhotoGallery` with attractive animations <!-- id: 110 -->
+- [ ] Experience Page Updates <!-- id: 111 -->
+    - [ ] Apply Neumorphic effect to `ExperienceCards` <!-- id: 112 -->
+    - [ ] Implement `ExperienceModal` (Pop-up with blur and detailed info) <!-- id: 113 -->
+    - [ ] Add photo section to Experience modals <!-- id: 114 -->
+- [ ] Verification & Cleanup <!-- id: 115 -->
+    - [ ] Verify responsiveness across all pages <!-- id: 116 -->
+    - [ ] Run build test <!-- id: 117 -->

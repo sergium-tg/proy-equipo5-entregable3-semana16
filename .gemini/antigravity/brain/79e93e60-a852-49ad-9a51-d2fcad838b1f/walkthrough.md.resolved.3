@@ -1,0 +1,27 @@
+# Refactor de Autenticación Completado
+
+Se ha rediseñado la arquitectura de autenticación para eliminar el bucle de redirecciones y organizar el sitio en rutas profesionales.
+
+## Mejoras de Arquitectura
+
+### 1. Estado Global (AuthProvider)
+Ahora la aplicación usa un Contexto global. Esto significa que:
+- **Sin flasheos:** El sitio "sabe" quién eres desde que carga la primera línea de código.
+- **Detección inteligente:** `isLoading` ahora es más preciso, evitando que el sistema te mande al inicio por error mientras verifica tu sesión.
+
+### 2. Rutas Dedicadas
+Siguiendo tu recomendación, hemos movido la autenticación a páginas reales:
+- **`http://localhost:3000/login`**: Página limpia para iniciar sesión.
+- **`http://localhost:3000/register`**: Página dedicada para nuevos usuarios.
+- **Acceso directo:** Ahora puedes compartir el link de login o registro directamente, y no fallará porque ya no dependen de un modal en la página principal.
+
+## Cómo probarlo:
+1. Entra a `http://localhost:3000`.
+2. Haz click en los botones del Hero.
+3. Observa cómo la URL cambia a `/login` o `/register`.
+4. Loguéate y verás que entras al Dashboard sin ningún parpadeo ni redirección extraña.
+
+---
+
+> [!TIP]
+> Al separar las rutas, el código es mucho más fácil de mantener y escalar cuando conectes tu backend real. ¡Todo está listo para que el diseño brille!

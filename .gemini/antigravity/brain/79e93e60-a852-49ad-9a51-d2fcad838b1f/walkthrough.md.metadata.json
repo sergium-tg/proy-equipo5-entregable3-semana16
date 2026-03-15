@@ -1,0 +1,6 @@
+{
+  "artifactType": "ARTIFACT_TYPE_WALKTHROUGH",
+  "summary": "Final walkthrough of the pure frontend demo. Redirection removed, hover interactions stabilized, and profile persistence implemented.",
+  "updatedAt": "2026-03-15T07:20:15.780081Z",
+  "version": "4"
+}

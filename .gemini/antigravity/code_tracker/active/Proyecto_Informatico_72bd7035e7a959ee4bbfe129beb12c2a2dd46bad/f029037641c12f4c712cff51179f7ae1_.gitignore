@@ -1,0 +1,13 @@
+vnode_modules/
+.pnp
+.pnp.js
+.next/
+out/
+.env
+.env.local
+.env.*.local
+prisma/migrations/
+.DS_Store
+*.pem
+npm-debug.log*
+v"(72bd7035e7a959ee4bbfe129beb12c2a2dd46bad2[file:///Users/santiagovalencia/backend%20proyecto%20inf%201/Proyecto_Informatico/.gitignore:Pfile:///Users/santiagovalencia/backend%20proyecto%20inf%201/Proyecto_Informatico

@@ -1,0 +1,37 @@
+# Portfolio Redesign - Isabella Trejos
+
+- [x] Planning & Design System <!-- id: 100 -->
+    - [x] Update Implementation Plan with new requirements <!-- id: 101 -->
+    - [x] Define new color palette and Neumorphic design tokens <!-- id: 102 -->
+- [x] Core UI Updates <!-- id: 103 -->
+    - [x] Implement Background Navigation Animation <!-- id: 104 -->
+    - [x] Update `Navbar` (Name change, spacing optimization) <!-- id: 105 -->
+    - [x] Fix Title rendering in subpages (Transition bug) <!-- id: 106 -->
+- [x] Dashboard Updates <!-- id: 107 -->
+    - [x] Update `HeroSection` (Name change, layout optimization) <!-- id: 108 -->
+    - [x] Remove `StatsSection` <!-- id: 109 -->
+    - [x] Implement `PhotoGallery` with attractive animations <!-- id: 110 -->
+- [x] Experience Page Updates <!-- id: 111 -->
+    - [x] Apply Neumorphic effect to `ExperienceCards` <!-- id: 112 -->
+    - [x] Implement `ExperienceModal` (Pop-up with blur and detailed info) <!-- id: 113 -->
+    - [x] Add photo section to Experience modals <!-- id: 114 -->
+- [x] Contact Page Updates <!-- id: 20 -->
+    - [x] Create `ContactLinks` <!-- id: 21 -->
+    - [x] Create `SocialIcons` <!-- id: 22 -->
+    - [x] Assemble `app/contacto/page.tsx" <!-- id: 23 -->
+- [x] SEO & Metadata Config <!-- id: 118 -->
+    - [x] Implement Global Metadata in `layout.tsx` <!-- id: 119 -->
+    - [x] Implement Page-specific Metadata <!-- id: 120 -->
+    - [x] Create `manifest.json`, `robots.txt`, and `sitemap.xml` <!-- id: 121 -->
+    - [x] Generate Favicons and App Icons <!-- id: 122 -->
+- [x] Gallery Page Implementation <!-- id: 123 -->
+    - [x] Update `Navbar` with Gallery link <!-- id: 124 -->
+    - [x] Create `GalleryGrid` and `GalleryItem` components <!-- id: 125 -->
+    - [x] Implement `ImageLightbox` (Pop-up view) <!-- id: 126 -->
+    - [x] Assemble `app/galeria/page.tsx` <!-- id: 127 -->
+- [x] Bug Fixes <!-- id: 128 -->
+    - [x] Fix Gallery text visibility on load <!-- id: 129 -->
+    - [x] Fix Experience & Gallery entry animations (No scroll required) <!-- id: 130 -->
+- [ ] Verification & Cleanup <!-- id: 115 -->
+    - [ ] Verify responsiveness of the gallery grid <!-- id: 116 -->
+    - [ ] Run build test <!-- id: 117 -->

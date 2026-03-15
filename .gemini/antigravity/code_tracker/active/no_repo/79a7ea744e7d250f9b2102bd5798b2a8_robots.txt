@@ -1,0 +1,13 @@
+Þ# Robots.txt para portafolio Isabella Trejos
+User-agent: *
+Allow: /
+Disallow: /api/*
+Disallow: /_next/*
+Disallow: /private/*
+
+# Sitemap
+Sitemap: https://isabellatrejos.vercel.app/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 10
+Þ*cascade082`file:///Users/santiagovalencia/portafolio%20profesional/portafolio-profesional/public/robots.txt

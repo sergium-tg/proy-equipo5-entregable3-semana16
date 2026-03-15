@@ -1,0 +1,39 @@
+# Auth Refactor: Shared State & Dedicated Routes
+
+Este plan soluciona el bucle de redirección ("parpadeo") y organiza el Login/Registro en rutas dedicadas como se solicitó.
+
+## User Review Required
+
+> [!IMPORTANT]
+> **Cambio de Arquitectura:** Moveremos el estado de autenticación a un `AuthProvider` global. Esto permitirá que cuando navegues entre páginas, el sistema no "olvide" quién eres ni un segundo.
+
+## Proposed Changes
+
+### [Core] Global Auth Context
+#### [NEW] [AuthContext.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/context/AuthContext.tsx)
+- Crear un `AuthContext` y un `AuthProvider`.
+- Mover toda la lógica de [useAuth.ts](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/hooks/useAuth.ts) aquí.
+- **Corrección Crítica:** Iniciar `isLoading` en `true` y solo pasar a `false` tras verificar `localStorage`.
+
+#### [MODIFY] [layout.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/app/layout.tsx)
+- Envolver `{children}` con el `AuthProvider`.
+
+#### [MODIFY] [useAuth.ts](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/hooks/useAuth.ts)
+- Refactorizar para que simplemente use `useContext(AuthContext)`. Esto asegura que todas las páginas compartan el mismo estado.
+
+### [Routing] Dedicated Auth Pages
+#### [NEW] [/login/page.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/app/(auth)/login/page.tsx)
+- Ruta dedicada para iniciar sesión.
+#### [NEW] [/register/page.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/app/(auth)/register/page.tsx)
+- Ruta dedicada para registro.
+
+### [UI] Home Page
+#### [MODIFY] [page.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/app/page.tsx)
+- Simplificar para que solo muestre el Landing.
+- Los botones de "Sign In" y "Sign Up" ahora navegarán a `/login` y `/register`.
+
+## Verification Plan
+
+1. **Redirección:** Loguearse y verificar que no hay bucle infinito entre `/` y `/dashboard`.
+2. **Persistencia:** Recargar la página en `/dashboard` y verificar que no redirige a `/` mientras carga.
+3. **Navegación:** Ir a `/login` y `/register` directamente desde la URL.

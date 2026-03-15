@@ -1,0 +1,48 @@
+# Auth Refactor: Shared State & Dedicated Routes
+
+Este plan soluciona el bucle de redirección ("parpadeo") y organiza el Login/Registro en rutas dedicadas como se solicitó.
+
+## User Review Required
+
+> [!IMPORTANT]
+> **Cambio de Arquitectura:** Moveremos el estado de autenticación a un [AuthProvider](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/context/AuthContext.tsx#17-98) global. Esto permitirá que cuando navegues entre páginas, el sistema no "olvide" quién eres ni un segundo.
+
+## Proposed Changes
+
+### [Core] Global Auth Context
+#### [NEW] [AuthContext.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/context/AuthContext.tsx)
+- Crear un [AuthContext](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/context/AuthContext.tsx#99-106) y un [AuthProvider](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/context/AuthContext.tsx#17-98).
+- Mover toda la lógica de [useAuth.ts](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/hooks/useAuth.ts) aquí.
+- **Corrección Crítica:** Iniciar `isLoading` en `true` y solo pasar a `false` tras verificar `localStorage`.
+
+#### [MODIFY] [layout.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/app/layout.tsx)
+- Envolver `{children}` con el [AuthProvider](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/context/AuthContext.tsx#17-98).
+
+#### [MODIFY] [useAuth.ts](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/hooks/useAuth.ts)
+- Refactorizar para que simplemente use `useContext(AuthContext)`. Esto asegura que todas las páginas compartan el mismo estado.
+
+### [Routing] Dedicated Auth Pages
+#### [NEW] [/login/page.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/app/(auth)/login/page.tsx)
+- Ruta dedicada para iniciar sesión.
+#### [NEW] [/register/page.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/app/(auth)/register/page.tsx)
+- Ruta dedicada para registro.
+
+### [UI] UX Refinement
+#### [MODIFY] [page.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/app/page.tsx)
+- Desactivar redirección automática al dashboard para permitir ver el landing.
+
+#### [MODIFY] [UserMenu.module.css](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/components/dashboard/UserMenu.module.css)
+- Eliminar el hueco físico entre el trigger y el dropdown para estabilizar el hover.
+
+### [Feature] Profile Management
+#### [MODIFY] [AuthContext.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/context/AuthContext.tsx)
+- Añadir función `updateUser` para persistir cambios en el perfil (mock).
+
+#### [MODIFY] [page.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/app/dashboard/profile/page.tsx)
+- Implementar la lógica de guardado real usando el nuevo método del contexto.
+
+## Verification Plan
+
+1. **Redirección:** Loguearse y verificar que no hay bucle infinito entre `/` y `/dashboard`.
+2. **Persistencia:** Recargar la página en `/dashboard` y verificar que no redirige a `/` mientras carga.
+3. **Navegación:** Ir a `/login` y `/register` directamente desde la URL.

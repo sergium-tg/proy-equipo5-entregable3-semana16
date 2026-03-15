@@ -1,0 +1,36 @@
+# Isabella Trejos - Portfolio Redesign Plan
+
+This plan focuses on a modern, neumorphic aesthetic with enhanced interactive features.
+
+## User Review Required
+
+> [!IMPORTANT]
+> - The institutional UAO colors will be shifted towards a more modern palette (Slate/Indigo/Soft Grey).
+> - Neumorphism requires specific shadow management; this may slightly increase the "weight" of the UI.
+> - Background animations will be kept "sober" (slow and subtle) to avoid eye fatigue.
+
+## Proposed Changes
+
+### Design System & Layout
+- [MODIFY] [globals.css](file:///Users/santiagovalencia/portafolio%20profesional/portafolio-profesional/src/app/globals.css): Define Neumorphic shadow tokens and a new modern color palette. Add keyframes for background navigation animation.
+- [MODIFY] [Navbar.tsx](file:///Users/santiagovalencia/portafolio%20profesional/portafolio-profesional/components/layout/Navbar.tsx): Change brand text to "Isabella Trejos", optimize spacing for a cleaner desktop/mobile feel.
+- [MODIFY] [TransitionWrapper.tsx](file:///Users/santiagovalencia/portafolio%20profesional/portafolio-profesional/components/ui/TransitionWrapper.tsx) & [AnimatedSection.tsx](file:///Users/santiagovalencia/portafolio%20profesional/portafolio-profesional/components/ui/AnimatedSection.tsx): Adjust animation timing to fix the "titles bug" and ensure immediate visibility on mount.
+
+### Dashboard Enhancements
+- [MODIFY] [HeroSection.tsx](file:///Users/santiagovalencia/portafolio%20profesional/portafolio-profesional/components/dashboard/HeroSection.tsx): Update name to "Isabella Trejos", remove [StatsSection](file:///Users/santiagovalencia/portafolio%20profesional/portafolio-profesional/src/components/dashboard/StatsSection.tsx#12-33).
+- [NEW] `PhotoGallery.tsx`: A staggered, animated photo grid implementing interactive hover effects.
+- [DELETE] [StatsSection.tsx](file:///Users/santiagovalencia/portafolio%20profesional/portafolio-profesional/components/dashboard/StatsSection.tsx).
+
+### Experience Page (Neumorphic + Modals)
+- [MODIFY] [ExperienceCard.tsx](file:///Users/santiagovalencia/portafolio%20profesional/portafolio-profesional/components/experiencia/ExperienceCard.tsx): Re-style with a Neumorphic look (concave/convex effects). Add click interaction to open details.
+- [NEW] `ExperienceModal.tsx`: A sophisticated pop-up with background blur (`backdrop-filter`) containing detailed text and a photo placeholder.
+
+## Verification Plan
+
+### Automated Tests
+- Run `npm run build` to ensure no linting/path errors.
+
+### Manual Verification
+- Test modal background blur on different browsers.
+- Verify photo gallery animations are smooth.
+- Check "Isabella Trejos" brand consistency across pages.

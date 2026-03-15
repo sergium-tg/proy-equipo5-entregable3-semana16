@@ -1,0 +1,11 @@
+# Task: Complete Backend Removal
+
+- [x] Delete API and Service Files
+    - [x] Remove `src/app/api`
+    - [x] Remove [src/lib/api.ts](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/lib/api.ts)
+- [/] Cleanup References
+    - [ ] Search and remove `@/lib/api` imports [/]
+    - [ ] Clean up any unused types related to raw API responses [ ]
+- [ ] Verification
+    - [ ] Run `npm run dev` and check for build errors [ ]
+    - [ ] Verify Dashboard and Profile still function with mocks [ ]

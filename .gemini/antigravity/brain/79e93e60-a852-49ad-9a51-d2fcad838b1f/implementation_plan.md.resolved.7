@@ -1,0 +1,35 @@
+# Profile UI & Premium Loading Experience
+
+Este plan añade la interfaz completa del Perfil y una pantalla de carga de alta calidad para las transiciones de autenticación.
+
+## User Review Required
+
+> [!IMPORTANT]
+> **Pantalla de Carga:** He diseñado una pantalla de carga centralizada en el [AuthProvider](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/context/AuthContext.tsx#18-108) que se activará automáticamente durante el login y registro para asegurar una transición fluida al Dashboard.
+
+## Proposed Changes
+
+### [UI] Premium Loading Screen
+#### [NEW] [LoadingOverlay.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/components/shared/LoadingOverlay/LoadingOverlay.tsx)
+- Pantalla completa con desenfoque (glassmorphism).
+- Animación de un orbe brillante y un spinner minimalista.
+- Mensajes de estado dinámicos ("Authenticating...", "Preparing Dashboard...").
+
+#### [MODIFY] [AuthContext.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/context/AuthContext.tsx)
+- Integrar el `LoadingOverlay` para que se muestre cuando `isLoading` sea true durante las acciones de auth.
+
+### [UI] Profile Page (Visual Fix)
+#### [MODIFY] [Profile.module.css](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/app/dashboard/profile/Profile.module.css)
+- Rediseñar completamente para asegurar visibilidad.
+- Layout de dos columnas: Avatar/Info básica a la izquierda, Formulario detallado a la derecha.
+- Efectos de hover en el avatar para simular el cambio de imagen.
+
+#### [MODIFY] [profile/page.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/app/dashboard/profile/page.tsx)
+- Asegurar que los datos del usuario se carguen correctamente y el formulario sea editable.
+- Añadir sección de "Developer Stats" en el perfil para enriquecer la vista.
+
+## Verification Plan
+
+1. **Auth Loading:** Cerrar sesión, loguearse y verificar que aparece la nueva pantalla de carga atractiva.
+2. **Profile Rendering:** Ir a `/dashboard/profile` y verificar que todo el contenido sea perfectamente visible y estilizado.
+3. **Responsive:** Probar el formulario de perfil en dispositivos móviles.

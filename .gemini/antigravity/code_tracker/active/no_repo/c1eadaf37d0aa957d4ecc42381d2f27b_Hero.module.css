@@ -1,51 +1,0 @@
-·.hero {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.content {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--space-10);
-    padding: var(--space-8) var(--space-6);
-    max-width: 900px;
-    width: 100%;
-    text-align: center;
-}
-
-/* â”€â”€â”€ Scroll hint â”€â”€â”€ */
-.scrollHint {
-    position: absolute;
-    bottom: var(--space-8);
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--space-2);
-    z-index: 1;
-    animation: fadeIn 1.5s 1s both;
-}
-
-.scrollLine {
-    width: 1px;
-    height: 40px;
-    background: linear-gradient(to bottom, var(--color-primary), transparent);
-    animation: pulse 2s ease-in-out infinite;
-}
-
-.scrollLabel {
-    font-size: 0.7rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--color-text-subtle);
-    font-family: var(--font-mono);
-}á *cascade08á–*cascade08–ª *cascade08ª¯*cascade08¯° *cascade08°¹*cascade08¹º *cascade08ºÀ*cascade08ÀÁ *cascade08ÁÅ*cascade08ÅÆ *cascade08ÆŒ*cascade08ŒŽ *cascade08ŽÉ*cascade08ÉÊ *cascade08Êá*cascade08áã *cascade08ãé*cascade08éê *cascade08êû*cascade08ûü *cascade08üƒ*cascade08ƒ… *cascade08…¢*cascade08¢£ *cascade08£à*cascade08àá *cascade08áç*cascade08çè *cascade08èµ*cascade08µ¶ *cascade08¶´*cascade08´· *cascade082]file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/components/hero/Hero.module.css

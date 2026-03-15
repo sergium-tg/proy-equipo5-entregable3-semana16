@@ -1,0 +1,45 @@
+# Dashboard & Profile Implementation Plan
+
+Este plan describe la creación de un Dashboard base con un sistema de perfiles integrado, manteniendo la estética premium y las micro-animaciones del proyecto.
+
+## User Review Required
+
+> [!IMPORTANT]
+> Se implementará una redirección automática al `/dashboard` tras un login exitoso.
+
+## Proposed Changes
+
+### [Component] Authentication & Types
+#### [MODIFY] [auth.types.ts](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/types/auth.types.ts)
+- Agregar el campo `rating: number` a la interfaz [AuthUser](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/types/auth.types.ts#1-9).
+
+### [Component] Dashboard UI
+#### [NEW] [DashboardLayout.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/components/dashboard/DashboardLayout.tsx)
+- Sidebar minimalista y Navbar superior con cristalografía (glassmorphism).
+#### [NEW] [UserMenu.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/components/dashboard/UserMenu.tsx)
+- Avatar en la esquina superior derecha.
+- Animación de hover para mostrar el "Mini-Profile" (Popup con username, rol y rating).
+- Menú desplegable para navegación al perfil y logout.
+
+### [Component] Profile System
+#### [NEW] [ProfilePage.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/app/dashboard/profile/page.tsx)
+- Vista detallada del usuario con capacidad de edición (UI mock por ahora para los inputs de edición).
+- Estética coherente con los formularios de Auth.
+
+### [Component] Routing & Navigation
+#### [MODIFY] [page.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/app/page.tsx)
+- Agregar redirección al `/dashboard` si el usuario ya está autenticado.
+
+---
+
+## Verification Plan
+
+### Automated/Manual Verification
+1. **Login & Redirect:**
+   - Loguearse y verificar redirección a `/dashboard`.
+2. **Mini-Profile Hover:**
+   - Hacer hover en el avatar y verificar que aparezca el popup con la información correcta (Username, Rol, Rating).
+3. **Profile Navigation:**
+   - Click en el avatar/nombre y verificar navegación a `/dashboard/profile`.
+4. **Responsive Design:**
+   - Verificar que el UserMenu funcione correctamente en dispositivos móviles.

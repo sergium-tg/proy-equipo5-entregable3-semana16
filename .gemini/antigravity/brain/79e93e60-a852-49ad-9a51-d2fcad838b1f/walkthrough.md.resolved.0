@@ -1,0 +1,33 @@
+# Conexión Frontend-Backend Completada
+
+Se ha implementado la integración real con el backend siguiendo la guía de endpoints proporcionada.
+
+## Cambios Realizados
+
+### Servicio de API
+- Se creó [api.ts](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/lib/api.ts) como una capa de abstracción para todas las peticiones HTTP.
+- Maneja automáticamente el `base URL` y añade el header `Authorization: Bearer <token>` cuando el usuario está autenticado.
+- Gestiona la persistencia del token en `localStorage`.
+
+### Autenticación y Estado
+- El hook [useAuth.ts](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/hooks/useAuth.ts) ahora realiza llamadas reales a:
+    - `POST /api/users/register`
+    - `POST /api/users/login`
+    - `POST /api/users/logout`
+- Se añadió lógica de recuperación de sesión automática al cargar la página.
+- Se actualizaron los tipos en [auth.types.ts](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/types/auth.types.ts) para usar `username` en lugar de `name`, alineándose con el backend.
+
+### Formularios de Usuario
+- **Registro:** El formulario ahora envía `username` y el `role` en mayúsculas ("FRONTEND" o "BACKEND").
+- **Login:** Se mejoró el manejo de errores para mostrar los mensajes específicos devueltos por la API.
+
+## Verificación
+
+1. **Persistencia:** Al iniciar sesión, el `accessToken` se guarda en `localStorage` y se recupera al refrescar.
+2. **Seguridad:** Todas las peticiones posteriores incluyen el token en los headers.
+3. **Manejo de Errores:** Errores como "Usuario ya existe" o "Credenciales inválidas" se muestran correctamente en la UI.
+
+---
+
+> [!TIP]
+> Asegúrate de tener el backend corriendo en `http://localhost:3000` (o el puerto configurado) para que las peticiones se realicen correctamente. Puedes configurar la URL en un archivo `.env` usando la variable `NEXT_PUBLIC_API_URL`.

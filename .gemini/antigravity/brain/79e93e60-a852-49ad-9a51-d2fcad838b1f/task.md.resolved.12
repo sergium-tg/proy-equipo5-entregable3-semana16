@@ -1,0 +1,13 @@
+# Task: Auth Refactor & Route Stabilization
+
+- [ ] Core Infrastructure
+    - [ ] Create `AuthContext.tsx` with corrected `isLoading` [/]
+    - [ ] Integrate `AuthProvider` in root [layout.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/app/layout.tsx) [ ]
+    - [ ] Refactor [useAuth.ts](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/hooks/useAuth.ts) to use Context [ ]
+- [ ] Dedicated Routes
+    - [ ] Create `/login` page [ ]
+    - [ ] Create `/register` page [ ]
+    - [ ] Update Landing page links [ ]
+- [ ] Verification
+    - [ ] Verify loop fix [ ]
+    - [ ] Verify separate route access [ ]

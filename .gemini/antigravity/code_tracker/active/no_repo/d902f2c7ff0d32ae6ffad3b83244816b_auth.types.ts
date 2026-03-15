@@ -1,7 +1,9 @@
-Èexport interface AuthUser {
+©export interface AuthUser {
     id: string;
-    name: string;
+    username: string;
     email: string;
+    role: string;
+    rating: number;
     avatarUrl?: string;
     createdAt?: string;
 }
@@ -12,10 +14,11 @@ export interface LoginCredentials {
 }
 
 export interface RegisterData {
-    name: string;
+    username: string;
     email: string;
     password: string;
     confirmPassword: string;
+    role: string;
 }
 
 export type AuthMode = 'login' | 'register';
@@ -25,4 +28,4 @@ export interface AuthState {
     isLoading: boolean;
     error: string | null;
 }
-i *cascade08iÅ*cascade08Å¸ *cascade08¸È*cascade082Qfile:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/types/auth.types.ts
+0 *cascade0804*cascade084K *cascade08K] ]e *cascade08eyyì *cascade08ì´*cascade08´¢ *cascade08¢¶*cascade08¶˙ *cascade08˙å*cascade08åº *cascade08º©*cascade082Qfile:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/types/auth.types.ts

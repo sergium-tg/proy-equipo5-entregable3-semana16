@@ -1,0 +1,32 @@
+# Dashboard y Perfil Implementados
+
+Se ha creado un entorno de Dashboard completo con gestión de perfiles, manteniendo la estética senior y las animaciones premium del proyecto.
+
+## Nuevas Funcionalidades
+
+### 1. Dashboard Base
+- **Layout Glassmorphism:** Un diseño respirable con sidebar lateral y navegación superior pegajosa.
+- **Acceso Protegidos:** Redirección automática al inicio si no hay sesión activa.
+- **Estadísticas Visuales:** Widgets base para visualizar XP, Rating y Proyectos Activos.
+
+### 2. Menú de Usuario ("Mini-Profile")
+- **Hover Card:** Al pasar el ratón sobre el avatar en la esquina superior derecha, emerge una ventana con:
+    - Username y Rol.
+    - Calificación (Rating) del desarrollador.
+- **Transiciones fluidas:** Animaciones de escala y opacidad coherentes con el resto del sitio.
+
+### 3. Página de Perfil
+- **Subpágina Dedicada:** `/dashboard/profile` para gestionar la información personal.
+- **Edición de Información:** Formulario para actualizar Username, Email y Rol Profesional.
+- **Estética de Formularios:** Se mantiene la consistencia visual con los formularios de Login/Registro.
+
+## Cambios Técnicos
+- **Tipos de Auth:** Se añadió el campo `rating` a la interfaz [AuthUser](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/types/auth.types.ts#1-10).
+- **Flujo de Navegación:**
+    - Login/Registro ➔ Redirección a Dashboard.
+    - Home (si ya logueado) ➔ Redirección a Dashboard.
+
+---
+
+> [!TIP]
+> Puedes navegar al perfil haciendo click en el avatar o usando el menú lateral. La calificación (Rating) es un campo dinámico que se puede integrar con un sistema de reputación en el futuro.

@@ -1,47 +1,37 @@
-# Project Enhancements: Developer Community Section
+## New Features: Developer Role Selection
 
-I have implemented a high-fidelity "Community" section that seamlessly transitions from the Hero section as you scroll.
+I have added a new "Developer Role" selection field to the registration form. This allows users to identify themselves as Frontend, Backend, or Fullstack developers during sign-up.
 
-## New Features
-
-1.  **Interactive Community Widgets**: 
-    - **Solved Doubts**: Displays community Q&A activity.
-    - **Shared Implementations**: Highlights code contributions from other developers.
-    - **Developer Ratings**: Shows an interactive reputation system.
-2.  **Glassmorphic Design**: Each widget uses a premium glass effect with real-time mouse-tracking glow.
-3.  **Scroll-Sync Fade-In**: The entire section fades in and lifts up as the Hero section fades out, creating a continuous narative.
-
-## Technical Details
+### Additions:
+1.  **FormSelect Component**: A new reusable component for dropdown selections that matches our premium glassmorphic theme.
+2.  **Role Validation**: The registration form now requires users to select a role before submitting.
+3.  **Updated Types**: Updated the `RegisterData` interface to include the `role` field.
 
 ````carousel
 ```tsx
-// CommunitySection.tsx - Scroll Animation
-const handleScroll = () => {
-    const rect = section.getBoundingClientRect();
-    const progress = Math.max(0, Math.min(1, (windowHeight - rect.top) / (windowHeight * 0.5)));
-    container.style.opacity = `${progress}`;
-    container.style.transform = `translateY(${(1 - progress) * 40}px)`;
-};
+// FormSelect implementation with lifted label
+<select
+    id={id}
+    value={value}
+    onChange={(e) => onChange(e.target.value)}
+    className={styles.select}
+>
+    <option value="" disabled hidden></option>
+    {options.map((opt) => (
+        <option key={opt.value} value={opt.value}>
+            {opt.label}
+        </option>
+    ))}
+</select>
 ```
 <!-- slide -->
 ```tsx
-// Widget.tsx - Interactive Glow
-const handleMouseMove = (e) => {
-    const x = ((e.clientX - rect.left) / rect.width) * 100;
-    const y = ((e.clientY - rect.top) / rect.height) * 100;
-    card.style.setProperty('--mouse-x', `${x}%`);
-    card.style.setProperty('--mouse-y', `${y}%`);
-};
+// RegisterForm validation
+if (!role) errs.role = 'Please select your developer role';
 ```
-<!-- slide -->
-![Community Section Preview](/Users/santiagovalencia/.gemini/antigravity/brain/7f7f02dc-954c-46be-84f7-5d477220893d/uploaded_media_1772948720378.png)
 ````
 
-## How to Test
+> [!TIP]
+> The role selection uses the same "lifted label" animation as the existing text inputs, ensuring a consistent user experience.
 
-1.  **Scroll Down**: Watch the Hero section gently vanish while the **Developer Community** section gracefully fades into view.
-2.  **Interact**: Hover over the cards in the Community section to see the **dynamic glow effect** that follows your cursor.
-3.  **Explore**: Read about the features: Solved doubts, shared code, and the rating system.
-
-> [!IMPORTANT]
-> This section is fully responsive and maintains its premium look on all devices.
+render_diffs(file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/components/auth/components/RegisterForm.tsx)

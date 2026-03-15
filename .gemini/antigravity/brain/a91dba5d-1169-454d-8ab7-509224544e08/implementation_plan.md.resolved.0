@@ -1,0 +1,24 @@
+# Plan de Ejecución y Verificación del Backend
+
+Este plan detalla los pasos para poner en marcha el backend y verificar que los endpoints funcionen correctamente con el frontend recién configurado.
+
+## Resumen de Tareas
+1. **Completar Documentación de Configuración**: Actualizar el [README.md](file:///Users/santiagovalencia/backend%20proyecto%20inf%201/Proyecto_Informatico/README.md) con pasos detallados de instalación y configuración de variables de entorno.
+2. **Guía de Verificación**: Proporcionar comandos `curl` y pasos manuales para validar los endpoints de Login y Registro.
+
+## Cambios Propuestos
+
+### Documentación
+#### [MODIFY] [README.md](file:///Users/santiagovalencia/backend%20proyecto%20inf%201/Proyecto_Informatico/README.md)
+Se incluirán los pasos de `npm install`, configuración de `.env` y el comando para iniciar el servidor de desarrollo.
+
+## Plan de Verificación
+
+### Pruebas Manuales
+1. **Prueba de Registro**: Ejecutar un comando `curl` para registrar un usuario de prueba.
+2. **Prueba de Login**: Ejecutar un comando `curl` para obtener un token de acceso.
+3. **Prueba de Integración**: Abrir el frontend, intentar registrarse y verificar que la petición llegue al backend (inspeccionando la consola de red).
+
+### Comandos de Verificación
+- `npm run dev` para iniciar el servidor.
+- `curl -X POST http://localhost:3000/api/users/register -H "Content-Type: application/json" -d '{"email":"test@example.com", "password":"password123", "username":"testuser", "role":"FRONTEND"}'`

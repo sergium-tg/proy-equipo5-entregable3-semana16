@@ -1,0 +1,11 @@
+# Task: Profile & Loading Experience
+
+- [ ] Global Loading Experience
+    - [ ] Create `LoadingOverlay` component [/]
+    - [ ] Integrate overlay into [AuthProvider](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/context/AuthContext.tsx#18-108) [ ]
+- [ ] Profile UI Enhancement
+    - [ ] Redesign [Profile.module.css](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/app/dashboard/profile/Profile.module.css) for visibility [ ]
+    - [ ] Update [profile/page.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/app/dashboard/profile/page.tsx) with rich info [ ]
+- [ ] Verification
+    - [ ] Verify transition feel [ ]
+    - [ ] Verify profile visibility and editing [ ]

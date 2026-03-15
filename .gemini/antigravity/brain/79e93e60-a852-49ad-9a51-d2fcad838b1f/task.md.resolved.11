@@ -1,0 +1,11 @@
+# Task: Frontend Mocking for Testing
+
+- [ ] Revert Connectivity
+    - [ ] Update [useAuth.ts](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/hooks/useAuth.ts) to use functional mock state [/]
+    - [ ] Remove `src/app/api` directory [ ]
+- [ ] Fix UI Stability
+    - [ ] Debug "client-side exception" in Dashboard/Home [ ]
+    - [ ] Ensure persistence works with mock state [ ]
+- [ ] Verification
+    - [ ] Verify Dashboard access with mock user [ ]
+    - [ ] Verify Profile viewing and editing [ ]

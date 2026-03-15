@@ -1,0 +1,7 @@
+# Auth Form Enhancements
+
+- [ ] Create `FormSelect` component and styles
+- [ ] Integrate `FormSelect` into [RegisterForm.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/components/auth/components/RegisterForm.tsx)
+- [ ] Update validation and state in [RegisterForm.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/components/auth/components/RegisterForm.tsx)
+- [ ] Verify functionality and design
+rigin/frontend

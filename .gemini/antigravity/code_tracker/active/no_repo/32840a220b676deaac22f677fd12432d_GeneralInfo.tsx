@@ -1,0 +1,77 @@
+Ù"use client";
+
+import { motion } from "framer-motion";
+
+export default function GeneralInfo() {
+    return (
+        <div className="space-y-8">
+            <div>
+                <motion.h1
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    className="text-5xl md:text-7xl font-bold text-foreground mb-4 font-poppins tracking-tight"
+                >
+                    Isabella<span className="text-indigo-600 block md:inline"> Trejos</span>
+                </motion.h1>
+                <motion.p
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    className="text-xl md:text-2xl text-indigo-600 font-semibold tracking-wide"
+                >
+                    Comunicaci√≥n Social y Periodismo ‚Ä¢ UAO
+                </motion.p>
+            </div>
+
+            <div className="space-y-6">
+                <motion.p
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
+                    className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"
+                >
+                    Estudiante apasionada por narrar historias que impactan. Enfocada en periodismo digital,
+                    comunicaci√≥n estrat√©gica y la creaci√≥n de contenidos que conectan con la audiencia.
+                </motion.p>
+
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                    className="flex flex-wrap gap-4 pt-4"
+                >
+                    {["Periodismo Digital", "Comunicaci√≥n Corporativa", "Redacci√≥n Creativa", "Estrategia Digital"].map((tag, i) => (
+                        <span
+                            key={tag}
+                            className="px-6 py-2 nm-soft rounded-full text-sm font-bold text-gray-700 hover:text-indigo-600 transition-colors cursor-default"
+                        >
+                            {tag}
+                        </span>
+                    ))}
+                </motion.div>
+            </div>
+        </div>
+    );
+}
+ç *cascade08çé*cascade08é¥ *cascade08¥ª*cascade08ªΩ *cascade08Ω¯*cascade08¯â *cascade08âä*cascade08äï *cascade08ïñ*cascade08ñ® *cascade08®©*cascade08©™ *cascade08™´*cascade08´¨ *cascade08¨≠*cascade08≠Æ *cascade08Æ≤*cascade08≤∂ *cascade08∂∑*cascade08∑ƒ *cascade08ƒ”*cascade08”‘ *cascade08‘Â*cascade08Â˚ *cascade08˚à*cascade08àâ *cascade08âé*cascade08éè *cascade08èê*cascade08êë *cascade08ë§*cascade08§• *cascade08•∑*cascade08∑π *cascade08π√*cascade08√÷ *cascade08÷›*cascade08›Ú *cascade08Ú˘*cascade08˘˙ *cascade08˙µ*cascade08µ… *cascade08…Ã*cascade08Ã— *cascade08—ﬂ*cascade08ﬂ· *cascade08·‰*cascade08‰Ú *cascade08ÚÄ*cascade08ÄÅ *cascade08Åí*cascade08í‰ *cascade08‰Î*cascade08Î¶ *cascade08¶ß*cascade08ßª *cascade08ª¬*cascade08¬√ *cascade08√˝	*cascade08˝	ë
+ *cascade08ë
+î
+*cascade08î
+ô
+ *cascade08ô
+ú
+*cascade08ú
+°
+ *cascade08°
+£
+*cascade08£
+•
+ *cascade08•
+©
+*cascade08©
+ƒ
+ *cascade08ƒ
+’
+*cascade08’
+Ö *cascade08Öò*cascade08òô *cascade08ôØ*cascade08Ø¬ *cascade08¬√*cascade08√Ÿ *cascade08Ÿ€*cascade08€› *cascade08›ﬁ*cascade08ﬁ‡ *cascade08‡‰*cascade08‰Í *cascade08Í*cascade08Ò *cascade08ÒÚ*cascade08ÚÛ *cascade08ÛÙ*cascade08Ùı *cascade08ı˜*cascade08˜ê *cascade08êô*cascade08ôú *cascade08ú¶*cascade08¶® *cascade08®¨*cascade08¨≠ *cascade08≠Æ*cascade08Æø *cascade08ø‘*cascade08‘ÿ *cascade08ÿ⁄*cascade08⁄€ *cascade08€‰*cascade08‰Â *cascade08Â¸*cascade08¸˛ *cascade08˛Ü*cascade08Üá *cascade08áä*cascade08äã *cascade08ãå*cascade08åç *cascade08çî*cascade08î• *cascade08•µ*cascade08µ∂ *cascade08∂¡*cascade08¡“ *cascade08“‰*cascade08‰Â *cascade08ÂÈ*cascade08ÈÍ *cascade08Íî*cascade08î≥ *cascade08≥¥*cascade08¥∏ *cascade08∏π*cascade08π∫ *cascade08∫À*cascade08ÀÆ *cascade08Æ¥*cascade08¥µ *cascade08µ∏*cascade08∏π *cascade08πº*cascade08ºΩ *cascade08Ωæ*cascade08æÀ *cascade08ÀŒ*cascade08Œ√ *cascade08√ƒ*cascade08ƒ» *cascade08»…*cascade08…  *cascade08 Ã*cascade08ÃÕ *cascade08Õ–*cascade08–Ï *cascade08ÏÔ*cascade08Ôˆ *cascade08ˆ¯*cascade08¯˘ *cascade08˘˙*cascade08˙˚ *cascade08˚Ö*cascade08Öã *cascade08ãó*cascade08óò *cascade08ò§*cascade08§• *cascade08•¶*cascade08¶ß *cascade08ß™*cascade08™¨ *cascade08¨≠*cascade08≠Æ *cascade08Æµ*cascade08µΩ *cascade08Ωƒ*cascade08ƒÙ *cascade082wfile:///Users/santiagovalencia/portafolio%20profesional/portafolio-profesional/src/components/dashboard/GeneralInfo.tsx

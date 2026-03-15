@@ -1,0 +1,14 @@
+# Task: Pure Frontend Demo Refinement
+
+- [ ] Core Infrastructure
+    - [ ] Add `updateUser` to [AuthContext.tsx](file:///Users/santiagovalencia/Documents/proyecto%20inf_1/src/context/AuthContext.tsx) [/]
+    - [ ] Remove Home page auto-redirection [ ]
+- [ ] UI & Interaction Fixes
+    - [ ] Fix UserMenu hover gap [ ]
+    - [ ] Implement saving logic in Profile page [ ]
+- [ ] Cleanup
+    - [ ] Verify `src/app/api` is removed [ ]
+- [ ] Verification
+    - [ ] Verify profile changes persist visually [ ]
+    - [ ] Verify Landing page access [ ]
+    - [ ] Verify stable hover [ ]
