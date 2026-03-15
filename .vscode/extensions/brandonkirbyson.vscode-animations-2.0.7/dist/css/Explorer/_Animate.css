@@ -1,0 +1,28 @@
+.explorer-folders-view .monaco-list-row.newFile[aria-posinset] {
+  /* background-color: red !important; */
+  animation-name: newFile;
+  animation-duration: 300ms;
+  animation-delay: calc(100ms * calc(var(--local-offset) - 1));
+  animation-fill-mode: backwards;
+  z-index: calc(-1 * var(--local-offset)) !important;
+}
+
+.explorer-folders-view .monaco-list-row {
+  /* background-color: red; */
+  background-color: var(--vscode-sideBar-background);
+  /* z-index: 1; */
+}
+
+@keyframes newFile {
+  from {
+    /* z-index: -2 !important; */
+    opacity: 0;
+    /* transform: translateY(calc(-100% * var(--local-offset))) scale(0.5); */
+    transform: translateY(-100%);
+  }
+  to {
+    /* z-index: -2 !important; */
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

@@ -1,0 +1,316 @@
+{
+	"name": "vscode-animations",
+	"displayName": "VSCode Animations",
+	"description": "Clean and customizable animations for VSCode",
+	"version": "2.0.7",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/BrandonKirbyson/VSCode-Animations"
+	},
+	"extensionDependencies": [],
+	"extensionKind": [
+		"ui"
+	],
+	"icon": "static/logo.png",
+	"author": {
+		"name": "Brandon Kirbyson",
+		"email": "brandonkirbyson@gmail.com"
+	},
+	"publisher": "BrandonKirbyson",
+	"readme": "README.md",
+	"homepage": "https://github.com/BrandonKirbyson/VSCode-Animations#readme",
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.64.0"
+	},
+	"categories": [
+		"Themes",
+		"Other"
+	],
+	"keywords": [
+		"vscode",
+		"visual studio code",
+		"theme",
+		"animations",
+		"animation",
+		"animate",
+		"custom",
+		"clean",
+		"smooth"
+	],
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"main": "./dist/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "VSCode-Animations.enableAnimations",
+				"title": "Enable Animations",
+				"category": "Animations"
+			},
+			{
+				"command": "VSCode-Animations.disableAnimations",
+				"title": "Disable Animations",
+				"category": "Animations"
+			},
+			{
+				"command": "VSCode-Animations.openAnimationSettings",
+				"title": "Open Animation Settings",
+				"category": "Animations"
+			},
+			{
+				"command": "VSCode-Animations.changeInstallMethod",
+				"title": "Change Install Method",
+				"category": "Animations"
+			},
+			{
+				"command": "VSCode-Animations.openCustomCSS",
+				"title": "Open Custom CSS",
+				"category": "Animations"
+			},
+			{
+				"command": "VSCode-Animations.installAnimations",
+				"title": "Install Animations",
+				"category": "Animations"
+			},
+			{
+				"command": "VSCode-Animations.getScriptPath",
+				"title": "Get Script Path",
+				"category": "Animations"
+			}
+		],
+		"configuration": {
+			"title": "Animations",
+			"properties": {
+				"animations.Enabled": {
+					"type": "boolean",
+					"default": true,
+					"description": "Whether or not to enable animations"
+				},
+				"animations.Install-Method": {
+					"type": "string",
+					"enum": [
+						"Custom CSS and JS",
+						"Custom UI Style",
+						"Apc Customize UI++"
+					],
+					"default": "Custom CSS and JS",
+					"markdownDescription": "The extension to use for injecting the animations. **NOTE:** This is a **very important** setting, if you don't know what this means, leave it as `Custom CSS and JS`"
+				},
+				"animations.Auto-Install": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "Whether or not to automatically install the animations with the [Custom CSS and JS extension](https://github.com/be5invis/vscode-custom-css), default: `true`. **IMPORTANT:** If set to `false`, you will need to manually install the animations by using the command `Animations: Get Script Path` to copy the path into your favorite custom injection extension (ex: [apc-extension](https://github.com/drcika/apc-extension)). **ONLY do this if you understand what this means.**"
+				},
+				"animations.Smooth-Mode": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "Make everything **SMOOTH**! Whether or not to use smooth animations on all windows (sidebars, split screens, etc.)"
+				},
+				"animations.Custom-CSS": {
+					"type": "boolean",
+					"default": true,
+					"description": "Whether or not to use the custom CSS file"
+				},
+				"animations.Focus-Dimming-Amount": {
+					"type": "number",
+					"default": 50,
+					"maximum": 100,
+					"minimum": 0,
+					"markdownDescription": "The amount to dim parts of vscode when a new window gains focus, default: `50%`"
+				},
+				"animations.Focus-Dimming-Mode": {
+					"type": "string",
+					"enum": [
+						"None",
+						"Full Window",
+						"Everything But Editor",
+						"Everything But Terminal",
+						"Everything But Editor and Terminal"
+					],
+					"default": "None",
+					"markdownDescription": "The mode to use for focus dimming, `None` disables dimming entirely, `Window` will dim the entire window, `Everything But Editor`, `Everything But Terminal`, and `Everything But Editor and Terminal` will dim everything but the editor, terminal, or both based on option, default: `Full Window`"
+				},
+				"animations.Command-Palette": {
+					"type": "string",
+					"enum": [
+						"None",
+						"Scale",
+						"Slide",
+						"Fade"
+					],
+					"default": "Scale",
+					"description": "The animation to use for the command palette"
+				},
+				"animations.Tabs": {
+					"type": "string",
+					"enum": [
+						"None",
+						"Scale",
+						"Slide",
+						"Flip"
+					],
+					"default": "Scale",
+					"description": "The animation to use for tabs"
+				},
+				"animations.Active": {
+					"type": "string",
+					"enum": [
+						"None",
+						"Indent",
+						"Scale"
+					],
+					"default": "Scale",
+					"description": "The animation to use for the active list item"
+				},
+				"animations.Scrolling": {
+					"type": "string",
+					"enum": [
+						"None",
+						"Scale",
+						"Slide",
+						"Fade"
+					],
+					"default": "Scale",
+					"description": "The animation to use for when new list items appear when scrolling"
+				},
+				"animations.Default-Duration": {
+					"type": "number",
+					"default": 300,
+					"maximum": 10000,
+					"minimum": 0,
+					"markdownDescription": "The default duration of all the animations in milliseconds, default: `300`, **NOTE:** This is the default duration for all animations, you can change the duration of each animation individually in the `Durations` section"
+				},
+				"animations.Durations": {
+					"type": "object",
+					"description": "The durations of the animations in milliseconds",
+					"additionalProperties": false,
+					"properties": {
+						"Command-Palette": {
+							"type": "number",
+							"default": 300,
+							"maximum": 10000,
+							"minimum": 0,
+							"markdownDescription": "The duration of the animation for the command palette in milliseconds, default: `300`"
+						},
+						"Tabs": {
+							"type": "number",
+							"default": 200,
+							"maximum": 10000,
+							"minimum": 0,
+							"markdownDescription": "The duration of the animation for tabs in milliseconds, default: `200`"
+						},
+						"Active": {
+							"type": "number",
+							"default": 200,
+							"maximum": 10000,
+							"minimum": 0,
+							"markdownDescription": "The duration of the animation for files in milliseconds, default: `200`"
+						},
+						"Scrolling": {
+							"type": "number",
+							"default": 200,
+							"maximum": 10000,
+							"minimum": 0,
+							"markdownDescription": "The duration of the animation for when new list items appear when scrolling in milliseconds, default: `200`"
+						},
+						"Smooth-Mode": {
+							"type": "number",
+							"default": 200,
+							"maximum": 10000,
+							"minimum": 0,
+							"markdownDescription": "The duration of the animation for when new list items appear when scrolling in milliseconds, default: `200`"
+						},
+						"Focus-Dimming": {
+							"type": "number",
+							"default": 200,
+							"maximum": 10000,
+							"minimum": 0,
+							"markdownDescription": "The duration of the animation for when a new window gains focus in milliseconds, default: `200`"
+						}
+					}
+				},
+				"animations.CursorAnimation": {
+					"type": "boolean",
+					"default": false,
+					"description": "Whether or not to enable the cursor animation"
+				},
+				"animations.UseCursorColorForCursorAnimation": {
+					"type": "boolean",
+					"default": false,
+					"description": "Whether or not to use the cursor color of the theme for the cursor animation, `false` will use the color set in the `CursorAnimationOptions`"
+				},
+				"animations.CursorAnimationOptions": {
+					"type": "object",
+					"description": "The cursor animation settings",
+					"additionalProperties": false,
+					"default": {
+						"Color": "#ffffff",
+						"CursorStyle": "block",
+						"TrailLength": 8
+					},
+					"properties": {
+						"Color": {
+							"type": "string",
+							"default": "#ffffff",
+							"description": "The color of the cursor animation"
+						},
+						"CursorStyle": {
+							"type": "string",
+							"enum": [
+								"line",
+								"block"
+							],
+							"default": "block",
+							"markdownDescription": "The type of cursor to use, either `line` or `block`"
+						},
+						"TrailLength": {
+							"type": "number",
+							"default": 8,
+							"minimum": 1,
+							"maximum": 50,
+							"markdownDescription": "The length of the cursor trail, should stay around `8`, higher might cause performance issues"
+						}
+					}
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run package",
+		"compile": "webpack & sass --watch --no-source-map src/scss:dist/css",
+		"watch": "webpack --watch & sass --watch --no-source-map src/scss:dist/css",
+		"package": "webpack --mode production && sass --no-source-map src/scss:dist/css",
+		"compile-tests": "tsc -p . --outDir out",
+		"watch-tests": "tsc -p . -w --outDir out",
+		"pretest": "npm run compile-tests && npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^8.1.0",
+		"@types/mocha": "^10.0.1",
+		"@types/node": "16.x",
+		"@types/vscode": "^1.64.0",
+		"@types/webpack": "^5.28.1",
+		"@typescript-eslint/eslint-plugin": "^5.59.1",
+		"@typescript-eslint/parser": "^5.59.1",
+		"@vscode/test-electron": "^2.3.0",
+		"eslint": "^8.39.0",
+		"glob": "^8.1.0",
+		"mocha": "^10.2.0",
+		"ts-loader": "^9.4.2",
+		"typescript": "^5.0.4",
+		"webpack": "^5.81.0",
+		"webpack-cli": "^5.0.2"
+	},
+	"dependencies": {
+		"ts-node": "^10.9.1"
+	},
+	"__metadata": {
+		"installedTimestamp": 1747206135705,
+		"targetPlatform": "undefined",
+		"size": 32749665
+	}
+}
